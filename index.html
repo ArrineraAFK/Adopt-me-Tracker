@@ -1614,6 +1614,9 @@ h1{font-size:18px;font-weight:600;margin-bottom:0.5rem}
   <button onclick="expandAll()">Alle auf</button>
   <button onclick="collapseAll()">Alle zu</button>
   <button onclick="openResetConfirm()" class="btn-danger">Reset</button>
+  <button onclick="exportData()">⬇ Export</button>
+  <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)">
+  <button onclick="document.getElementById('import-file').click()">⬆ Import</button>
 </div>
 
 <div class="grid" id="grid"></div>
@@ -1724,6 +1727,48 @@ let owned = profileData.profiles[profileData.active] || {};
 function save() {
   profileData.profiles[profileData.active] = owned;
   saveAllProfiles(profileData);
+}
+function exportData() {
+  const dataStr = JSON.stringify(profileData, null, 2);
+  const blob = new Blob([dataStr], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'adoptme_tracker_backup.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      if (!parsed.profiles || !parsed.active) {
+        openConfirmModal('Ungültige Datei', 'Die Datei hat kein gültiges Format. Bitte nur Dateien importieren die mit dem Export-Button erstellt wurden.', ()=>{});
+        return;
+      }
+      openConfirmModal(
+        'Import bestätigen',
+        'Alle aktuellen Profile und Häkchen werden durch die importierten Daten ersetzt. Fortfahren?',
+        () => {
+          profileData = parsed;
+          owned = profileData.profiles[profileData.active] || {};
+          saveAllProfiles(profileData);
+          renderProfileBar();
+          expanded = {};
+          sortMode = {};
+          render();
+        }
+      );
+    } catch(err) {
+      openConfirmModal('Fehler', 'Die Datei konnte nicht gelesen werden. Ist es eine gültige JSON-Datei?', ()=>{});
+    }
+    event.target.value = '';
+  };
+  reader.readAsText(file);
 }
 
 function renderProfileBar() {
