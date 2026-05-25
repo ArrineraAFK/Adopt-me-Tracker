@@ -1734,7 +1734,11 @@ function exportData() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'adoptme_tracker_backup.json';
+  const now = new Date();
+  const date = now.toLocaleDateString('de-DE', {day:'2-digit',month:'2-digit',year:'numeric'}).replace(/\./g,'-');
+  const time = now.toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'}).replace(':','-');
+  const safeName = profileData.active.replace(/[^a-zA-Z0-9äöüÄÖÜß]/g,'_');
+  a.download = `AM_Tracker_${safeName}_${date}_${time}.json`;
   a.click();
   URL.revokeObjectURL(url);
 }
