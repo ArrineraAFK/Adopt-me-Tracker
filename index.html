@@ -363,13 +363,16 @@ let expanded = {};
 let sortMode = {};
 
 function togglePet(colId, pet){
-  const key=colId+'|||'+pet; owned[key]=!owned[key]; if(!owned[key])delete owned[key];
+  const name=decodeURIComponent(pet);
+  const key=colId+'|||'+name; owned[key]=!owned[key]; if(!owned[key])delete owned[key];
   save(); refreshCard(colId); updateStats();
 }
 function togglePetFromFlat(colId, pet){
-  const key=colId+'|||'+pet; owned[key]=!owned[key]; if(!owned[key])delete owned[key];
+  const name=decodeURIComponent(pet);
+  const key=colId+'|||'+name; owned[key]=!owned[key]; if(!owned[key])delete owned[key];
   save(); updateStats(); renderCurrentView();
 }
+
 function getOwned(colId){ return COLLECTIONS.find(c=>c.id===colId).pets.filter(p=>owned[colId+'|||'+p.name]).length; }
 function expandAll()  { COLLECTIONS.forEach(c=>expanded[c.id]=true); renderCollections(); }
 function collapseAll(){ expanded={}; renderCollections(); }
@@ -404,9 +407,9 @@ function getPets(col){
   return{grouped:true,groups};
 }
 
-function petItemHtml(colId,p,highlight){
-  const isOwned=!!owned[colId+'|||'+p.name];
-  const safe=p.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+function petItemHtml(colId, p, highlight) {
+  const isOwned = !!owned[colId+'|||'+p.name];
+  const safe = encodeURIComponent(p.name);
   return`<div class="pet-item${isOwned?' owned':''}${highlight?' highlighted':''}" onclick="togglePet('${colId}','${safe}')">
     ${petImgHtml(p.rarity,p.name)}
     <div class="pet-name">${p.name}</div>
@@ -526,7 +529,7 @@ function renderRarityView(){
         ${pets.map(p=>{
           const isOwned=!!owned[p.colId+'|||'+p.name];
           const hi=search&&(p.name.toLowerCase().includes(search)||p.colName.toLowerCase().includes(search));
-          const safe=p.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+          const safe=encodeURIComponent(p.name);
           return`<div class="rarity-pet-item${isOwned?' owned':''}${hi?' highlighted':''}" onclick="togglePetFromFlat('${p.colId}','${safe}')">
             ${petImgHtml(p.rarity,p.name)}
             <div class="pet-name">${p.name}</div>
