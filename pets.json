@@ -1342,14 +1342,6 @@
         "collection": "aussie_update_2024"
       },
       {
-        "name": "Chanekeh",
-        "collection": "aztec_egg_2025"
-      },
-      {
-        "name": "Water Opossum",
-        "collection": "aztec_egg_2025"
-      },
-      {
         "name": "Zebra",
         "collection": "basic_egg_2022"
       },
@@ -2762,6 +2754,18 @@
       {
         "name": "Salamander",
         "collection": "woodland_egg_2022"
+      },
+      {
+        "name": "Sloth",
+        "collection": "pet_shop_2019"
+      },
+      {
+        "name": "Chanekeh",
+        "collection": "aztec_egg_2025"
+      },
+      {
+        "name": "Water Opossum",
+        "collection": "aztec_egg_2025"
       }
     ],
     "legendary": [
@@ -3158,7 +3162,7 @@
         "collection": "halloween_2024"
       },
       {
-        "name": "Black Widow",
+        "name": "'Black Widow'",
         "collection": "halloween_2025"
       },
       {
@@ -3391,10 +3395,6 @@
       },
       {
         "name": "Griffin",
-        "collection": "pet_shop_2019"
-      },
-      {
-        "name": "Sloth",
         "collection": "pet_shop_2019"
       },
       {
