@@ -8,6 +8,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,sans-serif;background:#f5f4f0;color:#1a1a1a;padding:0.75rem}
 h1{font-size:18px;font-weight:600;margin-bottom:0.5rem}
+
+/* ── TOP BAR ── */
 .top-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:0.75rem;align-items:stretch}
 .profile-bar{display:flex;gap:6px;align-items:center;padding:0.5rem 0.75rem;background:#fff;border:1px solid #e0ddd5;border-radius:8px;flex-shrink:0}
 .profile-select{padding:6px 10px;border:1px solid #ddd;border-radius:6px;font-size:13px;background:#fff;font-weight:500;min-width:120px;max-width:180px}
@@ -21,12 +23,16 @@ h1{font-size:18px;font-weight:600;margin-bottom:0.5rem}
 .profile-dropdown button.danger{color:#a32d2d}
 .stat{background:#fff;border:1px solid #e0ddd5;border-radius:8px;padding:0.5rem 0.75rem;font-size:12px;color:#666;white-space:nowrap}
 .stat strong{display:block;font-size:16px;font-weight:600;color:#1a1a1a}
+
+/* ── CONTROLS ── */
 .controls{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.75rem;align-items:center}
 .controls input[type=text]{flex:1;min-width:140px;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;background:#fff;-webkit-appearance:none}
 .controls select{padding:8px 6px;border:1px solid #ddd;border-radius:6px;font-size:13px;background:#fff;-webkit-appearance:none;appearance:none;padding-right:20px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center}
 .controls button{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;background:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent;white-space:nowrap}
 .controls button:active{background:#f0ede8}
 .btn-danger{color:#a32d2d}
+
+/* ── GRID & CARDS ── */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;padding-bottom:2rem}
 @media(max-width:600px){.grid{grid-template-columns:1fr}}
 .card{background:#fff;border:1px solid #e0ddd5;border-radius:12px;overflow:hidden}
@@ -49,1533 +55,55 @@ h1{font-size:18px;font-weight:600;margin-bottom:0.5rem}
 .sort-label{font-size:11px;color:#888}
 .sort-btn{font-size:11px;padding:4px 8px;border:1px solid #ddd;border-radius:5px;background:#fff;cursor:pointer;color:#555;-webkit-tap-highlight-color:transparent}
 .sort-btn.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
-.pets-grid{padding:0 14px 12px;display:none;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:5px}
+
+/* ── PETS GRID ── */
+.pets-grid{padding:0 10px 12px;display:none;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:6px}
 .pets-grid.open{display:grid}
-@media(max-width:400px){.pets-grid{grid-template-columns:repeat(2,1fr)}}
-.rarity-section{grid-column:1/-1;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#aaa;margin:6px 0 2px;border-bottom:1px solid #f0ede8;padding-bottom:3px}
-.pet-item{display:flex;align-items:center;gap:5px;padding:7px 7px;border-radius:6px;border:1px solid #e0ddd5;cursor:pointer;font-size:12px;line-height:1.3;-webkit-tap-highlight-color:transparent;min-height:36px}
+@media(max-width:400px){.pets-grid{grid-template-columns:repeat(3,1fr)}}
+.rarity-section{grid-column:1/-1;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#aaa;margin:6px 0 2px;border-bottom:1px solid #f0ede8;padding-bottom:3px;padding-left:4px}
+
+/* ── PET ITEM (with image) ── */
+.pet-item{display:flex;flex-direction:column;align-items:center;padding:6px;border-radius:8px;border:1px solid #e0ddd5;cursor:pointer;font-size:11px;line-height:1.3;text-align:center;gap:4px;-webkit-tap-highlight-color:transparent;position:relative;transition:background 0.1s}
 .pet-item:active{background:#f5f4f0}
 .pet-item.owned{background:#EAF3DE;border-color:#639922}
-.check{width:16px;height:16px;border:1.5px solid #ccc;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff}
+.pet-item.highlighted{outline:2px solid #185FA5;outline-offset:-1px}
+.pet-item.highlighted.owned{outline-color:#3B6D11}
+.pet-img-wrap{width:64px;height:64px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none}
+.pet-img.loaded{display:block}
+.pet-img-placeholder{width:64px;height:64px;border-radius:4px;background:#f5f4f0;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.pet-img-placeholder.hidden{display:none}
+.pet-name{width:100%;word-break:break-word;hyphens:auto}
+.pet-footer{display:flex;align-items:center;justify-content:center;gap:4px;width:100%}
+.check{width:14px;height:14px;border:1.5px solid #ccc;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff}
 .pet-item.owned .check{background:#639922;border-color:#639922}
-.rarity-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.rarity-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .r-common{background:#888}.r-uncommon{background:#2d9e5f}.r-rare{background:#185FA5}
 .r-ultrarare{background:#7F77DD}.r-legendary{background:#D85A30}.r-unknown{background:#ccc}
+
 .chevron{font-size:14px;color:#aaa;transition:transform 0.2s;display:inline-block}
 .chevron.open{transform:rotate(180deg)}
 .no-results{padding:2rem;text-align:center;color:#888;font-size:14px;grid-column:1/-1}
-.pet-item.highlighted{outline:2px solid #185FA5;outline-offset:-1px}
-.pet-item.highlighted.owned{outline-color:#3B6D11}
 
-/* ── MODAL ── */
+/* ── MODALS ── */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:500;align-items:center;justify-content:center;padding:1rem}
 .modal-overlay.open{display:flex}
 .modal{background:#fff;border-radius:12px;padding:1.25rem;width:100%;max-width:340px;box-shadow:0 8px 32px rgba(0,0,0,0.2)}
 .modal h2{font-size:16px;font-weight:600;margin-bottom:0.75rem}
+.modal p{font-size:14px;color:#444;margin-bottom:1rem}
 .modal input{width:100%;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;margin-bottom:0.75rem;-webkit-appearance:none}
 .modal input:focus{outline:none;border-color:#185FA5}
 .modal-btns{display:flex;gap:8px;justify-content:flex-end}
 .modal-btns button{padding:8px 16px;border-radius:6px;font-size:13px;cursor:pointer;border:1px solid #ddd;background:#fff}
 .modal-btns .btn-primary{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
 .modal-btns .btn-danger-solid{background:#a32d2d;color:#fff;border-color:#a32d2d}
-
-/* ── CONFIRM MODAL ── */
-.modal p{font-size:14px;color:#444;margin-bottom:1rem}
 </style>
 </head>
 <body>
 
-<script type="application/json" id="pet-data">
-{
-      "collections": [
-        {
-          "id": "2d_tuesday_2025", "name": "2D Tuesday 2025", "type": "special",
-          "pets": [
-            {"name":"2D Kitty","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "admin_abuse_2026", "name": "Admin Abuse 2026", "type": "special",
-          "pets": [
-            {"name":"Admin Abuse Egg","rarity":"legendary"},
-            {"name":"Sush Penguin","rarity":"legendary"},
-            {"name":"Velocirooster","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "adopt_bday_2021", "name": "Adopt Me's B-Day 2021", "type": "event",
-          "pets": [
-            {"name":"2021 Uplift Butterfly","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "april_fools_2022", "name": "April Fools 2022", "type": "event",
-          "pets": [
-            {"name":"Rock","rarity":"uncommon"},
-            {"name":"Mechapup","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "april_fools_2023", "name": "April Fools 2023", "type": "event",
-          "pets": [
-            {"name":"Pudding Cat","rarity":"rare"},
-            {"name":"Sprout Snail","rarity":"ultrarare"},
-            {"name":"Tió De Nadal","rarity":"legendary"},
-            {"name":"Yule Log Dog","rarity":"legendary"},
-            {"name":"Fool Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "aussie_egg_2020", "name": "Aussie Egg 2020", "type": "egg",
-          "pets": [
-            {"name":"Bandicoot","rarity":"common"},
-            {"name":"Dingo","rarity":"uncommon"},
-            {"name":"Australian Kelpie","rarity":"rare"},
-            {"name":"Emu","rarity":"rare"},
-            {"name":"Frog","rarity":"ultrarare"},
-            {"name":"Koala","rarity":"ultrarare"},
-            {"name":"Kangaroo","rarity":"legendary"},
-            {"name":"Turtle","rarity":"legendary"},
-            {"name":"Aussie Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "aussie_update_2024", "name": "Aussie Update 2024", "type": "event",
-          "pets": [
-            {"name":"Kookaburra","rarity":"ultrarare"},
-            {"name":"Quokka","rarity":"uncommon"},
-            {"name":"Tasmanian Devil","rarity":"rare"}
-          ]
-        },
-        {
-          "id": "aztec_2025", "name": "Aztec 2025", "type": "event",
-          "pets": [
-            {"name":"Aztec Egg","rarity":"legendary"},
-            {"name":"Royal Aztec Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "aztec_egg_2025", "name": "Aztec Egg 2025", "type": "egg",
-          "pets": [
-            {"name":"Tegu","rarity":"common"},
-            {"name":"Tree Frog","rarity":"uncommon"},
-            {"name":"Chanekeh","rarity":"rare"},
-            {"name":"Water Opossum","rarity":"rare"},
-            {"name":"Ehecatl","rarity":"ultrarare"},
-            {"name":"Onza","rarity":"ultrarare"},
-            {"name":"Quetzalcoatl","rarity":"legendary"},
-            {"name":"Temple Friend","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "basic_egg_2022", "name": "Basic Egg Update 2022", "type": "egg",
-          "pets": [
-            {"name":"Ant","rarity":"common"},
-            {"name":"Mouse","rarity":"common"},
-            {"name":"Camel","rarity":"uncommon"},
-            {"name":"Donkey","rarity":"uncommon"},
-            {"name":"Poodle","rarity":"uncommon"},
-            {"name":"Zebra","rarity":"rare"},
-            {"name":"Parakeet","rarity":"rare"},
-            {"name":"Retired Egg","rarity":"rare"},
-            {"name":"Orangutan","rarity":"rare"},
-            {"name":"Corgi","rarity":"ultrarare"},
-            {"name":"Robot","rarity":"ultrarare"},
-            {"name":"Swordfish","rarity":"ultrarare"},
-            {"name":"Alicorn","rarity":"legendary"},
-            {"name":"Ancient Dragon","rarity":"legendary"},
-            {"name":"Dragonfly","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "birthday_2022", "name": "Birthday 2022", "type": "event",
-          "pets": [
-            {"name":"2022 Uplift Butterfly","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "birthday_2023", "name": "Birthday 2023", "type": "event",
-          "pets": [
-            {"name":"Birthday Butterfly 2023","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "birthday_2024", "name": "Birthday 2024", "type": "event",
-          "pets": [
-            {"name":"Birthday Butterfly 2024","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "birthday_2025", "name": "Birthday 2025", "type": "event",
-          "pets": [
-            {"name":"2025 Birthday Butterfly","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "birthday_magic_2026", "name": "Birthday Magic 2026", "type": "event",
-          "pets": [
-            {"name":"Purrowl","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "black_friday_2023", "name": "Black Friday 2023", "type": "special",
-          "pets": [
-            {"name":"Mechameow","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "butterfly_2022", "name": "Butterfly Sanctuary 2022", "type": "event",
-          "pets": [
-            {"name":"Yellow Butterfly","rarity":"rare"},
-            {"name":"Orange Butterfly","rarity":"ultrarare"},
-            {"name":"Purple Butterfly","rarity":"ultrarare"},
-            {"name":"Scarlet Butterfly","rarity":"ultrarare"},
-            {"name":"Diamond Butterfly","rarity":"legendary"},
-            {"name":"Green Butterfly","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "butterfly_2025", "name": "Butterfly Sanctuary 2025", "type": "event",
-          "pets": [
-            {"name":"Blue Butterfly","rarity":"common"},
-            {"name":"Amber Butterfly","rarity":"rare"},
-            {"name":"Seafoam Butterfly","rarity":"ultrarare"},
-            {"name":"Vermillion Butterfly","rarity":"ultrarare"},
-            {"name":"Moonbeam Butterfly","rarity":"legendary"},
-            {"name":"Orchid Butterfly","rarity":"legendary"},
-            {"name":"Prismatic Butterfly","rarity":"legendary"},
-            {"name":"Violet Butterfly","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "camping_2023", "name": "Camping Shop 2023", "type": "shop",
-          "pets": [
-            {"name":"Possum","rarity":"uncommon"},
-            {"name":"Firefly","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "camping_refresh_2025", "name": "Camping Shop Refresh 2025", "type": "shop",
-          "pets": [
-            {"name":"Muskrat","rarity":"uncommon"},
-            {"name":"Momma Moose","rarity":"ultrarare"},
-            {"name":"Moose Calf","rarity":"legendary"},
-            {"name":"Papa Moose","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "capuchin_2024", "name": "Capuchin Fairground 2024", "type": "event",
-          "pets": [
-            {"name":"Capuchin Monkey","rarity":"rare"},
-            {"name":"Inmate Capuchin Monkey","rarity":"ultrarare"},
-            {"name":"Preppy Capuchin Monkey","rarity":"ultrarare"},
-            {"name":"Pirate Ghost Capuchin Monkey","rarity":"legendary"},
-            {"name":"Princess Capuchin Monkey","rarity":"legendary"},
-            {"name":"Royal Capuchin Monkey","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "celestial_2024", "name": "Celestial 2024", "type": "event",
-          "pets": [
-            {"name":"Moonlight Moth","rarity":"rare"},
-            {"name":"Singularity Beetle","rarity":"rare"},
-            {"name":"Singulariy Pisces","rarity":"rare"},
-            {"name":"Star Hopper","rarity":"rare"},
-            {"name":"Glormy Hound","rarity":"legendary"},
-            {"name":"Glormy Leo","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "chip_rac_2023", "name": "ChipRac 2023", "type": "special",
-          "pets": [
-            {"name":"Chipmunk","rarity":"rare"},
-            {"name":"Raccoon","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "coffee_2019", "name": "Coffee Shop 2019", "type": "shop",
-          "pets": [
-            {"name":"Bee","rarity":"ultrarare"},
-            {"name":"King Bee","rarity":"legendary"},
-            {"name":"Queen Bee","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "dj_2022", "name": "DJ Gamepass 2022", "type": "special",
-          "pets": [
-            {"name":"Lavender Dragon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "dailies_2025", "name": "Dailies 2025", "type": "special",
-          "pets": [
-            {"name":"Shih Tzu","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "danger_2023", "name": "Danger 2023", "type": "event",
-          "pets": [
-            {"name":"Liger","rarity":"common"},
-            {"name":"Mosquito","rarity":"common"},
-            {"name":"Piranha","rarity":"common"},
-            {"name":"Angler Fish","rarity":"uncommon"},
-            {"name":"Borhyaena Gigantica","rarity":"uncommon"},
-            {"name":"Hippo","rarity":"rare"},
-            {"name":"Poison Dart Frog","rarity":"rare"},
-            {"name":"Blue Ringed Octopus","rarity":"ultrarare"},
-            {"name":"Lammergeier","rarity":"ultrarare"},
-            {"name":"Puffer Fish","rarity":"ultrarare"},
-            {"name":"Owlbear","rarity":"legendary"},
-            {"name":"Spinosaurus","rarity":"legendary"},
-            {"name":"Danger Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "desert_2024", "name": "Desert 2024", "type": "event",
-          "pets": [
-            {"name":"Armadillo","rarity":"common"},
-            {"name":"Coyote","rarity":"common"},
-            {"name":"Sandfish","rarity":"common"},
-            {"name":"Gila Monster","rarity":"uncommon"},
-            {"name":"Rattlesnake","rarity":"uncommon"},
-            {"name":"Oryx","rarity":"rare"},
-            {"name":"Thorny Devil","rarity":"rare"},
-            {"name":"Deathstalker Scorpion","rarity":"ultrarare"},
-            {"name":"Roadrunner","rarity":"ultrarare"},
-            {"name":"Vulture","rarity":"ultrarare"},
-            {"name":"Cactus Friend","rarity":"legendary"},
-            {"name":"Criosphinx","rarity":"legendary"},
-            {"name":"Desert Egg","rarity":"legendary"},
-            {"name":"Royal Desert Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "desert_update_2022", "name": "Desert Update 2022", "type": "event",
-          "pets": [
-            {"name":"Abyssinian Cat","rarity":"rare"},
-            {"name":"Giant Black Scarab","rarity":"ultrarare"},
-            {"name":"Giant Blue Scarab","rarity":"ultrarare"},
-            {"name":"Giant Gold Scarab","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "dolls_2023", "name": "Dolls 2023", "type": "special",
-          "pets": [
-            {"name":"River","rarity":"uncommon"},
-            {"name":"Pistachio","rarity":"uncommon"},
-            {"name":"Dylan","rarity":"uncommon"},
-            {"name":"Wrapped Doll","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "dia_muertos_2024", "name": "Día de los Muertos 2024", "type": "event",
-          "pets": [
-            {"name":"Golden Jaguar","rarity":"ultrarare"},
-            {"name":"Grave Owl","rarity":"ultrarare"},
-            {"name":"Sugar Axolotl","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "easter_2019", "name": "Easter 2019", "type": "event",
-          "pets": [
-            {"name":"Blue Dog","rarity":"uncommon"},
-            {"name":"Blue Egg","rarity":"rare"}
-          ]
-        },
-        {
-          "id": "easter_2020", "name": "Easter 2020", "type": "event",
-          "pets": [
-            {"name":"Chick","rarity":"common"},
-            {"name":"Easter 2020 Egg","rarity":"common"}
-          ]
-        },
-        {
-          "id": "easter_2021", "name": "Easter 2021", "type": "event",
-          "pets": [
-            {"name":"Lamb","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "easter_2022", "name": "Easter 2022", "type": "event",
-          "pets": [
-            {"name":"Black Springer Spaniel","rarity":"ultrarare"},
-            {"name":"Brown Springer Spaniel","rarity":"ultrarare"},
-            {"name":"Sugar Glider","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "easter_2024", "name": "Easter 2024", "type": "event",
-          "pets": [
-            {"name":"Candy Cane Snail","rarity":"ultrarare"},
-            {"name":"Dotted Eggy","rarity":"rare"},
-            {"name":"Floral Eggy","rarity":"ultrarare"},
-            {"name":"Striped Eggy","rarity":"legendary"},
-            {"name":"Candy Floss Chick","rarity":"rare"}
-          ]
-        },
-        {
-          "id": "endangered_2026", "name": "Endangered Egg 2026", "type": "egg",
-          "pets": [
-            {"name":"Black-Footed Ferret","rarity":"ultrarare"},
-            {"name":"Black Rhino","rarity":"rare"},
-            {"name":"Black Tiger","rarity":"uncommon"},
-            {"name":"Blue Whale","rarity":"legendary"},
-            {"name":"California Condor","rarity":"common"},
-            {"name":"Galapagos Sea Lion","rarity":"common"},
-            {"name":"Kakapo","rarity":"uncommon"},
-            {"name":"Mexican Wolf","rarity":"rare"},
-            {"name":"Pangolin","rarity":"ultrarare"},
-            {"name":"Sea Turtle","rarity":"legendary"},
-            {"name":"Endangered Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "fall_2022", "name": "Fall Update 2022", "type": "event",
-          "pets": [
-            {"name":"Badger","rarity":"ultrarare"},
-            {"name":"Black-Chested Pheasent","rarity":"legendary"},
-            {"name":"Brown-Chested Pheasent","rarity":"ultrarare"},
-            {"name":"Green-Chested Pheasent","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "farm_2023", "name": "Farm 2023", "type": "event",
-          "pets": [
-            {"name":"Canadian Goose","rarity":"uncommon"},
-            {"name":"Long Horn Cow","rarity":"rare"},
-            {"name":"Rooster","rarity":"ultrarare"},
-            {"name":"English Sheepdog","rarity":"rare"},
-            {"name":"Alpaca","rarity":"ultrarare"},
-            {"name":"Caterpillar","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "farm_egg_2019", "name": "Farm Egg 2019", "type": "egg",
-          "pets": [
-            {"name":"Chicken","rarity":"common"},
-            {"name":"Drake","rarity":"uncommon"},
-            {"name":"Silly Duck","rarity":"uncommon"},
-            {"name":"Cow","rarity":"rare"},
-            {"name":"Pig","rarity":"rare"},
-            {"name":"Llama","rarity":"ultrarare"},
-            {"name":"Turkey","rarity":"ultrarare"},
-            {"name":"Crow","rarity":"legendary"},
-            {"name":"Owl","rarity":"legendary"},
-            {"name":"Farm Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "farm_shop_2021", "name": "Farm Shop 2021", "type": "shop",
-          "pets": [
-            {"name":"Ladybug","rarity":"ultrarare"},
-            {"name":"Diamond Ladybug","rarity":"legendary"},
-            {"name":"Golden Ladybug","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "fire_dimension_2024", "name": "Fire Dimension 2024", "type": "event",
-          "pets": [
-            {"name":"Burning Bunny","rarity":"ultrarare"},
-            {"name":"Flaming Fox","rarity":"ultrarare"},
-            {"name":"Ornate Horned Frog","rarity":"ultrarare"},
-            {"name":"Volcanic Rhino","rarity":"legendary"},
-            {"name":"Wildfire Hawk","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "food_pets_2026", "name": "Food Pets 2026", "type": "special",
-          "pets": [
-            {"name":"Apple Owl","rarity":"legendary"},
-            {"name":"Clementine Owl","rarity":"ultrarare"},
-            {"name":"Dragonfruit Fox","rarity":"legendary"},
-            {"name":"Peach Owl","rarity":"legendary"},
-            {"name":"Pineapple Owl","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "fossil_isle_2020", "name": "Fossil Isle 2020", "type": "egg",
-          "pets": [
-            {"name":"Ground Sloth","rarity":"common"},
-            {"name":"Tasmanian Tiger","rarity":"common"},
-            {"name":"Glyptodon","rarity":"uncommon"},
-            {"name":"Stegosaurus","rarity":"uncommon"},
-            {"name":"Triceratops","rarity":"uncommon"},
-            {"name":"Dilophosaurus","rarity":"rare"},
-            {"name":"Pterodactyl","rarity":"rare"},
-            {"name":"Woolly Mammoth","rarity":"rare"},
-            {"name":"Deinonychus","rarity":"ultrarare"},
-            {"name":"Sabertooth","rarity":"ultrarare"},
-            {"name":"Dodo","rarity":"legendary"},
-            {"name":"T-Rex","rarity":"legendary"},
-            {"name":"Fossil Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "fossil_isle_2024", "name": "Fossil Isle 2024", "type": "event",
-          "pets": [
-            {"name":"Ankylosaurus","rarity":"rare"},
-            {"name":"Brachiosaurus","rarity":"common"},
-            {"name":"Dimorphodon","rarity":"legendary"},
-            {"name":"Elasmosaurus","rarity":"ultrarare"},
-            {"name":"Velociraptor","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "gosh_2022", "name": "GOSH 2022", "type": "special",
-          "pets": [
-            {"name":"Therapy Dog","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "garden_2024", "name": "Garden 2024", "type": "egg",
-          "pets": [
-            {"name":"Garden Snake","rarity":"common"},
-            {"name":"Mole","rarity":"uncommon"},
-            {"name":"Blue Jay","rarity":"rare"},
-            {"name":"Weevil","rarity":"rare"},
-            {"name":"Praying Mantis","rarity":"ultrarare"},
-            {"name":"Skunk","rarity":"ultrarare"},
-            {"name":"Golden Tortoise Beetle","rarity":"legendary"},
-            {"name":"Mushroom Friend","rarity":"legendary"},
-            {"name":"Rosy Maple Moth","rarity":"legendary"},
-            {"name":"Garden Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "gibbon_2025", "name": "Gibbon Fairground 2025", "type": "event",
-          "pets": [
-            {"name":"Firefighter Gibbon","rarity":"ultrarare"},
-            {"name":"Gibbon","rarity":"rare"},
-            {"name":"Officer Gibbon","rarity":"ultrarare"},
-            {"name":"Ringmaster Gibbon","rarity":"ultrarare"},
-            {"name":"Villain Gibbon","rarity":"legendary"},
-            {"name":"Hero Gibbon","rarity":"legendary"},
-            {"name":"Influencer Gibbon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "gorilla_2023", "name": "Gorilla Fairground 2023", "type": "event",
-          "pets": [
-            {"name":"Gorilla","rarity":"rare"},
-            {"name":"Albino Gorilla","rarity":"legendary"},
-            {"name":"Astronaut Gorilla","rarity":"legendary"},
-            {"name":"Chef Gorilla","rarity":"ultrarare"},
-            {"name":"Emperor Gorilla","rarity":"legendary"},
-            {"name":"Karate Gorilla","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "groundhog_2024", "name": "Groundhog Day 2024", "type": "special",
-          "pets": [
-            {"name":"Groundhog","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "halloween_2019", "name": "Halloween 2019", "type": "event",
-          "pets": [
-            {"name":"Zombie Buffalo","rarity":"ultrarare"},
-            {"name":"Evil Unicorn","rarity":"legendary"},
-            {"name":"Shadow Dragon","rarity":"legendary"},
-            {"name":"Bat Dragon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "halloween_2020", "name": "Halloween 2020", "type": "event",
-          "pets": [
-            {"name":"Albino Bat","rarity":"ultrarare"},
-            {"name":"Bat","rarity":"uncommon"},
-            {"name":"Cerberus","rarity":"legendary"},
-            {"name":"Ghost Bunny","rarity":"ultrarare"},
-            {"name":"Skelerex","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "halloween_2021", "name": "Halloween 2021", "type": "event",
-          "pets": [
-            {"name":"Black Mummy Cat","rarity":"uncommon"},
-            {"name":"Evil Dachshund","rarity":"rare"},
-            {"name":"Ghost Dragon","rarity":"legendary"},
-            {"name":"Golden Mummy Cat","rarity":"legendary"},
-            {"name":"Halloween Blue Scorpion","rarity":"uncommon"},
-            {"name":"Skeleton Dog","rarity":"ultrarare"},
-            {"name":"White Mummy Cat","rarity":"uncommon"}
-          ]
-        },
-        {
-          "id": "halloween_2022", "name": "Halloween 2022", "type": "event",
-          "pets": [
-            {"name":"Slug","rarity":"uncommon"},
-            {"name":"Chickatrice","rarity":"uncommon"},
-            {"name":"Ghost Wolf","rarity":"rare"},
-            {"name":"Basilisk","rarity":"rare"},
-            {"name":"Mule","rarity":"rare"},
-            {"name":"Zombie Wolf","rarity":"ultrarare"},
-            {"name":"Evil Chickatrice","rarity":"ultrarare"},
-            {"name":"Evil Basilisk","rarity":"ultrarare"},
-            {"name":"Lava Wolf","rarity":"ultrarare"},
-            {"name":"Chimera","rarity":"legendary"},
-            {"name":"Jousting Horse","rarity":"legendary"},
-            {"name":"Lava Dragon","rarity":"legendary"},
-            {"name":"Undead Jousting Horse","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "halloween_2023", "name": "Halloween 2023", "type": "event",
-          "pets": [
-            {"name":"Ghost","rarity":"common"},
-            {"name":"Cute-A-Cabra","rarity":"uncommon"},
-            {"name":"Scarecrow","rarity":"uncommon"},
-            {"name":"Evil Rock","rarity":"rare"},
-            {"name":"Ghost Dog","rarity":"rare"},
-            {"name":"Scarecrow Horse","rarity":"rare"},
-            {"name":"Undead Elk","rarity":"rare"},
-            {"name":"Nightmare Owl","rarity":"ultrarare"},
-            {"name":"Scarecrow Cat","rarity":"ultrarare"},
-            {"name":"Slime","rarity":"ultrarare"},
-            {"name":"Dire Stag","rarity":"legendary"},
-            {"name":"Scarecrow Crow","rarity":"legendary"},
-            {"name":"Werewolf","rarity":"legendary"},
-            {"name":"Vampire Dragon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "halloween_2024", "name": "Halloween 2024", "type": "event",
-          "pets": [
-            {"name":"Frankefeline","rarity":"common"},
-            {"name":"Sea Skeleton Panda","rarity":"uncommon"},
-            {"name":"Marabou Stork","rarity":"rare"},
-            {"name":"Zombie Chick","rarity":"rare"},
-            {"name":"Ghost Chick","rarity":"ultrarare"},
-            {"name":"Headless Horse","rarity":"ultrarare"},
-            {"name":"Indian Flying Fox","rarity":"ultrarare"},
-            {"name":"Pumpkin Friend","rarity":"ultrarare"},
-            {"name":"Dracula Parrot","rarity":"legendary"},
-            {"name":"Evil Chick","rarity":"legendary"},
-            {"name":"Grim Dragon","rarity":"legendary"},
-            {"name":"Jekyll Hydra","rarity":"legendary"},
-            {"name":"Scarebear","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "halloween_2025", "name": "Halloween 2025", "type": "event",
-          "pets": [
-            {"name":"Aye Aye","rarity":"common"},
-            {"name":"Frankefeline","rarity":"uncommon"},
-            {"name":"Jumping Spider","rarity":"uncommon"},
-            {"name":"DJ Snooze","rarity":"rare"},
-            {"name":"Tarantula","rarity":"rare"},
-            {"name":"The Black Dog","rarity":"rare"},
-            {"name":"Chilling Spider","rarity":"ultrarare"},
-            {"name":"Ghostly Cat","rarity":"ultrarare"},
-            {"name":"Skelebat","rarity":"ultrarare"},
-            {"name":"'Black Widow'","rarity":"legendary"},
-            {"name":"Cryptid","rarity":"legendary"},
-            {"name":"Kitty Bat","rarity":"legendary"},
-            {"name":"Phantom Dragon","rarity":"legendary"},
-            {"name":"Slimingo","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "hamstertime_2024", "name": "Hamstertime 2024", "type": "special",
-          "pets": [
-            {"name":"Hamster","rarity":"ultrarare"},
-            {"name":"Diamond Hamster","rarity":"legendary"},
-            {"name":"Golden Hamster","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "hippogriff_2024", "name": "Hippogriff 2024", "type": "special",
-          "pets": [
-            {"name":"Hippogriff","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "house_pets_2025", "name": "House Pets 2025", "type": "special",
-          "pets": [
-            {"name":"Munchkin Cat","rarity":"rare"},
-            {"name":"French Bulldog","rarity":"rare"},
-            {"name":"Siamese","rarity":"ultrarare"},
-            {"name":"Mini Schnauzer","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "ice_cream_2019", "name": "Ice Cream Parlor 2019", "type": "shop",
-          "pets": [
-            {"name":"Penguin","rarity":"ultrarare"},
-            {"name":"Golden Penguin","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "ice_cream_2022", "name": "Ice Cream Refresh 2022", "type": "shop",
-          "pets": [
-            {"name":"King Penguin","rarity":"ultrarare"},
-            {"name":"Diamond King Penguin","rarity":"legendary"},
-            {"name":"Golden King Penguin","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "ice_dimension_2025", "name": "Ice Dimension 2025", "type": "event",
-          "pets": [
-            {"name":"Subzero Scorpion","rarity":"rare"},
-            {"name":"Shiver Wolf","rarity":"rare"},
-            {"name":"Frozen Penguin","rarity":"ultrarare"},
-            {"name":"Icy Porcupine","rarity":"ultrarare"},
-            {"name":"Snowy Mammoth","rarity":"ultrarare"},
-            {"name":"Frostbite Bear","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "inspector_2026", "name": "Inspector Shepherd 2026", "type": "special",
-          "pets": [
-            {"name":"Magpie","rarity":"uncommon"},
-            {"name":"Sneak Weasel","rarity":"rare"},
-            {"name":"Germnan Shepherd","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "japan_2022", "name": "Japan 2022", "type": "egg",
-          "pets": [
-            {"name":"Dugong","rarity":"common"},
-            {"name":"Sado Mole","rarity":"common"},
-            {"name":"Rhino Beetle","rarity":"uncommon"},
-            {"name":"Tanuki","rarity":"uncommon"},
-            {"name":"Ibis","rarity":"rare"},
-            {"name":"Koi Carp","rarity":"rare"},
-            {"name":"Leopard Cat","rarity":"rare"},
-            {"name":"Red Crowned Crane","rarity":"ultrarare"},
-            {"name":"Spider Crab","rarity":"ultrarare"},
-            {"name":"Trapdoor Snail","rarity":"ultrarare"},
-            {"name":"Baku","rarity":"legendary"},
-            {"name":"Japan Egg","rarity":"legendary"},
-            {"name":"Maneki-Neko","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "jungle_2023", "name": "Jungle 2023", "type": "event",
-          "pets": [
-            {"name":"Angelfish","rarity":"common"},
-            {"name":"Fossa","rarity":"uncommon"},
-            {"name":"Bird of Paradise","rarity":"rare"},
-            {"name":"Cassowary","rarity":"rare"},
-            {"name":"Giant Ant Eater","rarity":"rare"},
-            {"name":"Ring-tailed Lemur","rarity":"rare"}
-          ]
-        },
-        {
-          "id": "jungle_egg_2019", "name": "Jungle Egg 2019", "type": "egg",
-          "pets": [
-            {"name":"Black Panther","rarity":"uncommon"},
-            {"name":"Capybara","rarity":"uncommon"},
-            {"name":"Brown Bear","rarity":"rare"},
-            {"name":"Rhino","rarity":"rare"},
-            {"name":"Crocodile","rarity":"ultrarare"},
-            {"name":"Platypus","rarity":"ultrarare"},
-            {"name":"Jungle Egg","rarity":"legendary"},
-            {"name":"Parrot","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "kiwi_2023", "name": "Kiwi 2023", "type": "special",
-          "pets": [
-            {"name":"Kiwi","rarity":"rare"}
-          ]
-        },
-        {
-          "id": "lunar_2020", "name": "Lunar New Year 2020", "type": "event",
-          "pets": [
-            {"name":"Rat","rarity":"rare"},
-            {"name":"Panda","rarity":"ultrarare"},
-            {"name":"Golden Rat","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "lunar_2021", "name": "Lunar New Year 2021", "type": "event",
-          "pets": [
-            {"name":"Ox","rarity":"rare"},
-            {"name":"Lunar Ox","rarity":"ultrarare"},
-            {"name":"Guardian Lion","rarity":"legendary"},
-            {"name":"Metal Ox","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "lunar_2022", "name": "Lunar New Year 2022", "type": "event",
-          "pets": [
-            {"name":"Lunar Tiger","rarity":"rare"},
-            {"name":"Lunar White Tiger","rarity":"ultrarare"},
-            {"name":"Dancing Dragon","rarity":"legendary"},
-            {"name":"Lunar Gold Tiger","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "lunar_2023", "name": "Lunar New Year 2023", "type": "event",
-          "pets": [
-            {"name":"Amami Rabbit","rarity":"uncommon"},
-            {"name":"Black Moon Bear","rarity":"rare"},
-            {"name":"Moon Rabbit","rarity":"rare"},
-            {"name":"Water Moon Bear","rarity":"ultrarare"},
-            {"name":"Water Rabbit","rarity":"ultrarare"},
-            {"name":"Lunar Moon Bear","rarity":"legendary"},
-            {"name":"Winged Tiger","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "lunar_2024", "name": "Lunar New Year 2024", "type": "event",
-          "pets": [
-            {"name":"Rice Cake Rabbit","rarity":"ultrarare"},
-            {"name":"Fanghorn Tortoise","rarity":"ultrarare"},
-            {"name":"Midnight Dragon","rarity":"legendary"},
-            {"name":"Rainbow Dragon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "lunar_2025", "name": "Lunar New Year 2025", "type": "event",
-          "pets": [
-            {"name":"Blossom Snake","rarity":"rare"},
-            {"name":"Nebula Snake","rarity":"rare"},
-            {"name":"Prism Snake","rarity":"rare"},
-            {"name":"Gilded Snake","rarity":"legendary"},
-            {"name":"Haetae","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "lunar_2026", "name": "Lunar New Year 2026", "type": "event",
-          "pets": [
-            {"name":"Fire Foal","rarity":"ultrarare"},
-            {"name":"Fire Mare","rarity":"legendary"},
-            {"name":"Fire Stallion","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "lures_2023", "name": "Lures 2023", "type": "lure",
-          "pets": [
-            {"name":"Ash Zebra","rarity":"common"},
-            {"name":"Flaming Zebra","rarity":"rare"},
-            {"name":"Magma Moose","rarity":"ultrarare"},
-            {"name":"Magma Snail","rarity":"ultrarare"},
-            {"name":"Toasty Red Panda","rarity":"ultrarare"},
-            {"name":"Blazing Lion","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "meme_2023", "name": "Meme 2023", "type": "special",
-          "pets": [
-            {"name":"Frogspawn","rarity":"uncommon"},
-            {"name":"Feesh","rarity":"rare"},
-            {"name":"Sheeeeep","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "minions_2022", "name": "Minions: Rise of Gru 2022", "type": "special",
-          "pets": [
-            {"name":"Zodiac Minion Egg","rarity":"legendary"},
-            {"name":"Zodiac Minion Chick","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "monkey_2020", "name": "Monkey Fairground 2020", "type": "event",
-          "pets": [
-            {"name":"Monkey","rarity":"rare"},
-            {"name":"Business Monkey","rarity":"ultrarare"},
-            {"name":"Toy Monkey","rarity":"ultrarare"},
-            {"name":"Albino Monkey","rarity":"legendary"},
-            {"name":"Monkey King","rarity":"legendary"},
-            {"name":"Ninja Monkey","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "moon_2025", "name": "Moon 2025", "type": "egg",
-          "pets": [
-            {"name":"Hopbop","rarity":"common"},
-            {"name":"Snorgle","rarity":"uncommon"},
-            {"name":"Moonpine","rarity":"rare"},
-            {"name":"Zeopod","rarity":"rare"},
-            {"name":"Puptune","rarity":"ultrarare"},
-            {"name":"Starmite","rarity":"ultrarare"},
-            {"name":"Moon Egg","rarity":"legendary"},
-            {"name":"Royal Moon Egg","rarity":"legendary"},
-            {"name":"Dimension Drifter","rarity":"legendary"},
-            {"name":"Glormy Dolphin","rarity":"legendary"},
-            {"name":"Sunglider","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "mountain_2023", "name": "Mountain House 2023", "type": "shop",
-          "pets": [
-            {"name":"Frost Unicorn","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "mythic_egg_2021", "name": "Mythic Egg 2021", "type": "egg",
-          "pets": [
-            {"name":"Wolpertinger","rarity":"common"},
-            {"name":"Kirin","rarity":"uncommon"},
-            {"name":"Merhorse","rarity":"rare"},
-            {"name":"Sasquatch","rarity":"rare"},
-            {"name":"Hydra","rarity":"ultrarare"},
-            {"name":"Wyvern","rarity":"ultrarare"},
-            {"name":"Goldhorn","rarity":"legendary"},
-            {"name":"Phoenix","rarity":"legendary"},
-            {"name":"Mythic Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "nursery_2019", "name": "Nursey 2019", "type": "egg",
-          "pets": [
-            {"name":"Cracked Egg","rarity":"common"},
-            {"name":"Pet Egg","rarity":"rare"},
-            {"name":"Royal Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "ocean_2024", "name": "Ocean 2024", "type": "event",
-          "pets": [
-            {"name":"Urchin","rarity":"common"},
-            {"name":"Dracula Fish","rarity":"uncommon"},
-            {"name":"Sea Angel","rarity":"rare"},
-            {"name":"Lionfish","rarity":"ultrarare"},
-            {"name":"Kraken","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "ocean_event_2021", "name": "Ocean Event 2021", "type": "egg",
-          "pets": [
-            {"name":"Stingray","rarity":"common"},
-            {"name":"Crab","rarity":"uncommon"},
-            {"name":"Dolphin","rarity":"uncommon"},
-            {"name":"Narwhal","rarity":"rare"},
-            {"name":"Seahorse","rarity":"rare"},
-            {"name":"Clownfish","rarity":"ultrarare"},
-            {"name":"Octopus","rarity":"legendary"},
-            {"name":"Shark","rarity":"legendary"},
-            {"name":"Ocean Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "penguins_2025", "name": "Penguins 2025", "type": "event",
-          "pets": [
-            {"name":"Choco Penguin","rarity":"ultrarare"},
-            {"name":"Dango Penguins","rarity":"legendary"},
-            {"name":"Strawberry Penguin","rarity":"legendary"},
-            {"name":"Vanilla Penguin","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pet_releaser_2025", "name": "Pet Releaser 2025", "type": "special",
-          "pets": [
-            {"name":"Basic Egg","rarity":"common"},
-            {"name":"Crystal Egg","rarity":"legendary"},
-            {"name":"Emberlight","rarity":"legendary"},
-            {"name":"Giant Panda","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pet_releaser_2026", "name": "Pet Releaser 2026", "type": "special",
-          "pets": [
-            {"name":"Dire Wolf","rarity":"ultrarare"},
-            {"name":"Glormy Crab","rarity":"legendary"},
-            {"name":"Silverback Gorilla","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pet_shop_2019", "name": "Pet Shop 2019", "type": "shop",
-          "pets": [
-            {"name":"Horse","rarity":"ultrarare"},
-            {"name":"Griffin","rarity":"legendary"},
-            {"name":"Sloth","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pet_shop_2020", "name": "Pet Shop 2020", "type": "shop",
-          "pets": [
-            {"name":"Kitsune","rarity":"legendary"},
-            {"name":"Robo Dog","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pet_shop_2021", "name": "Pet Shop 2021", "type": "shop",
-          "pets": [
-            {"name":"Axolotl","rarity":"legendary"},
-            {"name":"Peacock","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pets_update_2019", "name": "Pets Update 2019", "type": "special",
-          "pets": [
-            {"name":"Buffalo","rarity":"common"},
-            {"name":"Cat","rarity":"common"},
-            {"name":"Dog","rarity":"common"},
-            {"name":"Otter","rarity":"common"},
-            {"name":"Chocolate Labrador","rarity":"uncommon"},
-            {"name":"Fennec Fox","rarity":"uncommon"},
-            {"name":"Pink Cat","rarity":"uncommon"},
-            {"name":"Puma","rarity":"uncommon"},
-            {"name":"Snow Cat","rarity":"uncommon"},
-            {"name":"Beaver","rarity":"rare"},
-            {"name":"Bunny","rarity":"rare"},
-            {"name":"Pink Egg","rarity":"rare"},
-            {"name":"Rabbit","rarity":"rare"},
-            {"name":"Snow Puma","rarity":"rare"},
-            {"name":"Red Panda","rarity":"ultrarare"},
-            {"name":"Shiba Inu","rarity":"ultrarare"},
-            {"name":"Dragon","rarity":"legendary"},
-            {"name":"Unicorn","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pool_2023", "name": "Pool Party 2023", "type": "event",
-          "pets": [
-            {"name":"Goldfish","rarity":"rare"},
-            {"name":"Red Sand Dollar","rarity":"ultrarare"},
-            {"name":"White Sand Dollar","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "pride_2023", "name": "Pride 2023", "type": "event",
-          "pets": [
-            {"name":"Caelum Cervi","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "pride_2022", "name": "Pride Update 2022", "type": "event",
-          "pets": [
-            {"name":"Goat","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "puss_2022", "name": "Puss in Boots 2022", "type": "special",
-          "pets": [
-            {"name":"Persian Cat","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "rain_2023", "name": "Rain 2023", "type": "event",
-          "pets": [
-            {"name":"Ocelot","rarity":"rare"},
-            {"name":"Green Amazon","rarity":"ultrarare"},
-            {"name":"Diamond Amazon","rarity":"legendary"},
-            {"name":"White Amazon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "random_2022", "name": "Random Pets 2022", "type": "special",
-          "pets": [
-            {"name":"Ibex","rarity":"rare"},
-            {"name":"Winged Horse","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "random_2023", "name": "Random Pets 2023", "type": "special",
-          "pets": [
-            {"name":"Eel","rarity":"uncommon"},
-            {"name":"Pelican","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "roblox_classic_2024", "name": "Roblox Classic Event 2024", "type": "event",
-          "pets": [
-            {"name":"Classic Teapot","rarity":"common"}
-          ]
-        },
-        {
-          "id": "royal_tea_2022", "name": "Royal Tea Party 2022", "type": "event",
-          "pets": [
-            {"name":"Royal Corgi","rarity":"ultrarare"},
-            {"name":"Royal Palace Spaniel","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "safari_egg_2019", "name": "Safari Egg 2019", "type": "egg",
-          "pets": [
-            {"name":"Meerkat","rarity":"uncommon"},
-            {"name":"Wild Boar","rarity":"uncommon"},
-            {"name":"Elephant","rarity":"rare"},
-            {"name":"Hyena","rarity":"rare"},
-            {"name":"Flamingo","rarity":"ultrarare"},
-            {"name":"Lion","rarity":"ultrarare"},
-            {"name":"Giraffe","rarity":"legendary"},
-            {"name":"Safari Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "salon_2026", "name": "Salon Revamp 2026", "type": "shop",
-          "pets": [
-            {"name":"Peachick","rarity":"ultrarare"},
-            {"name":"Moonbeam Peacock","rarity":"legendary"},
-            {"name":"Peahen","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "scottish_2023", "name": "Scottish 2023", "type": "event",
-          "pets": [
-            {"name":"Highland Cow","rarity":"ultrarare"},
-            {"name":"Nessie","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "sir_woofington_2019", "name": "Sir Woofington 2019", "type": "egg",
-          "pets": [
-            {"name":"Starter Egg","rarity":"common"}
-          ]
-        },
-        {
-          "id": "sky_castle_2021", "name": "Sky Castle 2021", "type": "event",
-          "pets": [
-            {"name":"Cobra","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "sky_castle_2023", "name": "Sky Castle 2023", "type": "event",
-          "pets": [
-            {"name":"Grinmoire","rarity":"ultrarare"},
-            {"name":"Cuddly Candle","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "snow_2022", "name": "Snow Update 2022", "type": "event",
-          "pets": [
-            {"name":"Ribbon Seal","rarity":"rare"},
-            {"name":"Albatross","rarity":"ultrarare"},
-            {"name":"Diamond Albatross","rarity":"legendary"},
-            {"name":"Golden Albatross","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "sea_2023", "name": "Southeast Asia 2023", "type": "egg",
-          "pets": [
-            {"name":"Bali Starling","rarity":"common"},
-            {"name":"Malaysian Tapir","rarity":"common"},
-            {"name":"Maleo Bird","rarity":"common"},
-            {"name":"Banded Palm Civet","rarity":"uncommon"},
-            {"name":"Yellow-lipped Sea Krait","rarity":"uncommon"},
-            {"name":"Gecko","rarity":"rare"},
-            {"name":"Tarsier","rarity":"rare"},
-            {"name":"Binturong","rarity":"ultrarare"},
-            {"name":"Black Macaque","rarity":"ultrarare"},
-            {"name":"Komodo Dragon","rarity":"ultrarare"},
-            {"name":"Naga Dragon","rarity":"legendary"},
-            {"name":"Tree Kangaroo","rarity":"legendary"},
-            {"name":"Southeast Asia Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "space_house_2022", "name": "Space House 2022", "type": "shop",
-          "pets": [
-            {"name":"Capricorn","rarity":"legendary"},
-            {"name":"Space Whale","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "spring_2025", "name": "Spring 2025", "type": "event",
-          "pets": [
-            {"name":"Bakeneko","rarity":"common"},
-            {"name":"Kaijunior","rarity":"uncommon"},
-            {"name":"Kappakid","rarity":"rare"},
-            {"name":"Mecha R3BBIT","rarity":"rare"},
-            {"name":"Cabbit","rarity":"ultrarare"},
-            {"name":"Kage Crow","rarity":"ultrarare"},
-            {"name":"Mirai Moth","rarity":"ultrarare"},
-            {"name":"Toxic Kaijunior","rarity":"ultrarare"},
-            {"name":"Primal Kaijunior","rarity":"legendary"},
-            {"name":"Sakura Spirit","rarity":"legendary"},
-            {"name":"Scorching Kaijunior","rarity":"legendary"},
-            {"name":"Super Saru","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "springfest_2023", "name": "Springfest 2023", "type": "event",
-          "pets": [
-            {"name":"Border Collie","rarity":"rare"},
-            {"name":"Goose","rarity":"rare"},
-            {"name":"Happy Duckling","rarity":"rare"},
-            {"name":"Hare","rarity":"rare"},
-            {"name":"Flower Power Duckling","rarity":"ultrarare"},
-            {"name":"Wood Pidgeon","rarity":"ultrarare"},
-            {"name":"Field Mouse","rarity":"legendary"},
-            {"name":"Sunrise Duckling","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "st_patricks_2025", "name": "St Patricks 2025", "type": "event",
-          "pets": [
-            {"name":"Clover Cow","rarity":"rare"},
-            {"name":"Gaelic Fae","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "star_2020", "name": "Star Rewards 2020", "type": "special",
-          "pets": [
-            {"name":"Diamond Dragon","rarity":"legendary"},
-            {"name":"Diamond Egg","rarity":"legendary"},
-            {"name":"Diamond Griffin","rarity":"legendary"},
-            {"name":"Diamond Unicorn","rarity":"legendary"},
-            {"name":"Ginger Cat","rarity":"ultrarare"},
-            {"name":"Golden Dragon","rarity":"legendary"},
-            {"name":"Golden Egg","rarity":"legendary"},
-            {"name":"Golden Griffin","rarity":"legendary"},
-            {"name":"Golden Unicorn","rarity":"legendary"},
-            {"name":"Starfish","rarity":"ultrarare"},
-            {"name":"Toucan","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "star_2022", "name": "Star Rewards 2022", "type": "special",
-          "pets": [
-            {"name":"Orca","rarity":"ultrarare"},
-            {"name":"Pomeranian","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "stormy_ducky_2026", "name": "Stormy Ducky Drama 2026", "type": "event",
-          "pets": [
-            {"name":"Dirty Ducky","rarity":"common"},
-            {"name":"Rubber Ducky","rarity":"common"},
-            {"name":"Glyptodon Ducky","rarity":"rare"},
-            {"name":"Unicorn Ducky","rarity":"ultrarare"},
-            {"name":"Shadow Dragon Ducky","rarity":"ultrarare"},
-            {"name":"Strawberry Shortcake Ducky","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "subscriptions_2024", "name": "Subscriptions 2024", "type": "special",
-          "pets": [
-            {"name":"Hummingbird","rarity":"ultrarare"},
-            {"name":"Diamond Hummingbird","rarity":"legendary"},
-            {"name":"Golden Hummingbird","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "subscriptions_2026", "name": "Subscriptions 2026", "type": "special",
-          "pets": [
-            {"name":"Chocolate Dutch Guinea Pig","rarity":"ultrarare"},
-            {"name":"Red Dutch Guinea Pig","rarity":"legendary"},
-            {"name":"Tortoiseshell Guinea Pig","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "sugarfest_2026", "name": "Sugarfest 2026", "type": "event",
-          "pets": [
-            {"name":"Jiggly Jerboa","rarity":"common"},
-            {"name":"Cocoadile","rarity":"uncommon"},
-            {"name":"Gummy Guana","rarity":"rare"},
-            {"name":"Milk Choccybunny","rarity":"rare"},
-            {"name":"Gumball Caterpillar","rarity":"ultrarare"},
-            {"name":"Waffle Wyrm","rarity":"ultrarare"},
-            {"name":"White Choccybunny","rarity":"ultrarare"},
-            {"name":"Pupcake","rarity":"ultrarare"},
-            {"name":"Candicorn","rarity":"legendary"},
-            {"name":"Mochi Meow","rarity":"legendary"},
-            {"name":"Latte Kitsune","rarity":"legendary"},
-            {"name":"Dark Choccybunny","rarity":"legendary"},
-            {"name":"Easter Bunny","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "summer_2024", "name": "Summer Beach 2024", "type": "event",
-          "pets": [
-            {"name":"Mahi Mahi","rarity":"rare"},
-            {"name":"Gold Mahi Mahi","rarity":"ultrarare"},
-            {"name":"Nautilus","rarity":"ultrarare"},
-            {"name":"Diamond Mahi Mahi","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "summerfest_2023", "name": "Summerfest 2023", "type": "event",
-          "pets": [
-            {"name":"Flying Fish","rarity":"common"},
-            {"name":"Lobster","rarity":"uncommon"},
-            {"name":"Hermit Crab","rarity":"uncommon"},
-            {"name":"Arctic Tern","rarity":"uncommon"},
-            {"name":"Castle Hermit Crab","rarity":"rare"},
-            {"name":"Leopard Shark","rarity":"rare"},
-            {"name":"Many Mackerel","rarity":"ultrarare"},
-            {"name":"Tortuga de la Isla","rarity":"ultrarare"},
-            {"name":"Ice Cream Hermit Crab","rarity":"ultrarare"},
-            {"name":"Happy Clam","rarity":"ultrarare"},
-            {"name":"Shark Puppy","rarity":"legendary"},
-            {"name":"Hot Doggo","rarity":"legendary"},
-            {"name":"Leviathan","rarity":"legendary"},
-            {"name":"Pirate Hermit Crab","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "summerfest_2024", "name": "Summerfest 2024", "type": "event",
-          "pets": [
-            {"name":"Kid Goat","rarity":"common"},
-            {"name":"Show Pony","rarity":"common"},
-            {"name":"Rodeo Bull","rarity":"uncommon"},
-            {"name":"Cow Calf","rarity":"rare"},
-            {"name":"Orange Betta Fish","rarity":"rare"},
-            {"name":"Punk Pony","rarity":"rare"},
-            {"name":"Mini Pig","rarity":"ultrarare"},
-            {"name":"Pink Betta Fish","rarity":"ultrarare"},
-            {"name":"Pretty Pony","rarity":"ultrarare"},
-            {"name":"Bald Eagle","rarity":"ultrarare"},
-            {"name":"Blue Betta Fish","rarity":"legendary"},
-            {"name":"Majestic Pony","rarity":"legendary"},
-            {"name":"Corn Doggo","rarity":"legendary"},
-            {"name":"Balloon Unicorn","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "summerfest_2025", "name": "Summerfest 2025", "type": "event",
-          "pets": [
-            {"name":"Island Tarsier","rarity":"common"},
-            {"name":"Hammerhead Shark","rarity":"uncommon"},
-            {"name":"Kelp Crewmate","rarity":"uncommon"},
-            {"name":"Emperor Shrimp","rarity":"rare"},
-            {"name":"Kelp Raider","rarity":"rare"},
-            {"name":"Wren","rarity":"rare"},
-            {"name":"Seabed Creeper","rarity":"ultrarare"},
-            {"name":"Kelp Hunter","rarity":"ultrarare"},
-            {"name":"Sea Slug","rarity":"ultrarare"},
-            {"name":"Manta Ray","rarity":"legendary"},
-            {"name":"Mermicorn","rarity":"legendary"},
-            {"name":"Coconut Friend","rarity":"legendary"},
-            {"name":"Priceless Shrimp","rarity":"legendary"},
-            {"name":"Kelp Captain","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "sunshine_2024", "name": "Sunshine Games 2024", "type": "event",
-          "pets": [
-            {"name":"Black Marlin","rarity":"uncommon"},
-            {"name":"Peregrine Falcon","rarity":"ultrarare"},
-            {"name":"Bush Elephant","rarity":"legendary"},
-            {"name":"Cheetah","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "task_board_2022", "name": "Task Board Update 2022", "type": "special",
-          "pets": [
-            {"name":"Chameleon","rarity":"legendary"},
-            {"name":"Squid","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "toy_shop_2021", "name": "Toy Shop 2021", "type": "shop",
-          "pets": [
-            {"name":"Red Squirrel","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "ugc_2023", "name": "UGC Refresh 2023", "type": "special",
-          "pets": [
-            {"name":"Warthog","rarity":"uncommon"},
-            {"name":"Bloodhound","rarity":"rare"},
-            {"name":"Ostrich","rarity":"rare"},
-            {"name":"Glacier Moth","rarity":"ultrarare"},
-            {"name":"African Wild Dog","rarity":"ultrarare"},
-            {"name":"Lion Cub","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "ugc_2024", "name": "UGC Refresh 2024", "type": "special",
-          "pets": [
-            {"name":"Honey Badger","rarity":"ultrarare"},
-            {"name":"Jellyfish","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "ugc_2025", "name": "UGC Refresh 2025", "type": "special",
-          "pets": [
-            {"name":"Tri-horned Treehopper","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "ugc_2022", "name": "UGC Refresh 2022", "type": "special",
-          "pets": [
-            {"name":"Irish Water Spaniel","rarity":"ultrarare"}
-          ]
-        },
-        {
-          "id": "urban_2023", "name": "Urban 2023", "type": "egg",
-          "pets": [
-            {"name":"Bluebottle Fly","rarity":"common"},
-            {"name":"Cockroach","rarity":"common"},
-            {"name":"Mongoose","rarity":"common"},
-            {"name":"Rock Pigeon","rarity":"uncommon"},
-            {"name":"Tawny Frogmouth","rarity":"uncommon"},
-            {"name":"Indian Leopard","rarity":"rare"},
-            {"name":"Toy Poodle","rarity":"rare"},
-            {"name":"Alley Cat","rarity":"ultrarare"},
-            {"name":"Black Kite","rarity":"ultrarare"},
-            {"name":"Seagull","rarity":"ultrarare"},
-            {"name":"Billy Goat","rarity":"legendary"},
-            {"name":"Gargoyle","rarity":"legendary"},
-            {"name":"Urban Egg","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "vip_2022", "name": "VIP Update 2022", "type": "special",
-          "pets": [
-            {"name":"Tan Chow-Chow","rarity":"ultrarare"},
-            {"name":"Black Chow-Chow","rarity":"legendary"},
-            {"name":"Chocolate Chow-Chow","rarity":"legendary"},
-            {"name":"Golden Chow-Chow","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "valentines_2025", "name": "Valentines 2025", "type": "event",
-          "pets": [
-            {"name":"Love Bird","rarity":"rare"},
-            {"name":"Sweetheart Rat","rarity":"rare"},
-            {"name":"Cupid Dragon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "valentines_2026", "name": "Valentines 2026", "type": "event",
-          "pets": [
-            {"name":"Cherub Chipmunk","rarity":"rare"},
-            {"name":"Rose Dragon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "winter_2019", "name": "Winter 2019", "type": "event",
-          "pets": [
-            {"name":"Robin","rarity":"common"},
-            {"name":"Wolf","rarity":"uncommon"},
-            {"name":"Polar Bear","rarity":"rare"},
-            {"name":"Reindeer","rarity":"rare"},
-            {"name":"Shrew","rarity":"rare"},
-            {"name":"Swan","rarity":"rare"},
-            {"name":"Arctic Fox","rarity":"ultrarare"},
-            {"name":"Dalmatian","rarity":"ultrarare"},
-            {"name":"Hedgehog","rarity":"ultrarare"},
-            {"name":"Arctic Reindeer","rarity":"legendary"},
-            {"name":"Christmas Egg","rarity":"legendary"},
-            {"name":"Frost Dragon","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "winter_2020", "name": "Winter 2020", "type": "event",
-          "pets": [
-            {"name":"Snowman","rarity":"uncommon"},
-            {"name":"Musk Ox","rarity":"rare"},
-            {"name":"Lynx","rarity":"rare"},
-            {"name":"Yeti","rarity":"ultrarare"},
-            {"name":"Frost Fury","rarity":"legendary"},
-            {"name":"Snow Owl","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "winter_2021", "name": "Winter 2021", "type": "event",
-          "pets": [
-            {"name":"Walrus","rarity":"common"},
-            {"name":"Snow Leopard","rarity":"uncommon"},
-            {"name":"Husky","rarity":"rare"},
-            {"name":"Summer Walrus","rarity":"rare"},
-            {"name":"Puffin","rarity":"ultrarare"},
-            {"name":"St Benard","rarity":"ultrarare"},
-            {"name":"Golden Walrus","rarity":"legendary"},
-            {"name":"Ice Golem","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "winter_2022", "name": "Winter 2022", "type": "event",
-          "pets": [
-            {"name":"Ermine","rarity":"uncommon"},
-            {"name":"Irish Elk","rarity":"rare"},
-            {"name":"Shetland Pony Dark Brown","rarity":"rare"},
-            {"name":"Steppe Lion","rarity":"rare"},
-            {"name":"Grinderbread Reindeer","rarity":"ultrarare"},
-            {"name":"Ice Wolf","rarity":"ultrarare"},
-            {"name":"Ram","rarity":"ultrarare"},
-            {"name":"Shetland Pony White","rarity":"ultrarare"},
-            {"name":"Snowball Pet","rarity":"ultrarare"},
-            {"name":"Wooly Rhino","rarity":"ultrarare"},
-            {"name":"Ice Moth Dragon","rarity":"legendary"},
-            {"name":"Strawberry Shortcake Bat Dragon","rarity":"legendary"},
-            {"name":"Shetland Pony Light Brown","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "winter_2023", "name": "Winter 2023", "type": "event",
-          "pets": [
-            {"name":"Beluga Whale","rarity":"common"},
-            {"name":"Arctic Hare","rarity":"uncommon"},
-            {"name":"Christmas Future Egg","rarity":"uncommon"},
-            {"name":"Harp Seal","rarity":"uncommon"},
-            {"name":"Eggnog Dog","rarity":"uncommon"},
-            {"name":"Nutcracker Squirrel","rarity":"rare"},
-            {"name":"Eggnog Hare","rarity":"rare"},
-            {"name":"Christmas Pudding Pup","rarity":"ultrarare"},
-            {"name":"Gingerbread Mouse","rarity":"ultrarare"},
-            {"name":"Peppermint Penguin","rarity":"ultrarare"},
-            {"name":"Grinderbread Hare","rarity":"ultrarare"},
-            {"name":"Snow Monkey","rarity":"ultrarare"},
-            {"name":"Chocolate Chip Bat Dragon","rarity":"legendary"},
-            {"name":"Fleur de Ice","rarity":"legendary"},
-            {"name":"Candy Hare","rarity":"legendary"},
-            {"name":"Glacier Kitsune","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "winter_2024", "name": "Winter 2024", "type": "event",
-          "pets": [
-            {"name":"Ratatoskr","rarity":"common"},
-            {"name":"Mistletroll","rarity":"uncommon"},
-            {"name":"Ice Cube","rarity":"rare"},
-            {"name":"Great Pyrenees","rarity":"rare"},
-            {"name":"Winter Fawn","rarity":"rare"},
-            {"name":"Bauble Buddies","rarity":"ultrarare"},
-            {"name":"Cold Cube","rarity":"ultrarare"},
-            {"name":"Partridge","rarity":"ultrarare"},
-            {"name":"Merry Mistletroll","rarity":"ultrarare"},
-            {"name":"Mr. Whiskerpips","rarity":"ultrarare"},
-            {"name":"Winter Doe","rarity":"ultrarare"},
-            {"name":"Frostbite Cub","rarity":"ultrarare"},
-            {"name":"Aurora Fox","rarity":"legendary"},
-            {"name":"Berry Cool Cube","rarity":"legendary"},
-            {"name":"Fairy Bat Dragon","rarity":"legendary"},
-            {"name":"Frostclaw","rarity":"legendary"},
-            {"name":"Naughty Mistletroll","rarity":"legendary"},
-            {"name":"Royal Mistletroll","rarity":"legendary"},
-            {"name":"Winter Buck","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "winter_2025", "name": "Winter 2025", "type": "event",
-          "pets": [
-            {"name":"Japanese Snow Fairy","rarity":"common"},
-            {"name":"Humbug","rarity":"uncommon"},
-            {"name":"Old King Coal","rarity":"uncommon"},
-            {"name":"Angus Cow","rarity":"rare"},
-            {"name":"Turtle Doves","rarity":"rare"},
-            {"name":"Tree Sasquatch","rarity":"rare"},
-            {"name":"Samoyed","rarity":"rare"},
-            {"name":"Snowball Pug","rarity":"ultrarare"},
-            {"name":"Maine Coon","rarity":"ultrarare"},
-            {"name":"Angus Calf","rarity":"ultrarare"},
-            {"name":"Cozy Mistletroll","rarity":"ultrarare"},
-            {"name":"Bunny Swirl","rarity":"ultrarare"},
-            {"name":"Mrs. Whisperpips","rarity":"ultrarare"},
-            {"name":"Arctic Dusk Dragon","rarity":"legendary"},
-            {"name":"Christmas Spirit","rarity":"legendary"},
-            {"name":"Angus Bull","rarity":"legendary"},
-            {"name":"Frost Phoenix","rarity":"legendary"}
-          ]
-        },
-        {
-          "id": "woodland_egg_2022", "name": "Woodland Egg 2022", "type": "egg",
-          "pets": [
-            {"name":"Bullfrog","rarity":"common"},
-            {"name":"Red Cardinal","rarity":"uncommon"},
-            {"name":"Red Fox","rarity":"rare"},
-            {"name":"Woodpecker","rarity":"rare"},
-            {"name":"Pine Marten","rarity":"ultrarare"},
-            {"name":"Salamander","rarity":"ultrarare"},
-            {"name":"Fallow Deer","rarity":"legendary"},
-            {"name":"Hawk","rarity":"legendary"},
-            {"name":"Woodland Egg","rarity":"legendary"}
-          ]
-        }
-      ]
-    }
-</script>
-
 <h1>🐾 Adopt Me Collection Tracker</h1>
 
-<!-- Top bar: profile + stats -->
+<!-- Top bar -->
 <div class="top-bar">
   <div class="profile-bar">
     <select class="profile-select" id="profile-select" onchange="switchProfile()"></select>
@@ -1619,9 +147,11 @@ h1{font-size:18px;font-weight:600;margin-bottom:0.5rem}
   <button onclick="document.getElementById('import-file').click()">⬆ Import</button>
 </div>
 
-<div class="grid" id="grid"></div>
+<div class="grid" id="grid">
+  <div class="no-results">⏳ Lade Pet-Daten…</div>
+</div>
 
-<!-- Modal: Neues Profil / Umbenennen -->
+<!-- Modal: Input -->
 <div class="modal-overlay" id="modal-input">
   <div class="modal">
     <h2 id="modal-input-title">Neues Profil</h2>
@@ -1633,28 +163,60 @@ h1{font-size:18px;font-weight:600;margin-bottom:0.5rem}
   </div>
 </div>
 
-<!-- Modal: Bestätigung (Löschen / Reset) -->
+<!-- Modal: Bestätigung -->
 <div class="modal-overlay" id="modal-confirm">
   <div class="modal">
     <h2 id="modal-confirm-title">Bestätigen</h2>
     <p id="modal-confirm-text"></p>
     <div class="modal-btns">
       <button onclick="closeConfirmModal()">Abbrechen</button>
-      <button class="btn-danger-solid" id="modal-confirm-ok" onclick="">OK</button>
+      <button class="btn-danger-solid" id="modal-confirm-ok">OK</button>
     </div>
   </div>
 </div>
 
 <script>
-const COLLECTIONS = JSON.parse(document.getElementById('pet-data').textContent).collections;
-
+// ── CONSTANTS ───────────────────────────────────────────────────
 const RARITY_ORDER = {common:0,uncommon:1,rare:2,ultrarare:3,legendary:4,unknown:6};
 const RARITY_LABEL = {common:'Common',uncommon:'Uncommon',rare:'Rare',ultrarare:'Ultra-Rare',legendary:'Legendary',unknown:'Unbekannt'};
 const RARITY_COLOR = {common:'r-common',uncommon:'r-uncommon',rare:'r-rare',ultrarare:'r-ultrarare',legendary:'r-legendary',unknown:'r-unknown'};
+const RARITY_EMOJI = {common:'⚪',uncommon:'🟢',rare:'🔵',ultrarare:'🟣',legendary:'🟠',unknown:'⚫'};
 const TYPE_LABELS  = {egg:'Egg',event:'Event',shop:'Shop / Update',special:'Special',lure:'Lure'};
 const TYPE_BADGE   = {egg:'badge-egg',event:'badge-event',shop:'badge-shop',special:'badge-special',lure:'badge-lure'};
 
-// ── MODAL SYSTEM ────────────────────────────────────────────────
+// ── IMAGE HELPERS ────────────────────────────────────────────────
+// Images live at: img/{collection_id}/{pet_name_normalized}.png
+// e.g. img/safari_egg_2019/giraffe.png
+function imgPath(colId, petName) {
+  const file = petName.toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_|_$/g, '');
+  return `img/${colId}/${file}.png`;
+}
+
+// Lazy-load image when it enters viewport
+const imgObserver = typeof IntersectionObserver !== 'undefined'
+  ? new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.onload  = () => { img.classList.add('loaded'); img.nextElementSibling?.classList.add('hidden'); };
+        img.onerror = () => { /* keep placeholder visible */ };
+        imgObserver.unobserve(img);
+      });
+    }, { rootMargin: '100px' })
+  : null;
+
+function observeImages(card) {
+  card.querySelectorAll('img[data-src]').forEach(img => {
+    if (imgObserver) imgObserver.observe(img);
+    else { img.src = img.dataset.src; } // fallback: load immediately
+  });
+}
+
+// ── MODAL SYSTEM ─────────────────────────────────────────────────
 let inputModalCallback = null;
 
 function openInputModal(title, defaultVal, callback) {
@@ -1665,54 +227,40 @@ function openInputModal(title, defaultVal, callback) {
   document.getElementById('modal-input').classList.add('open');
   setTimeout(() => field.focus(), 100);
 }
-
 function closeInputModal() {
   document.getElementById('modal-input').classList.remove('open');
   inputModalCallback = null;
 }
-
 function confirmInputModal() {
   const val = document.getElementById('modal-input-field').value.trim();
   if (inputModalCallback) inputModalCallback(val);
   closeInputModal();
 }
-
 document.getElementById('modal-input-field').addEventListener('keydown', e => {
   if (e.key === 'Enter') confirmInputModal();
   if (e.key === 'Escape') closeInputModal();
 });
 
 let confirmCallback = null;
-
 function openConfirmModal(title, text, callback) {
   document.getElementById('modal-confirm-title').textContent = title;
   document.getElementById('modal-confirm-text').textContent = text;
   confirmCallback = callback;
   document.getElementById('modal-confirm').classList.add('open');
 }
-
 function closeConfirmModal() {
   document.getElementById('modal-confirm').classList.remove('open');
   confirmCallback = null;
 }
-
-document.getElementById('modal-confirm-ok').onclick = function() {
+document.getElementById('modal-confirm-ok').onclick = () => {
   if (confirmCallback) confirmCallback();
   closeConfirmModal();
 };
-
-// close modals on overlay click
-document.getElementById('modal-input').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeInputModal();
-});
-document.getElementById('modal-confirm').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeConfirmModal();
-});
-// ────────────────────────────────────────────────────────────────
+document.getElementById('modal-input').addEventListener('click', e => { if (e.target===e.currentTarget) closeInputModal(); });
+document.getElementById('modal-confirm').addEventListener('click', e => { if (e.target===e.currentTarget) closeConfirmModal(); });
 
 // ── PROFILE SYSTEM ───────────────────────────────────────────────
 const STORAGE_KEY = 'am_profiles';
-
 function loadAllProfiles() {
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {active:'Standard',profiles:{Standard:{}}}; }
   catch(e) { return {active:'Standard',profiles:{Standard:{}}}; }
@@ -1728,61 +276,12 @@ function save() {
   profileData.profiles[profileData.active] = owned;
   saveAllProfiles(profileData);
 }
-function exportData() {
-  const dataStr = JSON.stringify(profileData, null, 2);
-  const blob = new Blob([dataStr], {type: 'application/json'});
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  const now = new Date();
-  const date = now.toLocaleDateString('de-DE', {day:'2-digit',month:'2-digit',year:'numeric'}).replace(/\./g,'-');
-  const time = now.toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'}).replace(':','-');
-  const safeName = profileData.active.replace(/[^a-zA-Z0-9äöüÄÖÜß]/g,'_');
-  a.download = `AM_Tracker_${safeName}_${date}_${time}.json`;
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-function importData(event) {
-  const file = event.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    try {
-      const parsed = JSON.parse(e.target.result);
-      if (!parsed.profiles || !parsed.active) {
-        openConfirmModal('Ungültige Datei', 'Die Datei hat kein gültiges Format. Bitte nur Dateien importieren die mit dem Export-Button erstellt wurden.', ()=>{});
-        return;
-      }
-      openConfirmModal(
-        'Import bestätigen',
-        'Alle aktuellen Profile und Häkchen werden durch die importierten Daten ersetzt. Fortfahren?',
-        () => {
-          profileData = parsed;
-          owned = profileData.profiles[profileData.active] || {};
-          saveAllProfiles(profileData);
-          renderProfileBar();
-          expanded = {};
-          sortMode = {};
-          render();
-        }
-      );
-    } catch(err) {
-      openConfirmModal('Fehler', 'Die Datei konnte nicht gelesen werden. Ist es eine gültige JSON-Datei?', ()=>{});
-    }
-    event.target.value = '';
-  };
-  reader.readAsText(file);
-}
-
 function renderProfileBar() {
   const sel = document.getElementById('profile-select');
-  const names = Object.keys(profileData.profiles);
-  sel.innerHTML = names.map(n =>
+  sel.innerHTML = Object.keys(profileData.profiles).map(n =>
     `<option value="${n}" ${n===profileData.active?'selected':''}>${n}</option>`
   ).join('');
 }
-
 function switchProfile() {
   profileData.active = document.getElementById('profile-select').value;
   owned = profileData.profiles[profileData.active] || {};
@@ -1790,67 +289,81 @@ function switchProfile() {
   expanded = {}; sortMode = {};
   render();
 }
-
 function openNewProfileModal() {
   openInputModal('Neues Profil', '', name => {
     if (!name) return;
-    if (profileData.profiles[name]) { openConfirmModal('Bereits vorhanden', `Ein Profil mit dem Namen "${name}" existiert bereits.`, ()=>{}); return; }
+    if (profileData.profiles[name]) { openConfirmModal('Bereits vorhanden',`Profil "${name}" existiert bereits.`,()=>{}); return; }
     profileData.profiles[name] = {};
-    profileData.active = name;
-    owned = {};
-    saveAllProfiles(profileData);
-    renderProfileBar();
-    expanded = {}; sortMode = {};
-    render();
+    profileData.active = name; owned = {};
+    saveAllProfiles(profileData); renderProfileBar();
+    expanded = {}; sortMode = {}; render();
   });
 }
-
 function openRenameModal() {
-  openInputModal('Profil umbenennen', profileData.active, newName => {
-    if (!newName || newName === profileData.active) return;
-    if (profileData.profiles[newName]) { openConfirmModal('Bereits vorhanden', `Ein Profil mit dem Namen "${newName}" existiert bereits.`, ()=>{}); return; }
+  openInputModal('Umbenennen', profileData.active, newName => {
+    if (!newName || newName===profileData.active) return;
+    if (profileData.profiles[newName]) { openConfirmModal('Bereits vorhanden',`Profil "${newName}" existiert bereits.`,()=>{}); return; }
     profileData.profiles[newName] = profileData.profiles[profileData.active];
     delete profileData.profiles[profileData.active];
     profileData.active = newName;
-    saveAllProfiles(profileData);
-    renderProfileBar();
-    render();
+    saveAllProfiles(profileData); renderProfileBar(); render();
   });
 }
-
 function openDeleteConfirm() {
-  const names = Object.keys(profileData.profiles);
-  if (names.length <= 1) { openConfirmModal('Nicht möglich', 'Du kannst das letzte Profil nicht löschen.', ()=>{}); return; }
-  openConfirmModal('Profil löschen', `Profil "${profileData.active}" wirklich löschen?`, () => {
+  if (Object.keys(profileData.profiles).length <= 1) { openConfirmModal('Nicht möglich','Du kannst das letzte Profil nicht löschen.',()=>{}); return; }
+  openConfirmModal('Profil löschen',`Profil "${profileData.active}" wirklich löschen?`, () => {
     delete profileData.profiles[profileData.active];
     profileData.active = Object.keys(profileData.profiles)[0];
     owned = profileData.profiles[profileData.active] || {};
-    saveAllProfiles(profileData);
-    renderProfileBar();
-    expanded = {}; sortMode = {};
-    render();
+    saveAllProfiles(profileData); renderProfileBar();
+    expanded = {}; sortMode = {}; render();
   });
 }
-
 function openResetConfirm() {
-  openConfirmModal('Zurücksetzen', 'Alle Häkchen im aktuellen Profil zurücksetzen?', () => {
-    owned = {}; save(); render();
-  });
+  openConfirmModal('Zurücksetzen','Alle Häkchen im aktuellen Profil zurücksetzen?', () => { owned={}; save(); render(); });
+}
+function toggleProfileMenu() { document.getElementById('profile-dropdown').classList.toggle('open'); }
+function closeProfileMenu()  { document.getElementById('profile-dropdown').classList.remove('open'); }
+document.addEventListener('click', e => { if (!e.target.closest('.profile-menu')) closeProfileMenu(); });
+
+// ── EXPORT / IMPORT ──────────────────────────────────────────────
+function exportData() {
+  const dataStr = JSON.stringify(profileData, null, 2);
+  const blob = new Blob([dataStr], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  const now = new Date();
+  const date = now.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'}).replace(/\./g,'-');
+  const time = now.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}).replace(':','-');
+  const safeName = profileData.active.replace(/[^a-zA-Z0-9äöüÄÖÜß]/g,'_');
+  a.download = `AM_Tracker_${safeName}_${date}_${time}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function importData(event) {
+  const file = event.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const parsed = JSON.parse(e.target.result);
+      if (!parsed.profiles || !parsed.active) { openConfirmModal('Ungültige Datei','Die Datei hat kein gültiges Format.',()=>{}); return; }
+      openConfirmModal('Import bestätigen','Alle aktuellen Profile werden ersetzt. Fortfahren?', () => {
+        profileData = parsed;
+        owned = profileData.profiles[profileData.active] || {};
+        saveAllProfiles(profileData); renderProfileBar();
+        expanded = {}; sortMode = {}; render();
+      });
+    } catch(err) { openConfirmModal('Fehler','Die Datei konnte nicht gelesen werden.',()=>{}); }
+    event.target.value = '';
+  };
+  reader.readAsText(file);
 }
 
-function toggleProfileMenu() {
-  document.getElementById('profile-dropdown').classList.toggle('open');
-}
-function closeProfileMenu() {
-  document.getElementById('profile-dropdown').classList.remove('open');
-}
-document.addEventListener('click', e => {
-  if (!e.target.closest('.profile-menu')) closeProfileMenu();
-});
-// ────────────────────────────────────────────────────────────────
-
-let expanded = {};
-let sortMode = {};
+// ── CORE STATE ───────────────────────────────────────────────────
+let COLLECTIONS = [];
+let expanded  = {};
+let sortMode  = {};
 
 function togglePet(colId, pet) {
   const key = colId+'|||'+pet;
@@ -1858,15 +371,14 @@ function togglePet(colId, pet) {
   if (!owned[key]) delete owned[key];
   save(); refreshCard(colId); updateStats();
 }
-
 function getOwned(colId) {
   return COLLECTIONS.find(c=>c.id===colId).pets.filter(p=>owned[colId+'|||'+p.name]).length;
 }
+function expandAll()   { COLLECTIONS.forEach(c=>expanded[c.id]=true); render(); }
+function collapseAll() { expanded={}; render(); }
+function setSortMode(colId, mode) { sortMode[colId]=mode; refreshCard(colId); }
 
-function expandAll()  { COLLECTIONS.forEach(c=>expanded[c.id]=true); render(); }
-function collapseAll(){ expanded={}; render(); }
-function setSortMode(colId, mode){ sortMode[colId]=mode; refreshCard(colId); }
-
+// ── PET SORTING ──────────────────────────────────────────────────
 function getPets(col) {
   const mode = sortMode[col.id]||'rarity';
   const pets = [...col.pets];
@@ -1874,79 +386,93 @@ function getPets(col) {
     pets.sort((a,b)=>a.name.localeCompare(b.name));
     return {grouped:false, pets};
   }
-  pets.sort((a,b)=>(RARITY_ORDER[a.rarity]??6)-(RARITY_ORDER[b.rarity]??6)||a.name.localeCompare(b.name));
+  // already sorted by rarity from loadPetData; just group
   const groups={};
   pets.forEach(p=>{ const r=p.rarity||'unknown'; if(!groups[r])groups[r]=[]; groups[r].push(p); });
   return {grouped:true, groups};
 }
 
-function renderPetsHtml(col, search) {
-  const {grouped,pets,groups}=getPets(col);
-  const sq = search ? search.toLowerCase() : '';
-  const hi = p => sq && p.name.toLowerCase().includes(sq);
-  let html='';
-  if (grouped) {
-    Object.keys(groups).forEach(r=>{
-      html+=`<div class="rarity-section">${RARITY_LABEL[r]||r}</div>`;
-      groups[r].forEach(p=>html+=petItemHtml(col.id,p,hi(p)));
-    });
-  } else { pets.forEach(p=>html+=petItemHtml(col.id,p,hi(p))); }
-  return html;
-}
-
+// ── RENDER HELPERS ───────────────────────────────────────────────
 function petItemHtml(colId, p, highlight) {
-  const isOwned=!!owned[colId+'|||'+p.name];
-  const name=p.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-  return `<div class="pet-item${isOwned?' owned':''}${highlight?' highlighted':''}" onclick="togglePet('${colId}','${name}')">
-    <div class="check">${isOwned?'✓':''}</div>
-    <span class="rarity-dot ${RARITY_COLOR[p.rarity]||'r-unknown'}"></span>
-    <span>${p.name}</span>
+  const isOwned = !!owned[colId+'|||'+p.name];
+  const safeName = p.name.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+  const path = imgPath(colId, p.name);
+  return `<div class="pet-item${isOwned?' owned':''}${highlight?' highlighted':''}" onclick="togglePet('${colId}','${safeName}')">
+    <div class="pet-img-wrap">
+      <img class="pet-img" data-src="${path}" alt="${p.name}">
+      <div class="pet-img-placeholder">${RARITY_EMOJI[p.rarity]||'❓'}</div>
+    </div>
+    <div class="pet-name">${p.name}</div>
+    <div class="pet-footer">
+      <div class="check">${isOwned?'✓':''}</div>
+      <span class="rarity-dot ${RARITY_COLOR[p.rarity]||'r-unknown'}"></span>
+    </div>
   </div>`;
 }
 
+function renderPetsHtml(col, search) {
+  const {grouped,pets,groups} = getPets(col);
+  const sq = search ? search.toLowerCase() : '';
+  const hi = p => sq && p.name.toLowerCase().includes(sq);
+  let html = '';
+  if (grouped) {
+    Object.keys(groups).forEach(r => {
+      html += `<div class="rarity-section">${RARITY_LABEL[r]||r}</div>`;
+      groups[r].forEach(p => html += petItemHtml(col.id, p, hi(p)));
+    });
+  } else {
+    pets.forEach(p => html += petItemHtml(col.id, p, hi(p)));
+  }
+  return html;
+}
+
 function refreshCard(colId) {
-  const el=document.getElementById('card-'+colId); if(!el)return;
-  const col=COLLECTIONS.find(c=>c.id===colId);
-  const o=getOwned(colId),t=col.pets.length,pct=t?Math.round(o/t*100):0,complete=o===t;
-  el.className='card'+(complete?' complete':'');
-  el.querySelector('.progress-bar').style.width=pct+'%';
-  el.querySelector('.count-badge').textContent=o+'/'+t;
-  const stamp=el.querySelector('.complete-stamp');
-  if(stamp) stamp.style.display=complete?'':'none';
-  el.querySelector('.pets-grid').innerHTML=renderPetsHtml(col,'');
-  const mode=sortMode[colId]||'rarity';
+  const el = document.getElementById('card-'+colId); if (!el) return;
+  const col = COLLECTIONS.find(c=>c.id===colId);
+  const o=getOwned(colId), t=col.pets.length, pct=t?Math.round(o/t*100):0, complete=o===t;
+  el.className = 'card'+(complete?' complete':'');
+  el.querySelector('.progress-bar').style.width = pct+'%';
+  el.querySelector('.count-badge').textContent = o+'/'+t;
+  const stamp = el.querySelector('.complete-stamp');
+  if (stamp) stamp.style.display = complete ? '' : 'none';
+  const pg = el.querySelector('.pets-grid');
+  if (pg) { pg.innerHTML = renderPetsHtml(col,''); observeImages(el); }
+  const mode = sortMode[colId]||'rarity';
   el.querySelectorAll('.sort-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
 }
 
 function updateStats() {
-  let complete=0,partial=0,totalPets=0,ownedPets=0;
+  let complete=0, partial=0, totalPets=0, ownedPets=0;
   COLLECTIONS.forEach(c=>{ const o=getOwned(c.id),t=c.pets.length; totalPets+=t; ownedPets+=o; if(o===t)complete++; else if(o>0)partial++; });
-  document.getElementById('s-complete').textContent=complete;
-  document.getElementById('s-partial').textContent=partial;
-  document.getElementById('s-total').textContent=COLLECTIONS.length;
-  document.getElementById('s-pets').textContent=ownedPets+'/'+totalPets;
+  document.getElementById('s-complete').textContent = complete;
+  document.getElementById('s-partial').textContent  = partial;
+  document.getElementById('s-total').textContent    = COLLECTIONS.length;
+  document.getElementById('s-pets').textContent     = ownedPets+'/'+totalPets;
 }
 
 function render() {
-  const search=document.getElementById('search').value.toLowerCase();
-  const fStatus=document.getElementById('filter-status').value;
-  const fType=document.getElementById('filter-type').value;
-  const filtered=COLLECTIONS.filter(c=>{
-    if(fType!=='all'&&c.type!==fType) return false;
-    const o=getOwned(c.id),t=c.pets.length;
-    if(fStatus==='complete'&&o!==t) return false;
-    if(fStatus==='partial'&&(o===0||o===t)) return false;
-    if(fStatus==='empty'&&o>0) return false;
-    if(search&&!c.name.toLowerCase().includes(search)&&!c.pets.some(p=>p.name.toLowerCase().includes(search))) return false;
+  const search  = document.getElementById('search').value.toLowerCase();
+  const fStatus = document.getElementById('filter-status').value;
+  const fType   = document.getElementById('filter-type').value;
+
+  const filtered = COLLECTIONS.filter(c => {
+    if (fType!=='all' && c.type!==fType) return false;
+    const o=getOwned(c.id), t=c.pets.length;
+    if (fStatus==='complete' && o!==t) return false;
+    if (fStatus==='partial'  && (o===0||o===t)) return false;
+    if (fStatus==='empty'    && o>0) return false;
+    if (search && !c.name.toLowerCase().includes(search) && !c.pets.some(p=>p.name.toLowerCase().includes(search))) return false;
     return true;
   });
-  const grid=document.getElementById('grid');
-  if(!filtered.length){ grid.innerHTML='<div class="no-results">Keine Collections gefunden.</div>'; updateStats(); return; }
-  grid.innerHTML=filtered.map(col=>{
-    const o=getOwned(col.id),t=col.pets.length,pct=t?Math.round(o/t*100):0,complete=o===t;
-    const petMatch=search&&col.pets.some(p=>p.name.toLowerCase().includes(search));
-    const isOpen=expanded[col.id]||petMatch;
-    const mode=sortMode[col.id]||'rarity';
+
+  const grid = document.getElementById('grid');
+  if (!filtered.length) { grid.innerHTML='<div class="no-results">Keine Collections gefunden.</div>'; updateStats(); return; }
+
+  grid.innerHTML = filtered.map(col => {
+    const o=getOwned(col.id), t=col.pets.length, pct=t?Math.round(o/t*100):0, complete=o===t;
+    const petMatch = search && col.pets.some(p=>p.name.toLowerCase().includes(search));
+    const isOpen   = expanded[col.id] || petMatch;
+    const mode     = sortMode[col.id]||'rarity';
     return `<div class="card${complete?' complete':''}" id="card-${col.id}">
       <div class="card-header" onclick="toggleExpand('${col.id}')">
         <div class="card-title">${col.name}</div>
@@ -1961,27 +487,73 @@ function render() {
       <div class="card-toolbar${isOpen?' open':''}">
         <span class="sort-label">Sortierung:</span>
         <button class="sort-btn${mode==='rarity'?' active':''}" data-mode="rarity" onclick="event.stopPropagation();setSortMode('${col.id}','rarity')">Seltenheit</button>
-        <button class="sort-btn${mode==='alpha'?' active':''}" data-mode="alpha" onclick="event.stopPropagation();setSortMode('${col.id}','alpha')">A–Z</button>
+        <button class="sort-btn${mode==='alpha'?' active':''}"  data-mode="alpha"  onclick="event.stopPropagation();setSortMode('${col.id}','alpha')">A–Z</button>
       </div>
       <div class="pets-grid${isOpen?' open':''}" style="${isOpen?'display:grid':''}">
-        ${renderPetsHtml(col,search)}
+        ${isOpen ? renderPetsHtml(col,search) : ''}
       </div>
     </div>`;
   }).join('');
+
+  // Observe images only for open cards
+  filtered.forEach(col => {
+    if (expanded[col.id] || (search && col.pets.some(p=>p.name.toLowerCase().includes(search)))) {
+      const card = document.getElementById('card-'+col.id);
+      if (card) observeImages(card);
+    }
+  });
+
   updateStats();
 }
 
 function toggleExpand(id) {
-  expanded[id]=!expanded[id];
-  const card=document.getElementById('card-'+id); if(!card)return;
-  card.querySelector('.pets-grid').style.display=expanded[id]?'grid':'none';
-  card.querySelector('.pets-grid').classList.toggle('open',!!expanded[id]);
-  card.querySelector('.chevron').classList.toggle('open',!!expanded[id]);
-  card.querySelector('.card-toolbar').classList.toggle('open',!!expanded[id]);
+  expanded[id] = !expanded[id];
+  const card = document.getElementById('card-'+id); if (!card) return;
+  const pg   = card.querySelector('.pets-grid');
+  const col  = COLLECTIONS.find(c=>c.id===id);
+  if (expanded[id] && pg.innerHTML.trim()==='') {
+    // Lazy render pets HTML on first open
+    const search = document.getElementById('search').value.toLowerCase();
+    pg.innerHTML = renderPetsHtml(col, search);
+  }
+  pg.style.display = expanded[id] ? 'grid' : 'none';
+  pg.classList.toggle('open', !!expanded[id]);
+  card.querySelector('.chevron').classList.toggle('open', !!expanded[id]);
+  card.querySelector('.card-toolbar').classList.toggle('open', !!expanded[id]);
+  if (expanded[id]) observeImages(card);
 }
 
-renderProfileBar();
-render();
+// ── DATA LOADING ─────────────────────────────────────────────────
+async function loadPetData() {
+  try {
+    const res = await fetch('pets.json');
+    if (!res.ok) throw new Error('HTTP '+res.status);
+    const data = await res.json();
+
+    // Build a lookup: colId -> sorted pet list
+    const petsByCollection = {};
+    const rarityOrder = ['common','uncommon','rare','ultrarare','legendary'];
+    rarityOrder.forEach(rarity => {
+      (data.pets[rarity] || []).forEach(pet => {
+        if (!petsByCollection[pet.collection]) petsByCollection[pet.collection] = [];
+        petsByCollection[pet.collection].push({name: pet.name, rarity});
+      });
+    });
+
+    COLLECTIONS = data.collections.map(col => ({
+      ...col,
+      pets: petsByCollection[col.id] || []
+    }));
+
+    renderProfileBar();
+    render();
+  } catch(e) {
+    document.getElementById('grid').innerHTML =
+      `<div class="no-results">⚠️ pets.json konnte nicht geladen werden.<br><small>${e.message}</small><br><br>Stelle sicher dass die Datei im selben Repository liegt.</div>`;
+  }
+}
+
+loadPetData();
 </script>
 </body>
 </html>
