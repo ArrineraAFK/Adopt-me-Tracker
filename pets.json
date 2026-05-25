@@ -91,7 +91,7 @@
       "type": "event"
     },
     {
-      "id": "camping_2023",
+      "id": "camping_shop_2023",
       "name": "Camping Shop 2023",
       "type": "shop"
     },
@@ -785,7 +785,7 @@
       {"name": "Birthday Butterfly 2023", "collection": "birthday_2023"},
       {"name": "Birthday Butterfly 2024", "collection": "birthday_2024"},
       {"name": "2025 Birthday Butterfly", "collection": "birthday_2025"},
-      {"name": "Possum", "collection": "camping_2023"},
+      {"name": "Possum", "collection": "camping_shop_2023"},
       {"name": "Muskrat", "collection": "camping_shop_refresh_2025"},
       {"name": "Raccoon", "collection": "chip_rac_2023"},
       {"name": "Shih Tzu", "collection": "dailies_2025"},
@@ -1262,7 +1262,7 @@
       {"name": "Orchid Butterfly", "collection": "butterfly_2025"},
       {"name": "Prismatic Butterfly", "collection": "butterfly_2025"},
       {"name": "Violet Butterfly", "collection": "butterfly_2025"},
-      {"name": "Firefly", "collection": "camping_2023"},
+      {"name": "Firefly", "collection": "camping_shop_2023"},
       {"name": "Moose Calf", "collection": "camping_shop_refresh_2025"},
       {"name": "Papa Moose", "collection": "camping_shop_refresh_2025"},
       {"name": "Pirate Ghost Capuchin Monkey", "collection": "capuchin_2024"},
