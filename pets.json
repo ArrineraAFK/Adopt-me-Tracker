@@ -713,81 +713,80 @@
   ],
   "pets": {
     "common": [
-      {"name": "Tegu", "collection": "aztec_egg_2025"},
       {"name": "Bandicoot", "collection": "aussie_egg_2020"},
+      {"name": "Tegu", "collection": "aztec_egg_2025"},
       {"name": "Ant", "collection": "basic_egg_2022"},
       {"name": "Mouse", "collection": "basic_egg_2022"},
-      {"name": "Buffalo", "collection": "pets_update_2019"},
       {"name": "Blue Butterfly", "collection": "butterfly_2025"},
-      {"name": "Cat", "collection": "pets_update_2019"},
-      {"name": "Chick", "collection": "easter_2020"},
-      {"name": "Chicken", "collection": "farm_egg_2019"},
       {"name": "Liger", "collection": "danger_2023"},
       {"name": "Mosquito", "collection": "danger_2023"},
       {"name": "Piranha", "collection": "danger_2023"},
       {"name": "Armadillo", "collection": "desert_2024"},
       {"name": "Coyote", "collection": "desert_2024"},
       {"name": "Sandfish", "collection": "desert_2024"},
-      {"name": "Dog", "collection": "pets_update_2019"},
-      {"name": "California Condor", "collection": "endangered_egg_2026"},
-      {"name": "Galapagos Sea Lion", "collection": "endangered_egg_2026"},
+      {"name": "Chick", "collection": "easter_2020"},
+      {"name": "Easter 2020 Egg", "collection": "easter_2020"},
+      {"name": "California Condor", "collection": "endangered_2026"},
+      {"name": "Galapagos Sea Lion", "collection": "endangered_2026"},
+      {"name": "Chicken", "collection": "farm_egg_2019"},
+      {"name": "Ground Sloth", "collection": "fossil_isle_2020"},
+      {"name": "Tasmanian Tiger", "collection": "fossil_isle_2020"},
       {"name": "Brachiosaurus", "collection": "fossil_isle_2024"},
       {"name": "Garden Snake", "collection": "garden_2024"},
-      {"name": "Ground Sloth", "collection": "fossil_isle_2020"},
       {"name": "Ghost", "collection": "halloween_2023"},
-      {"name": "Frankefeline", "collection": "halloween_2024"},
       {"name": "Aye Aye", "collection": "halloween_2025"},
       {"name": "Dugong", "collection": "japan_2022"},
       {"name": "Sado Mole", "collection": "japan_2022"},
       {"name": "Angelfish", "collection": "jungle_2023"},
       {"name": "Ash Zebra", "collection": "lures_2023"},
       {"name": "Hopbop", "collection": "moon_2025"},
+      {"name": "Wolpertinger", "collection": "mythic_egg_2021"},
+      {"name": "Cracked Egg", "collection": "nursery_2019"},
       {"name": "Urchin", "collection": "ocean_2024"},
+      {"name": "Stingray", "collection": "ocean_event_2021"},
+      {"name": "Basic Egg", "collection": "pet_releaser_2025"},
+      {"name": "Buffalo", "collection": "pets_update_2019"},
+      {"name": "Cat", "collection": "pets_update_2019"},
+      {"name": "Dog", "collection": "pets_update_2019"},
       {"name": "Otter", "collection": "pets_update_2019"},
-      {"name": "Robin", "collection": "winter_2019"},
       {"name": "Classic Teapot", "collection": "roblox_classic_2024"},
-      {"name": "Bali Starling", "collection": "southeast_asia_2023"},
-      {"name": "Malayan Tapir", "collection": "southeast_asia_2023"},
-      {"name": "Maleo Bird", "collection": "southeast_asia_2023"},
+      {"name": "Starter Egg", "collection": "sir_woofington_2019"},
+      {"name": "Bali Starling", "collection": "sea_2023"},
+      {"name": "Malaysian Tapir", "collection": "sea_2023"},
+      {"name": "Maleo Bird", "collection": "sea_2023"},
+      {"name": "Bakeneko", "collection": "spring_2025"},
       {"name": "Dirty Ducky", "collection": "stormy_ducky_2026"},
       {"name": "Rubber Ducky", "collection": "stormy_ducky_2026"},
-      {"name": "Bakeneko", "collection": "spring_2025"},
-      {"name": "Stingray", "collection": "ocean_event_2021"},
       {"name": "Jiggly Jerboa", "collection": "sugarfest_2026"},
       {"name": "Flying Fish", "collection": "summerfest_2023"},
       {"name": "Kid Goat", "collection": "summerfest_2024"},
       {"name": "Show Pony", "collection": "summerfest_2024"},
       {"name": "Island Tarsier", "collection": "summerfest_2025"},
-      {"name": "Tasmanian Tiger", "collection": "fossil_isle_2020"},
-      {"name": "Cockroach", "collection": "urban_2023"},
       {"name": "Bluebottle Fly", "collection": "urban_2023"},
+      {"name": "Cockroach", "collection": "urban_2023"},
       {"name": "Mongoose", "collection": "urban_2023"},
+      {"name": "Robin", "collection": "winter_2019"},
       {"name": "Walrus", "collection": "winter_2021"},
       {"name": "Beluga Whale", "collection": "winter_2023"},
       {"name": "Ratatoskr", "collection": "winter_2024"},
       {"name": "Japanese Snow Fairy", "collection": "winter_2025"},
-      {"name": "Wolpertinger", "collection": "mythic_egg_2021"},
-      {"name": "Bull Frog", "collection": "woodland_egg_2022"},
-      {"name": "Cracked Egg", "collection": "nursery_2019"},
-      {"name": "Easter 2020 Egg", "collection": "easter_2020"},
-      {"name": "Basic Egg", "collection": "pet_releaser_2025"}
+      {"name": "Bullfrog", "collection": "woodland_egg_2022"}
     ],
     "uncommon": [
       {"name": "2021 Uplift Butterfly", "collection": "adopt_bday_2021"},
       {"name": "Rock", "collection": "april_fools_2022"},
-      {"name": "Dingo",  "collection": "aussie_egg_2020"},
+      {"name": "Dingo", "collection": "aussie_egg_2020"},
       {"name": "Quokka", "collection": "aussie_update_2024"},
       {"name": "Tree Frog", "collection": "aztec_egg_2025"},
-      {"name": "Water Opossum", "collection": "aztec_egg_2025"},
       {"name": "Camel", "collection": "basic_egg_2022"},
       {"name": "Donkey", "collection": "basic_egg_2022"},
-      {"name": "Poodle",  "collection": "basic_egg_2022"},
+      {"name": "Poodle", "collection": "basic_egg_2022"},
       {"name": "2022 Uplift Butterfly", "collection": "birthday_2022"},
       {"name": "Birthday Butterfly 2023", "collection": "birthday_2023"},
       {"name": "Birthday Butterfly 2024", "collection": "birthday_2024"},
       {"name": "2025 Birthday Butterfly", "collection": "birthday_2025"},
       {"name": "Possum", "collection": "camping_2023"},
-      {"name": "Muskrat", "collection": "camping_shop_refresh_2025"},
+      {"name": "Muskrat", "collection": "camping_refresh_2025"},
       {"name": "Raccoon", "collection": "chip_rac_2023"},
       {"name": "Shih Tzu", "collection": "dailies_2025"},
       {"name": "Angler Fish", "collection": "danger_2023"},
@@ -795,68 +794,70 @@
       {"name": "Gila Monster", "collection": "desert_2024"},
       {"name": "Rattlesnake", "collection": "desert_2024"},
       {"name": "Dylan", "collection": "dolls_2023"},
-      {"name": "Pistacio", "collection": "dolls_2023"},
+      {"name": "Pistachio", "collection": "dolls_2023"},
       {"name": "River", "collection": "dolls_2023"},
       {"name": "Blue Dog", "collection": "easter_2019"},
-      {"name": "Black Tiger", "collection": "endangered_egg_2026"},
-      {"name": "Kakapo", "collection": "endangered_egg_2026"},
+      {"name": "Black Tiger", "collection": "endangered_2026"},
+      {"name": "Kakapo", "collection": "endangered_2026"},
+      {"name": "Canadian Goose", "collection": "farm_2023"},
       {"name": "Drake", "collection": "farm_egg_2019"},
       {"name": "Silly Duck", "collection": "farm_egg_2019"},
-      {"name": "Canadian Goose", "collection": "farm_2023"},
-      {"name": "Glyptogon", "collection": "fossil_isle_2020"},
+      {"name": "Glyptodon", "collection": "fossil_isle_2020"},
       {"name": "Stegosaurus", "collection": "fossil_isle_2020"},
       {"name": "Triceratops", "collection": "fossil_isle_2020"},
       {"name": "Velociraptor", "collection": "fossil_isle_2024"},
-      {"name": "Mole", "collection": "garden_2024"},
       {"name": "Therapy Dog", "collection": "gosh_2022"},
-      {"name": "Bat",  "collection": "halloween_2020"},
-      {"name": "Halloween Black Mummy Cat", "collection": "halloween_2021"},
+      {"name": "Mole", "collection": "garden_2024"},
+      {"name": "Bat", "collection": "halloween_2020"},
+      {"name": "Black Mummy Cat", "collection": "halloween_2021"},
       {"name": "Halloween Blue Scorpion", "collection": "halloween_2021"},
       {"name": "Chickatrice", "collection": "halloween_2022"},
       {"name": "Slug", "collection": "halloween_2022"},
       {"name": "Cute-A-Cabra", "collection": "halloween_2023"},
       {"name": "Scarecrow", "collection": "halloween_2023"},
       {"name": "Sea Skeleton Panda", "collection": "halloween_2024"},
-      {"name": "Patchy Bear", "collection": "halloween_2025"},
+      {"name": "Frankefeline", "collection": "halloween_2025"},
       {"name": "Jumping Spider", "collection": "halloween_2025"},
-      {"name": "Magpie", "collection": "inspector_shepherd_2026"},
+      {"name": "Patchy Bear", "collection": "halloween_2025"},
+      {"name": "Magpie", "collection": "inspector_2026"},
       {"name": "Rhino Beetle", "collection": "japan_2022"},
       {"name": "Tanuki", "collection": "japan_2022"},
+      {"name": "Fossa", "collection": "jungle_2023"},
       {"name": "Black Panther", "collection": "jungle_egg_2019"},
       {"name": "Capybara", "collection": "jungle_egg_2019"},
-      {"name": "Fossa", "collection": "jungle_2023"},
-      {"name": "Amami Rabbit", "collection": "lunar_new_year_2023"},
+      {"name": "Amami Rabbit", "collection": "lunar_2023"},
       {"name": "Frogspawn", "collection": "meme_2023"},
       {"name": "Snorgle", "collection": "moon_2025"},
       {"name": "Kirin", "collection": "mythic_egg_2021"},
+      {"name": "Dracula Fish", "collection": "ocean_2024"},
       {"name": "Crab", "collection": "ocean_event_2021"},
       {"name": "Dolphin", "collection": "ocean_event_2021"},
-      {"name": "Dracula Fish", "collection": "ocean_2024"},
       {"name": "Chocolate Labrador", "collection": "pets_update_2019"},
       {"name": "Fennec Fox", "collection": "pets_update_2019"},
       {"name": "Pink Cat", "collection": "pets_update_2019"},
       {"name": "Puma", "collection": "pets_update_2019"},
       {"name": "Snow Cat", "collection": "pets_update_2019"},
-      {"name": "Eel", "collection": "random_pets_2023"},
+      {"name": "Eel", "collection": "random_2023"},
       {"name": "Meerkat", "collection": "safari_egg_2019"},
       {"name": "Wild Boar", "collection": "safari_egg_2019"},
-      {"name": "Banded Palm Civet", "collection": "southeast_asia_2023"},
-      {"name": "Yellow-lipped Sea Krait", "collection": "southeast_asia_2023"},
-      {"name": "Kaijunir", "collection": "spring_2025"},
+      {"name": "Banded Palm Civet", "collection": "sea_2023"},
+      {"name": "Yellow-lipped Sea Krait", "collection": "sea_2023"},
+      {"name": "Kaijunior", "collection": "spring_2025"},
       {"name": "Cocoadile", "collection": "sugarfest_2026"},
-      {"name": "Mahi Mahi",  "collection": "summer_beach_2024"},
+      {"name": "Mahi Mahi", "collection": "summer_2024"},
       {"name": "Arctic Tern", "collection": "summerfest_2023"},
       {"name": "Hermit Crab", "collection": "summerfest_2023"},
       {"name": "Lobster", "collection": "summerfest_2023"},
       {"name": "Rodeo Bull", "collection": "summerfest_2024"},
       {"name": "Hammerhead Shark", "collection": "summerfest_2025"},
       {"name": "Kelp Crewmate", "collection": "summerfest_2025"},
-      {"name": "Black Marlin", "collection": "sunshine_games_2024"},
-      {"name": "Warthog", "collection": "ugc_refresh_2023"},
-      {"name": "Rock Pidgeon", "collection": "urban_2023"},
+      {"name": "Black Marlin", "collection": "sunshine_2024"},
+      {"name": "Warthog", "collection": "ugc_2023"},
+      {"name": "Rock Pigeon", "collection": "urban_2023"},
       {"name": "Tawny Frogmouth", "collection": "urban_2023"},
+      {"name": "Wolf", "collection": "winter_2019"},
       {"name": "Snowman", "collection": "winter_2020"},
-      {"name": "Snowy Leopard", "collection": "winter_2021"},
+      {"name": "Snow Leopard", "collection": "winter_2021"},
       {"name": "Ermine", "collection": "winter_2022"},
       {"name": "Arctic Hare", "collection": "winter_2023"},
       {"name": "Christmas Future Egg", "collection": "winter_2023"},
@@ -865,2478 +866,629 @@
       {"name": "Mistletroll", "collection": "winter_2024"},
       {"name": "Humbug", "collection": "winter_2025"},
       {"name": "Old King Coal", "collection": "winter_2025"},
-      {"name": "Wolf", "collection": "winter_2019"},
       {"name": "Red Cardinal", "collection": "woodland_egg_2022"}
     ],
     "rare": [
-      {
-        "name": "Pudding Cat",
-        "collection": "april_fools_2023"
-      },
-      {
-        "name": "Australian Kelpie",
-        "collection": "aussie_egg_2020"
-      },
-      {
-        "name": "Emu",
-        "collection": "aussie_egg_2020"
-      },
-      {
-        "name": "Tasmanian Devil",
-        "collection": "aussie_update_2024"
-      },
-      {
-        "name": "Zebra",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Parakeet",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Retired Egg",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Orangutan",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Yellow Butterfly",
-        "collection": "butterfly_2022"
-      },
-      {
-        "name": "Amber Butterfly",
-        "collection": "butterfly_2025"
-      },
-      {
-        "name": "Capuchin Monkey",
-        "collection": "capuchin_2024"
-      },
-      {
-        "name": "Moonlight Moth",
-        "collection": "celestial_2024"
-      },
-      {
-        "name": "Singularity Beetle",
-        "collection": "celestial_2024"
-      },
-      {
-        "name": "Singulariy Pisces",
-        "collection": "celestial_2024"
-      },
-      {
-        "name": "Star Hopper",
-        "collection": "celestial_2024"
-      },
-      {
-        "name": "Chipmunk",
-        "collection": "chip_rac_2023"
-      },
-      {
-        "name": "Hippo",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Poison Dart Frog",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Oryx",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Thorny Devil",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Abyssinian Cat",
-        "collection": "desert_update_2022"
-      },
-      {
-        "name": "Blue Egg",
-        "collection": "easter_2019"
-      },
-      {
-        "name": "Dotted Eggy",
-        "collection": "easter_2024"
-      },
-      {
-        "name": "Candy Floss Chick",
-        "collection": "easter_2024"
-      },
-      {
-        "name": "Black Rhino",
-        "collection": "endangered_egg_2026"
-      },
-      {
-        "name": "Mexican Wolf",
-        "collection": "endangered_egg_2026"
-      },
-      {
-        "name": "Long Horn Cow",
-        "collection": "farm_2023"
-      },
-      {
-        "name": "English Sheepdog",
-        "collection": "farm_2023"
-      },
-      {
-        "name": "Cow",
-        "collection": "farm_egg_2019"
-      },
-      {
-        "name": "Pig",
-        "collection": "farm_egg_2019"
-      },
-      {
-        "name": "Dilophosaurus",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "Pterodactyl",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "Woolly Mammoth",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "Ankylosaurus",
-        "collection": "fossil_isle_2024"
-      },
-      {
-        "name": "Blue Jay",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Weevil",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Gibbon",
-        "collection": "gibbon_2025"
-      },
-      {
-        "name": "Gorilla",
-        "collection": "gorilla_2023"
-      },
-      {
-        "name": "Evil Dachshund",
-        "collection": "halloween_2021"
-      },
-      {
-        "name": "Ghost Wolf",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Basilisk",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Mule",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Evil Rock",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Ghost Dog",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Scarecrow Horse",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Undead Elk",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Marabou Stork",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Zombie Chick",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "DJ Snooze",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Tarantula",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "The Black Dog",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Munchkin Cat",
-        "collection": "house_pets_2025"
-      },
-      {
-        "name": "French Bulldog",
-        "collection": "house_pets_2025"
-      },
-      {
-        "name": "Subzero Scorpion",
-        "collection": "ice_dimension_2025"
-      },
-      {
-        "name": "Shiver Wolf",
-        "collection": "ice_dimension_2025"
-      },
-      {
-        "name": "Sneak Weasel",
-        "collection": "inspector_shepherd_2026"
-      },
-      {
-        "name": "Ibis",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Koi Carp",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Leopard Cat",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Bird of Paradise",
-        "collection": "jungle_2023"
-      },
-      {
-        "name": "Cassowary",
-        "collection": "jungle_2023"
-      },
-      {
-        "name": "Giant Ant Eater",
-        "collection": "jungle_2023"
-      },
-      {
-        "name": "Ring-tailed Lemur",
-        "collection": "jungle_2023"
-      },
-      {
-        "name": "Brown Bear",
-        "collection": "jungle_egg_2019"
-      },
-      {
-        "name": "Rhino",
-        "collection": "jungle_egg_2019"
-      },
-      {
-        "name": "Kiwi",
-        "collection": "kiwi_2023"
-      },
-      {
-        "name": "Rat",
-        "collection": "lunar_2020"
-      },
-      {
-        "name": "Ox",
-        "collection": "lunar_2021"
-      },
-      {
-        "name": "Lunar Tiger",
-        "collection": "lunar_2022"
-      },
-      {
-        "name": "Black Moon Bear",
-        "collection": "lunar_new_year_2023"
-      },
-      {
-        "name": "Moon Rabbit",
-        "collection": "lunar_new_year_2023"
-      },
-      {
-        "name": "Blossom Snake",
-        "collection": "lunar_2025"
-      },
-      {
-        "name": "Nebula Snake",
-        "collection": "lunar_2025"
-      },
-      {
-        "name": "Prism Snake",
-        "collection": "lunar_2025"
-      },
-      {
-        "name": "Flaming Zebra",
-        "collection": "lures_2023"
-      },
-      {
-        "name": "Feesh",
-        "collection": "meme_2023"
-      },
-      {
-        "name": "Monkey",
-        "collection": "monkey_2020"
-      },
-      {
-        "name": "Moonpine",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Zeopod",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Merhorse",
-        "collection": "mythic_egg_2021"
-      },
-      {
-        "name": "Sasquatch",
-        "collection": "mythic_egg_2021"
-      },
-      {
-        "name": "Pet Egg",
-        "collection": "nursery_2019"
-      },
-      {
-        "name": "Sea Angel",
-        "collection": "ocean_2024"
-      },
-      {
-        "name": "Narwhal",
-        "collection": "ocean_event_2021"
-      },
-      {
-        "name": "Seahorse",
-        "collection": "ocean_event_2021"
-      },
-      {
-        "name": "Beaver",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Bunny",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Pink Egg",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Rabbit",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Snow Puma",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Goldfish",
-        "collection": "pool_2023"
-      },
-      {
-        "name": "Ocelot",
-        "collection": "rain_2023"
-      },
-      {
-        "name": "Ibex",
-        "collection": "random_2022"
-      },
-      {
-        "name": "Elephant",
-        "collection": "safari_egg_2019"
-      },
-      {
-        "name": "Hyena",
-        "collection": "safari_egg_2019"
-      },
-      {
-        "name": "Ribbon Seal",
-        "collection": "snow_2022"
-      },
-      {
-        "name": "Gecko",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Tarsier",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Kappakid",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Mecha R3BBIT",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Border Collie",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Goose",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Happy Duckling",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Hare",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Clover Cow",
-        "collection": "st_patricks_2025"
-      },
-      {
-        "name": "Glyptodon Ducky",
-        "collection": "stormy_ducky_2026"
-      },
-      {
-        "name": "Gummy Guana",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Milk Choccybunny",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Mahi Mahi",
-        "collection": "summer_beach_2024"
-      },
-      {
-        "name": "Castle Hermit Crab",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Leopard Shark",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Cow Calf",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Orange Betta Fish",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Punk Pony",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Emperor Shrimp",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Kelp Raider",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Wren",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Bloodhound",
-        "collection": "ugc_refresh_2023"
-      },
-      {
-        "name": "Ostrich",
-        "collection": "ugc_refresh_2023"
-      },
-      {
-        "name": "Indian Leopard",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Toy Poodle",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Love Bird",
-        "collection": "valentines_2025"
-      },
-      {
-        "name": "Sweetheart Rat",
-        "collection": "valentines_2025"
-      },
-      {
-        "name": "Cherub Chipmunk",
-        "collection": "valentines_2026"
-      },
-      {
-        "name": "Polar Bear",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Reindeer",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Shrew",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Swan",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Musk Ox",
-        "collection": "winter_2020"
-      },
-      {
-        "name": "Lynx",
-        "collection": "winter_2020"
-      },
-      {
-        "name": "Husky",
-        "collection": "winter_2021"
-      },
-      {
-        "name": "Summer Walrus",
-        "collection": "winter_2021"
-      },
-      {
-        "name": "Irish Elk",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Shetland Pony Dark Brown",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Steppe Lion",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Nutcracker Squirrel",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Eggnog Hare",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Ice Cube",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Great Pyrenees",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Winter Fawn",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Angus Cow",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Turtle Doves",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Tree Sasquatch",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Samoyed",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Red Fox",
-        "collection": "woodland_egg_2022"
-      },
-      {
-        "name": "Woodpecker",
-        "collection": "woodland_egg_2022"
-      }
+      {"name": "Pudding Cat", "collection": "april_fools_2023"},
+      {"name": "Australian Kelpie", "collection": "aussie_egg_2020"},
+      {"name": "Emu", "collection": "aussie_egg_2020"},
+      {"name": "Tasmanian Devil", "collection": "aussie_update_2024"},
+      {"name": "Chanekeh", "collection": "aztec_egg_2025"},
+      {"name": "Water Opossum", "collection": "aztec_egg_2025"},
+      {"name": "Orangutan", "collection": "basic_egg_2022"},
+      {"name": "Parakeet", "collection": "basic_egg_2022"},
+      {"name": "Retired Egg", "collection": "basic_egg_2022"},
+      {"name": "Zebra", "collection": "basic_egg_2022"},
+      {"name": "Yellow Butterfly", "collection": "butterfly_2022"},
+      {"name": "Amber Butterfly", "collection": "butterfly_2025"},
+      {"name": "Capuchin Monkey", "collection": "capuchin_2024"},
+      {"name": "Moonlight Moth", "collection": "celestial_2024"},
+      {"name": "Singularity Beetle", "collection": "celestial_2024"},
+      {"name": "Singularity Pisces", "collection": "celestial_2024"},
+      {"name": "Starhopper", "collection": "celestial_2024"},
+      {"name": "Chipmunk", "collection": "chip_rac_2023"},
+      {"name": "Hippo", "collection": "danger_2023"},
+      {"name": "Poison Dart Frog", "collection": "danger_2023"},
+      {"name": "Oryx", "collection": "desert_2024"},
+      {"name": "Thorny Devil", "collection": "desert_2024"},
+      {"name": "Abyssinian Cat", "collection": "desert_update_2022"},
+      {"name": "Blue Egg", "collection": "easter_2019"},
+      {"name": "Candyfloss Chick", "collection": "easter_2024"},
+      {"name": "Dotted Eggy", "collection": "easter_2024"},
+      {"name": "Black Rhino", "collection": "endangered_2026"},
+      {"name": "Mexican Wolf", "collection": "endangered_2026"},
+      {"name": "English Sheepdog", "collection": "farm_2023"},
+      {"name": "Longhorn Cow", "collection": "farm_2023"},
+      {"name": "Cow", "collection": "farm_egg_2019"},
+      {"name": "Pig", "collection": "farm_egg_2019"},
+      {"name": "Dilophosaurus", "collection": "fossil_isle_2020"},
+      {"name": "Pterodactyl", "collection": "fossil_isle_2020"},
+      {"name": "Woolly Mammoth", "collection": "fossil_isle_2020"},
+      {"name": "Ankylosaurus", "collection": "fossil_isle_2024"},
+      {"name": "Blue Jay", "collection": "garden_2024"},
+      {"name": "Weevil", "collection": "garden_2024"},
+      {"name": "Gibbon", "collection": "gibbon_2025"},
+      {"name": "Gorilla", "collection": "gorilla_2023"},
+      {"name": "Halloween Evil Dachshund", "collection": "halloween_2021"},
+      {"name": "White Mummy Cat", "collection": "halloween_2021"},
+      {"name": "Basilisk", "collection": "halloween_2022"},
+      {"name": "Ghost Wolf", "collection": "halloween_2022"},
+      {"name": "Mule", "collection": "halloween_2022"},
+      {"name": "Evil Rock", "collection": "halloween_2023"},
+      {"name": "Ghost Dog", "collection": "halloween_2023"},
+      {"name": "Scarecrow Horse", "collection": "halloween_2023"},
+      {"name": "Undead Elk", "collection": "halloween_2023"},
+      {"name": "Marabou Stork", "collection": "halloween_2024"},
+      {"name": "Zombie Chick", "collection": "halloween_2024"},
+      {"name": "DJ Snooze", "collection": "halloween_2025"},
+      {"name": "Tarantula", "collection": "halloween_2025"},
+      {"name": "The Black Dog", "collection": "halloween_2025"},
+      {"name": "French Bulldog", "collection": "house_pets_2025"},
+      {"name": "Munchkin Cat", "collection": "house_pets_2025"},
+      {"name": "Shiver Wolf", "collection": "ice_dimension_2025"},
+      {"name": "Subzero Scorpion", "collection": "ice_dimension_2025"},
+      {"name": "Sneak Weasel", "collection": "inspector_2026"},
+      {"name": "Ibis", "collection": "japan_2022"},
+      {"name": "Koi Carp", "collection": "japan_2022"},
+      {"name": "Leopard Cat", "collection": "japan_2022"},
+      {"name": "Bird of Paradise", "collection": "jungle_2023"},
+      {"name": "Cassowary", "collection": "jungle_2023"},
+      {"name": "Giant Ant Eater", "collection": "jungle_2023"},
+      {"name": "Ring-tailed Lemur", "collection": "jungle_2023"},
+      {"name": "Brown Bear", "collection": "jungle_egg_2019"},
+      {"name": "Rhino", "collection": "jungle_egg_2019"},
+      {"name": "Kiwi", "collection": "kiwi_2023"},
+      {"name": "Rat", "collection": "lunar_2020"},
+      {"name": "Ox", "collection": "lunar_2021"},
+      {"name": "Lunar Tiger", "collection": "lunar_2022"},
+      {"name": "Black Moon Bear", "collection": "lunar_2023"},
+      {"name": "Moon Rabbit", "collection": "lunar_2023"},
+      {"name": "Blossom Snake", "collection": "lunar_2025"},
+      {"name": "Nebula Snake", "collection": "lunar_2025"},
+      {"name": "Prism Snake", "collection": "lunar_2025"},
+      {"name": "Flaming Zebra", "collection": "lures_2023"},
+      {"name": "Feesh", "collection": "meme_2023"},
+      {"name": "Monkey", "collection": "monkey_2020"},
+      {"name": "Moonpine", "collection": "moon_2025"},
+      {"name": "Zeopod", "collection": "moon_2025"},
+      {"name": "Merhorse", "collection": "mythic_egg_2021"},
+      {"name": "Sasquatch", "collection": "mythic_egg_2021"},
+      {"name": "Pet Egg", "collection": "nursery_2019"},
+      {"name": "Sea Angel", "collection": "ocean_2024"},
+      {"name": "Narwhal", "collection": "ocean_event_2021"},
+      {"name": "Seahorse", "collection": "ocean_event_2021"},
+      {"name": "Beaver", "collection": "pets_update_2019"},
+      {"name": "Bunny", "collection": "pets_update_2019"},
+      {"name": "Pink Egg", "collection": "pets_update_2019"},
+      {"name": "Rabbit", "collection": "pets_update_2019"},
+      {"name": "Snow Puma", "collection": "pets_update_2019"},
+      {"name": "Goldfish", "collection": "pool_2023"},
+      {"name": "Ocelot", "collection": "rain_2023"},
+      {"name": "Ibex", "collection": "random_2022"},
+      {"name": "Elephant", "collection": "safari_egg_2019"},
+      {"name": "Hyena", "collection": "safari_egg_2019"},
+      {"name": "Gecko", "collection": "sea_2023"},
+      {"name": "Tarsier", "collection": "sea_2023"},
+      {"name": "Kappakid", "collection": "spring_2025"},
+      {"name": "Mecha R3BBIT", "collection": "spring_2025"},
+      {"name": "Border Collie", "collection": "springfest_2023"},
+      {"name": "Goose", "collection": "springfest_2023"},
+      {"name": "Happy Duckling", "collection": "springfest_2023"},
+      {"name": "Hare", "collection": "springfest_2023"},
+      {"name": "Clover Cow", "collection": "st_patricks_2025"},
+      {"name": "Glyptodon Ducky", "collection": "stormy_ducky_2026"},
+      {"name": "Gummy Guana", "collection": "sugarfest_2026"},
+      {"name": "Milk Choccybunny", "collection": "sugarfest_2026"},
+      {"name": "Castle Hermit Crab", "collection": "summerfest_2023"},
+      {"name": "Leopard Shark", "collection": "summerfest_2023"},
+      {"name": "Cow Calf", "collection": "summerfest_2024"},
+      {"name": "Orange Betta Fish", "collection": "summerfest_2024"},
+      {"name": "Punk Pony", "collection": "summerfest_2024"},
+      {"name": "Emperor Shrimp", "collection": "summerfest_2025"},
+      {"name": "Kelp Raider", "collection": "summerfest_2025"},
+      {"name": "Wren", "collection": "summerfest_2025"},
+      {"name": "Bloodhound", "collection": "ugc_2023"},
+      {"name": "Ostrich", "collection": "ugc_2023"},
+      {"name": "Indian Leopard", "collection": "urban_2023"},
+      {"name": "Toy Poodle", "collection": "urban_2023"},
+      {"name": "Love Bird", "collection": "valentines_2025"},
+      {"name": "Sweetheart Rat", "collection": "valentines_2025"},
+      {"name": "Cherub Chipmunk", "collection": "valentines_2026"},
+      {"name": "Polar Bear", "collection": "winter_2019"},
+      {"name": "Reindeer", "collection": "winter_2019"},
+      {"name": "Shrew", "collection": "winter_2019"},
+      {"name": "Swan", "collection": "winter_2019"},
+      {"name": "Lynx", "collection": "winter_2020"},
+      {"name": "Musk Ox", "collection": "winter_2020"},
+      {"name": "Husky", "collection": "winter_2021"},
+      {"name": "Summer Walrus", "collection": "winter_2021"},
+      {"name": "Irish Elk", "collection": "winter_2022"},
+      {"name": "Shetland Pony Dark Brown", "collection": "winter_2022"},
+      {"name": "Steppe Lion", "collection": "winter_2022"},
+      {"name": "Eggnog Hare", "collection": "winter_2023"},
+      {"name": "Nutcracker Squirrel", "collection": "winter_2023"},
+      {"name": "Great Pyrenees", "collection": "winter_2024"},
+      {"name": "Ice Cube", "collection": "winter_2024"},
+      {"name": "Winter Fawn", "collection": "winter_2024"},
+      {"name": "Angus Cow", "collection": "winter_2025"},
+      {"name": "Samoyed", "collection": "winter_2025"},
+      {"name": "Tree Sasquatch", "collection": "winter_2025"},
+      {"name": "Turtle Doves", "collection": "winter_2025"},
+      {"name": "Red Fox", "collection": "woodland_egg_2022"},
+      {"name": "Woodpecker", "collection": "woodland_egg_2022"}
     ],
     "ultrarare": [
-      {
-        "name": "Sprout Snail",
-        "collection": "april_fools_2023"
-      },
-      {
-        "name": "Frog",
-        "collection": "aussie_egg_2020"
-      },
-      {
-        "name": "Koala",
-        "collection": "aussie_egg_2020"
-      },
-      {
-        "name": "Kookaburra",
-        "collection": "aussie_update_2024"
-      },
-      {
-        "name": "Ehecatl",
-        "collection": "aztec_egg_2025"
-      },
-      {
-        "name": "Onza",
-        "collection": "aztec_egg_2025"
-      },
-      {
-        "name": "Corgi",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Robot",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Swordfish",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Orange Butterfly",
-        "collection": "butterfly_2022"
-      },
-      {
-        "name": "Purple Butterfly",
-        "collection": "butterfly_2022"
-      },
-      {
-        "name": "Scarlet Butterfly",
-        "collection": "butterfly_2022"
-      },
-      {
-        "name": "Seafoam Butterfly",
-        "collection": "butterfly_2025"
-      },
-      {
-        "name": "Vermillion Butterfly",
-        "collection": "butterfly_2025"
-      },
-      {
-        "name": "Momma Moose",
-        "collection": "camping_shop_refresh_2025"
-      },
-      {
-        "name": "Inmate Capuchin Monkey",
-        "collection": "capuchin_2024"
-      },
-      {
-        "name": "Preppy Capuchin Monkey",
-        "collection": "capuchin_2024"
-      },
-      {
-        "name": "Bee",
-        "collection": "coffee_2019"
-      },
-      {
-        "name": "Blue Ringed Octopus",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Lammergeier",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Puffer Fish",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Deathstalker Scorpion",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Roadrunner",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Vulture",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Giant Black Scarab",
-        "collection": "desert_update_2022"
-      },
-      {
-        "name": "Giant Blue Scarab",
-        "collection": "desert_update_2022"
-      },
-      {
-        "name": "Golden Jaguar",
-        "collection": "dia_muertos_2024"
-      },
-      {
-        "name": "Grave Owl",
-        "collection": "dia_muertos_2024"
-      },
-      {
-        "name": "Lamb",
-        "collection": "easter_2021"
-      },
-      {
-        "name": "Black Springer Spaniel",
-        "collection": "easter_2022"
-      },
-      {
-        "name": "Brown Springer Spaniel",
-        "collection": "easter_2022"
-      },
-      {
-        "name": "Candy Cane Snail",
-        "collection": "easter_2024"
-      },
-      {
-        "name": "Floral Eggy",
-        "collection": "easter_2024"
-      },
-      {
-        "name": "Black-Footed Ferret",
-        "collection": "endangered_egg_2026"
-      },
-      {
-        "name": "Pangolin",
-        "collection": "endangered_egg_2026"
-      },
-      {
-        "name": "Badger",
-        "collection": "fall_2022"
-      },
-      {
-        "name": "Brown-Chested Pheasent",
-        "collection": "fall_2022"
-      },
-      {
-        "name": "Rooster",
-        "collection": "farm_2023"
-      },
-      {
-        "name": "Alpaca",
-        "collection": "farm_2023"
-      },
-      {
-        "name": "Caterpillar",
-        "collection": "farm_2023"
-      },
-      {
-        "name": "Llama",
-        "collection": "farm_egg_2019"
-      },
-      {
-        "name": "Turkey",
-        "collection": "farm_egg_2019"
-      },
-      {
-        "name": "Ladybug",
-        "collection": "farm_shop_2021"
-      },
-      {
-        "name": "Burning Bunny",
-        "collection": "fire_dimension_2024"
-      },
-      {
-        "name": "Flaming Fox",
-        "collection": "fire_dimension_2024"
-      },
-      {
-        "name": "Ornate Horned Frog",
-        "collection": "fire_dimension_2024"
-      },
-      {
-        "name": "Wildfire Hawk",
-        "collection": "fire_dimension_2024"
-      },
-      {
-        "name": "Clementine Owl",
-        "collection": "food_pets_2026"
-      },
-      {
-        "name": "Deinonychus",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "Sabertooth",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "Elasmosaurus",
-        "collection": "fossil_isle_2024"
-      },
-      {
-        "name": "Praying Mantis",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Skunk",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Firefighter Gibbon",
-        "collection": "gibbon_2025"
-      },
-      {
-        "name": "Officer Gibbon",
-        "collection": "gibbon_2025"
-      },
-      {
-        "name": "Ringmaster Gibbon",
-        "collection": "gibbon_2025"
-      },
-      {
-        "name": "Chef Gorilla",
-        "collection": "gorilla_2023"
-      },
-      {
-        "name": "Karate Gorilla",
-        "collection": "gorilla_2023"
-      },
-      {
-        "name": "Groundhog",
-        "collection": "groundhog_2024"
-      },
-      {
-        "name": "Zombie Buffalo",
-        "collection": "halloween_2019"
-      },
-      {
-        "name": "Albino Bat",
-        "collection": "halloween_2020"
-      },
-      {
-        "name": "Ghost Bunny",
-        "collection": "halloween_2020"
-      },
-      {
-        "name": "Skeleton Dog",
-        "collection": "halloween_2021"
-      },
-      {
-        "name": "Zombie Wolf",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Evil Chickatrice",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Evil Basilisk",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Lava Wolf",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Nightmare Owl",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Scarecrow Cat",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Slime",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Ghost Chick",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Headless Horse",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Indian Flying Fox",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Pumpkin Friend",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Chilling Spider",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Ghostly Cat",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Skelebat",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Hamster",
-        "collection": "hamstertime_2024"
-      },
-      {
-        "name": "Siamese",
-        "collection": "house_pets_2025"
-      },
-      {
-        "name": "Mini Schnauzer",
-        "collection": "house_pets_2025"
-      },
-      {
-        "name": "Penguin",
-        "collection": "ice_cream_2019"
-      },
-      {
-        "name": "King Penguin",
-        "collection": "ice_cream_2022"
-      },
-      {
-        "name": "Frozen Penguin",
-        "collection": "ice_dimension_2025"
-      },
-      {
-        "name": "Icy Porcupine",
-        "collection": "ice_dimension_2025"
-      },
-      {
-        "name": "Snowy Mammoth",
-        "collection": "ice_dimension_2025"
-      },
-      {
-        "name": "Germnan Shepherd",
-        "collection": "inspector_shepherd_2026"
-      },
-      {
-        "name": "Red Crowned Crane",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Spider Crab",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Trapdoor Snail",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Crocodile",
-        "collection": "jungle_egg_2019"
-      },
-      {
-        "name": "Platypus",
-        "collection": "jungle_egg_2019"
-      },
-      {
-        "name": "Panda",
-        "collection": "lunar_2020"
-      },
-      {
-        "name": "Lunar Ox",
-        "collection": "lunar_2021"
-      },
-      {
-        "name": "Lunar White Tiger",
-        "collection": "lunar_2022"
-      },
-      {
-        "name": "Water Moon Bear",
-        "collection": "lunar_new_year_2023"
-      },
-      {
-        "name": "Water Rabbit",
-        "collection": "lunar_new_year_2023"
-      },
-      {
-        "name": "Rice Cake Rabbit",
-        "collection": "lunar_2024"
-      },
-      {
-        "name": "Fanghorn Tortoise",
-        "collection": "lunar_2024"
-      },
-      {
-        "name": "Fire Foal",
-        "collection": "lunar_2026"
-      },
-      {
-        "name": "Magma Moose",
-        "collection": "lures_2023"
-      },
-      {
-        "name": "Magma Snail",
-        "collection": "lures_2023"
-      },
-      {
-        "name": "Toasty Red Panda",
-        "collection": "lures_2023"
-      },
-      {
-        "name": "Sheeeeep",
-        "collection": "meme_2023"
-      },
-      {
-        "name": "Business Monkey",
-        "collection": "monkey_2020"
-      },
-      {
-        "name": "Toy Monkey",
-        "collection": "monkey_2020"
-      },
-      {
-        "name": "Puptune",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Starmite",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Hydra",
-        "collection": "mythic_egg_2021"
-      },
-      {
-        "name": "Wyvern",
-        "collection": "mythic_egg_2021"
-      },
-      {
-        "name": "Lionfish",
-        "collection": "ocean_2024"
-      },
-      {
-        "name": "Clownfish",
-        "collection": "ocean_event_2021"
-      },
-      {
-        "name": "Choco Penguin",
-        "collection": "penguins_2025"
-      },
-      {
-        "name": "Dire Wolf",
-        "collection": "pet_releaser_2026"
-      },
-      {
-        "name": "Horse",
-        "collection": "pet_shop_2019"
-      },
-      {
-        "name": "Red Panda",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Shiba Inu",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Red Sand Dollar",
-        "collection": "pool_2023"
-      },
-      {
-        "name": "White Sand Dollar",
-        "collection": "pool_2023"
-      },
-      {
-        "name": "Goat",
-        "collection": "pride_2022"
-      },
-      {
-        "name": "Persian Cat",
-        "collection": "puss_2022"
-      },
-      {
-        "name": "Green Amazon",
-        "collection": "rain_2023"
-      },
-      {
-        "name": "Pelican",
-        "collection": "random_pets_2023"
-      },
-      {
-        "name": "Royal Corgi",
-        "collection": "royal_tea_2022"
-      },
-      {
-        "name": "Royal Palace Spaniel",
-        "collection": "royal_tea_2022"
-      },
-      {
-        "name": "Flamingo",
-        "collection": "safari_egg_2019"
-      },
-      {
-        "name": "Lion",
-        "collection": "safari_egg_2019"
-      },
-      {
-        "name": "Peachick",
-        "collection": "salon_2026"
-      },
-      {
-        "name": "Highland Cow",
-        "collection": "scottish_2023"
-      },
-      {
-        "name": "Grinmoire",
-        "collection": "sky_castle_2023"
-      },
-      {
-        "name": "Albatross",
-        "collection": "snow_2022"
-      },
-      {
-        "name": "Binturong",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Black Macaque",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Komodo Dragon",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Cabbit",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Kage Crow",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Mirai Moth",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Toxic Kaijunior",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Flower Power Duckling",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Wood Pidgeon",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Gaelic Fae",
-        "collection": "st_patricks_2025"
-      },
-      {
-        "name": "Ginger Cat",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Starfish",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Toucan",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Orca",
-        "collection": "star_2022"
-      },
-      {
-        "name": "Pomeranian",
-        "collection": "star_2022"
-      },
-      {
-        "name": "Unicorn Ducky",
-        "collection": "stormy_ducky_2026"
-      },
-      {
-        "name": "Shadow Dragon Ducky",
-        "collection": "stormy_ducky_2026"
-      },
-      {
-        "name": "Hummingbird",
-        "collection": "subscriptions_2024"
-      },
-      {
-        "name": "Chocolate Dutch Guinea Pig",
-        "collection": "subscriptions_2026"
-      },
-      {
-        "name": "Gumball Caterpillar",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Waffle Wyrm",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "White Choccybunny",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Pupcake",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Gold Mahi Mahi",
-        "collection": "summer_beach_2024"
-      },
-      {
-        "name": "Nautilus",
-        "collection": "summer_beach_2024"
-      },
-      {
-        "name": "Many Mackerel",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Tortuga de la Isla",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Ice Cream Hermit Crab",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Happy Clam",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Mini Pig",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Pink Betta Fish",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Pretty Pony",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Bald Eagle",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Seabed Creeper",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Kelp Hunter",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Sea Slug",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Peregrine Falcon",
-        "collection": "sunshine_games_2024"
-      },
-      {
-        "name": "Red Squirrel",
-        "collection": "toy_shop_2021"
-      },
-      {
-        "name": "Glacier Moth",
-        "collection": "ugc_refresh_2023"
-      },
-      {
-        "name": "African Wild Dog",
-        "collection": "ugc_refresh_2023"
-      },
-      {
-        "name": "Lion Cub",
-        "collection": "ugc_refresh_2023"
-      },
-      {
-        "name": "Honey Badger",
-        "collection": "ugc_2024"
-      },
-      {
-        "name": "Jellyfish",
-        "collection": "ugc_2024"
-      },
-      {
-        "name": "Tri-horned Treehopper",
-        "collection": "ugc_2025"
-      },
-      {
-        "name": "Irish Water Spaniel",
-        "collection": "ugc_2022"
-      },
-      {
-        "name": "Alley Cat",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Black Kite",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Seagull",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Tan Chow-Chow",
-        "collection": "vip_2022"
-      },
-      {
-        "name": "Arctic Fox",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Dalmatian",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Hedgehog",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Yeti",
-        "collection": "winter_2020"
-      },
-      {
-        "name": "Puffin",
-        "collection": "winter_2021"
-      },
-      {
-        "name": "St Benard",
-        "collection": "winter_2021"
-      },
-      {
-        "name": "Grinderbread Reindeer",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Ice Wolf",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Ram",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Shetland Pony White",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Snowball Pet",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Wooly Rhino",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Christmas Pudding Pup",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Gingerbread Mouse",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Peppermint Penguin",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Grinderbread Hare",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Snow Monkey",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Bauble Buddies",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Cold Cube",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Partridge",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Merry Mistletroll",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Mr. Whiskerpips",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Winter Doe",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Frostbite Cub",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Snowball Pug",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Maine Coon",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Angus Calf",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Cozy Mistletroll",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Bunny Swirl",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Mrs. Whisperpips",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Pine Marten",
-        "collection": "woodland_egg_2022"
-      },
-      {
-        "name": "Salamander",
-        "collection": "woodland_egg_2022"
-      },
-      {
-        "name": "Sloth",
-        "collection": "pet_shop_2019"
-      },
-      {
-        "name": "Chanekeh",
-        "collection": "aztec_egg_2025"
-      },
-      {
-        "name": "Water Opossum",
-        "collection": "aztec_egg_2025"
-      }
+      {"name": "Sprout Snail", "collection": "april_fools_2023"},
+      {"name": "Frog", "collection": "aussie_egg_2020"},
+      {"name": "Koala", "collection": "aussie_egg_2020"},
+      {"name": "Kookaburra", "collection": "aussie_update_2024"},
+      {"name": "Ehecatl", "collection": "aztec_egg_2025"},
+      {"name": "Onza", "collection": "aztec_egg_2025"},
+      {"name": "Corgi", "collection": "basic_egg_2022"},
+      {"name": "Robot", "collection": "basic_egg_2022"},
+      {"name": "Swordfish", "collection": "basic_egg_2022"},
+      {"name": "Green Butterfly", "collection": "butterfly_2022"},
+      {"name": "Orange Butterfly", "collection": "butterfly_2022"},
+      {"name": "Purple Butterfly", "collection": "butterfly_2022"},
+      {"name": "Scarlet Butterfly", "collection": "butterfly_2022"},
+      {"name": "Seafoam Butterfly", "collection": "butterfly_2025"},
+      {"name": "Vermillion Butterfly", "collection": "butterfly_2025"},
+      {"name": "Momma Moose", "collection": "camping_refresh_2025"},
+      {"name": "Inmate Capuchin Monkey", "collection": "capuchin_2024"},
+      {"name": "Preppy Capuchin Monkey", "collection": "capuchin_2024"},
+      {"name": "Bee", "collection": "coffee_2019"},
+      {"name": "Blue Ringed Octopus", "collection": "danger_2023"},
+      {"name": "Lammergeier", "collection": "danger_2023"},
+      {"name": "Puffer Fish", "collection": "danger_2023"},
+      {"name": "Deathstalker Scorpion", "collection": "desert_2024"},
+      {"name": "Roadrunner", "collection": "desert_2024"},
+      {"name": "Vulture", "collection": "desert_2024"},
+      {"name": "Giant Black Scarab", "collection": "desert_update_2022"},
+      {"name": "Giant Blue Scarab", "collection": "desert_update_2022"},
+      {"name": "Golden Jaguar", "collection": "dia_muertos_2024"},
+      {"name": "Grave Owl", "collection": "dia_muertos_2024"},
+      {"name": "Lamb", "collection": "easter_2021"},
+      {"name": "Black Springer Spaniel", "collection": "easter_2022"},
+      {"name": "Brown Springer Spaniel", "collection": "easter_2022"},
+      {"name": "Candy Cane Snail", "collection": "easter_2024"},
+      {"name": "Floral Eggy", "collection": "easter_2024"},
+      {"name": "Black-Footed Ferret", "collection": "endangered_2026"},
+      {"name": "Pangolin", "collection": "endangered_2026"},
+      {"name": "Badger", "collection": "fall_2022"},
+      {"name": "Brown-Chested Pheasant", "collection": "fall_2022"},
+      {"name": "Alpaca", "collection": "farm_2023"},
+      {"name": "Caterpillar", "collection": "farm_2023"},
+      {"name": "Rooster", "collection": "farm_2023"},
+      {"name": "Llama", "collection": "farm_egg_2019"},
+      {"name": "Turkey", "collection": "farm_egg_2019"},
+      {"name": "Ladybug", "collection": "farm_shop_2021"},
+      {"name": "Burning Bunny", "collection": "fire_dimension_2024"},
+      {"name": "Flaming Fox", "collection": "fire_dimension_2024"},
+      {"name": "Ornate Horned Frog", "collection": "fire_dimension_2024"},
+      {"name": "Wildfire Hawk", "collection": "fire_dimension_2024"},
+      {"name": "Clementine Owl", "collection": "food_pets_2026"},
+      {"name": "Deinonychus", "collection": "fossil_isle_2020"},
+      {"name": "Sabertooth", "collection": "fossil_isle_2020"},
+      {"name": "Elasmosaurus", "collection": "fossil_isle_2024"},
+      {"name": "Praying Mantis", "collection": "garden_2024"},
+      {"name": "Skunk", "collection": "garden_2024"},
+      {"name": "Firefighter Gibbon", "collection": "gibbon_2025"},
+      {"name": "Officer Gibbon", "collection": "gibbon_2025"},
+      {"name": "Ringmaster Gibbon", "collection": "gibbon_2025"},
+      {"name": "Chef Gorilla", "collection": "gorilla_2023"},
+      {"name": "Karate Gorilla", "collection": "gorilla_2023"},
+      {"name": "Groundhog", "collection": "groundhog_2024"},
+      {"name": "Zombie Buffalo", "collection": "halloween_2019"},
+      {"name": "Albino Bat", "collection": "halloween_2020"},
+      {"name": "Ghost Bunny", "collection": "halloween_2020"},
+      {"name": "Skeleton Dog", "collection": "halloween_2021"},
+      {"name": "Evil Basilisk", "collection": "halloween_2022"},
+      {"name": "Evil Chickatrice", "collection": "halloween_2022"},
+      {"name": "Zombie Wolf", "collection": "halloween_2022"},
+      {"name": "Nightmare Owl", "collection": "halloween_2023"},
+      {"name": "Scarecrow Cat", "collection": "halloween_2023"},
+      {"name": "Slime", "collection": "halloween_2023"},
+      {"name": "Ghost Chick", "collection": "halloween_2024"},
+      {"name": "Headless Horse", "collection": "halloween_2024"},
+      {"name": "Indian Flying Fox", "collection": "halloween_2024"},
+      {"name": "Pumpkin Friend", "collection": "halloween_2024"},
+      {"name": "Chilling Spider", "collection": "halloween_2025"},
+      {"name": "Ghostly Cat", "collection": "halloween_2025"},
+      {"name": "Skelebat", "collection": "halloween_2025"},
+      {"name": "Hamster", "collection": "hamstertime_2024"},
+      {"name": "Mini Schnauzer", "collection": "house_pets_2025"},
+      {"name": "Siamese Cat", "collection": "house_pets_2025"},
+      {"name": "Penguin", "collection": "ice_cream_2019"},
+      {"name": "King Penguin", "collection": "ice_cream_2022"},
+      {"name": "Frozen Penguin", "collection": "ice_dimension_2025"},
+      {"name": "Icy Porcupine", "collection": "ice_dimension_2025"},
+      {"name": "Snowy Mammoth", "collection": "ice_dimension_2025"},
+      {"name": "German Shepherd", "collection": "inspector_2026"},
+      {"name": "Red Crowned Crane", "collection": "japan_2022"},
+      {"name": "Spider Crab", "collection": "japan_2022"},
+      {"name": "Trapdoor Snail", "collection": "japan_2022"},
+      {"name": "Crocodile", "collection": "jungle_egg_2019"},
+      {"name": "Platypus", "collection": "jungle_egg_2019"},
+      {"name": "Panda", "collection": "lunar_2020"},
+      {"name": "Lunar Ox", "collection": "lunar_2021"},
+      {"name": "Lunar White Tiger", "collection": "lunar_2022"},
+      {"name": "Water Moon Bear", "collection": "lunar_2023"},
+      {"name": "Water Rabbit", "collection": "lunar_2023"},
+      {"name": "Fanghorn Tortoise", "collection": "lunar_2024"},
+      {"name": "Rice Cake Rabbit", "collection": "lunar_2024"},
+      {"name": "Fire Foal", "collection": "lunar_2026"},
+      {"name": "Magma Moose", "collection": "lures_2023"},
+      {"name": "Magma Snail", "collection": "lures_2023"},
+      {"name": "Toasty Red Panda", "collection": "lures_2023"},
+      {"name": "Sheeeeep", "collection": "meme_2023"},
+      {"name": "Business Monkey", "collection": "monkey_2020"},
+      {"name": "Toy Monkey", "collection": "monkey_2020"},
+      {"name": "Puptune", "collection": "moon_2025"},
+      {"name": "Starmite", "collection": "moon_2025"},
+      {"name": "Hydra", "collection": "mythic_egg_2021"},
+      {"name": "Wyvern", "collection": "mythic_egg_2021"},
+      {"name": "Lionfish", "collection": "ocean_2024"},
+      {"name": "Clownfish", "collection": "ocean_event_2021"},
+      {"name": "Choco Penguin", "collection": "penguins_2025"},
+      {"name": "Dire Wolf", "collection": "pet_releaser_2026"},
+      {"name": "Horse", "collection": "pet_shop_2019"},
+      {"name": "Sloth", "collection": "pet_shop_2019"},
+      {"name": "Red Panda", "collection": "pets_update_2019"},
+      {"name": "Shiba Inu", "collection": "pets_update_2019"},
+      {"name": "Red Sand Dollar", "collection": "pool_2023"},
+      {"name": "White Sand Dollar", "collection": "pool_2023"},
+      {"name": "Goat", "collection": "pride_2022"},
+      {"name": "Persian Cat", "collection": "puss_2022"},
+      {"name": "Green Amazon", "collection": "rain_2023"},
+      {"name": "Pelican", "collection": "random_2023"},
+      {"name": "Royal Corgi", "collection": "royal_tea_2022"},
+      {"name": "Royal Palace Spaniel", "collection": "royal_tea_2022"},
+      {"name": "Flamingo", "collection": "safari_egg_2019"},
+      {"name": "Lion", "collection": "safari_egg_2019"},
+      {"name": "Moonbeam Peacock", "collection": "salon_2026"},
+      {"name": "Peachick", "collection": "salon_2026"},
+      {"name": "Peahen", "collection": "salon_2026"},
+      {"name": "Highland Cow", "collection": "scottish_2023"},
+      {"name": "Grinmoire", "collection": "sky_castle_2023"},
+      {"name": "Albatross", "collection": "snow_2022"},
+      {"name": "Ribbon Seal", "collection": "snow_2022"},
+      {"name": "Binturong", "collection": "sea_2023"},
+      {"name": "Black Macaque", "collection": "sea_2023"},
+      {"name": "Komodo Dragon", "collection": "sea_2023"},
+      {"name": "Space Whale", "collection": "space_house_2022"},
+      {"name": "Cabbit", "collection": "spring_2025"},
+      {"name": "Kage Crow", "collection": "spring_2025"},
+      {"name": "Mirai Moth", "collection": "spring_2025"},
+      {"name": "Toxic Kaijunior", "collection": "spring_2025"},
+      {"name": "Flower Power Duckling", "collection": "springfest_2023"},
+      {"name": "Wood Pidgeon", "collection": "springfest_2023"},
+      {"name": "Gaelic Fae", "collection": "st_patricks_2025"},
+      {"name": "Ginger Cat", "collection": "star_2020"},
+      {"name": "Starfish", "collection": "star_2020"},
+      {"name": "Toucan", "collection": "star_2020"},
+      {"name": "Orca", "collection": "star_2022"},
+      {"name": "Pomeranian", "collection": "star_2022"},
+      {"name": "Shadow Dragon Ducky", "collection": "stormy_ducky_2026"},
+      {"name": "Unicorn Ducky", "collection": "stormy_ducky_2026"},
+      {"name": "Hummingbird", "collection": "subscriptions_2024"},
+      {"name": "Chocolate Dutch Guinea Pig", "collection": "subscriptions_2026"},
+      {"name": "Gumball Caterpillar", "collection": "sugarfest_2026"},
+      {"name": "Pupcake", "collection": "sugarfest_2026"},
+      {"name": "Waffle Wyrm", "collection": "sugarfest_2026"},
+      {"name": "White Choccybunny", "collection": "sugarfest_2026"},
+      {"name": "Gold Mahi Mahi", "collection": "summer_2024"},
+      {"name": "Nautilus", "collection": "summer_2024"},
+      {"name": "Happy Clam", "collection": "summerfest_2023"},
+      {"name": "Ice Cream Hermit Crab", "collection": "summerfest_2023"},
+      {"name": "Many Mackerel", "collection": "summerfest_2023"},
+      {"name": "Tortuga de la Isla", "collection": "summerfest_2023"},
+      {"name": "Bald Eagle", "collection": "summerfest_2024"},
+      {"name": "Mini Pig", "collection": "summerfest_2024"},
+      {"name": "Pink Betta Fish", "collection": "summerfest_2024"},
+      {"name": "Pretty Pony", "collection": "summerfest_2024"},
+      {"name": "Kelp Hunter", "collection": "summerfest_2025"},
+      {"name": "Manta Ray", "collection": "summerfest_2025"},
+      {"name": "Sea Slug", "collection": "summerfest_2025"},
+      {"name": "Seabed Creeper", "collection": "summerfest_2025"},
+      {"name": "Peregrine Falcon", "collection": "sunshine_2024"},
+      {"name": "Red Squirrel", "collection": "toy_shop_2021"},
+      {"name": "African Wild Dog", "collection": "ugc_2023"},
+      {"name": "Glacier Moth", "collection": "ugc_2023"},
+      {"name": "Lion Cub", "collection": "ugc_2023"},
+      {"name": "Honey Badger", "collection": "ugc_2024"},
+      {"name": "Jellyfish", "collection": "ugc_2024"},
+      {"name": "Tri-horned Treehopper", "collection": "ugc_2025"},
+      {"name": "Irish Water Spaniel", "collection": "ugc_2022"},
+      {"name": "Alley Cat", "collection": "urban_2023"},
+      {"name": "Black Kite", "collection": "urban_2023"},
+      {"name": "Seagull", "collection": "urban_2023"},
+      {"name": "Tan Chow-Chow", "collection": "vip_2022"},
+      {"name": "Arctic Fox", "collection": "winter_2019"},
+      {"name": "Dalmatian", "collection": "winter_2019"},
+      {"name": "Hedgehog", "collection": "winter_2019"},
+      {"name": "Yeti", "collection": "winter_2020"},
+      {"name": "Puffin", "collection": "winter_2021"},
+      {"name": "St Bernard", "collection": "winter_2021"},
+      {"name": "Gingerbread Reindeer", "collection": "winter_2022"},
+      {"name": "Ice Wolf", "collection": "winter_2022"},
+      {"name": "Ram", "collection": "winter_2022"},
+      {"name": "Shetland Pony White", "collection": "winter_2022"},
+      {"name": "Snowball Pet", "collection": "winter_2022"},
+      {"name": "Wooly Rhino", "collection": "winter_2022"},
+      {"name": "Christmas Pudding Pup", "collection": "winter_2023"},
+      {"name": "Gingerbread Hare", "collection": "winter_2023"},
+      {"name": "Gingerbread Mouse", "collection": "winter_2023"},
+      {"name": "Peppermint Penguin", "collection": "winter_2023"},
+      {"name": "Snow Monkey", "collection": "winter_2023"},
+      {"name": "Bauble Buddies", "collection": "winter_2024"},
+      {"name": "Cold Cube", "collection": "winter_2024"},
+      {"name": "Frostbite Cub", "collection": "winter_2024"},
+      {"name": "Merry Mistletroll", "collection": "winter_2024"},
+      {"name": "Mr. Whiskerpips", "collection": "winter_2024"},
+      {"name": "Partridge", "collection": "winter_2024"},
+      {"name": "Winter Doe", "collection": "winter_2024"},
+      {"name": "Angus Calf", "collection": "winter_2025"},
+      {"name": "Bunny Swirl", "collection": "winter_2025"},
+      {"name": "Cozy Mistletroll", "collection": "winter_2025"},
+      {"name": "Maine Coon", "collection": "winter_2025"},
+      {"name": "Mrs. Whiskerpips", "collection": "winter_2025"},
+      {"name": "Snowball Pug", "collection": "winter_2025"},
+      {"name": "Pine Marten", "collection": "woodland_egg_2022"},
+      {"name": "Salamander", "collection": "woodland_egg_2022"}
     ],
     "legendary": [
-      {
-        "name": "2D Kitty",
-        "collection": "2d_tuesday_2025"
-      },
-      {
-        "name": "Admin Abuse Egg",
-        "collection": "admin_abuse_2026"
-      },
-      {
-        "name": "Sush Penguin",
-        "collection": "admin_abuse_2026"
-      },
-      {
-        "name": "Velocirooster",
-        "collection": "admin_abuse_2026"
-      },
-      {
-        "name": "Mechapup",
-        "collection": "april_fools_2022"
-      },
-      {
-        "name": "Tió De Nadal",
-        "collection": "april_fools_2023"
-      },
-      {
-        "name": "Yule Log Dog",
-        "collection": "april_fools_2023"
-      },
-      {
-        "name": "Fool Egg",
-        "collection": "april_fools_2023"
-      },
-      {
-        "name": "Kangaroo",
-        "collection": "aussie_egg_2020"
-      },
-      {
-        "name": "Turtle",
-        "collection": "aussie_egg_2020"
-      },
-      {
-        "name": "Aussie Egg",
-        "collection": "aussie_egg_2020"
-      },
-      {
-        "name": "Aztec Egg",
-        "collection": "aztec_2025"
-      },
-      {
-        "name": "Royal Aztec Egg",
-        "collection": "aztec_2025"
-      },
-      {
-        "name": "Quetzalcoatl",
-        "collection": "aztec_egg_2025"
-      },
-      {
-        "name": "Temple Friend",
-        "collection": "aztec_egg_2025"
-      },
-      {
-        "name": "Alicorn",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Ancient Dragon",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Dragonfly",
-        "collection": "basic_egg_2022"
-      },
-      {
-        "name": "Purrowl",
-        "collection": "birthday_magic_2026"
-      },
-      {
-        "name": "Mechameow",
-        "collection": "black_friday_2023"
-      },
-      {
-        "name": "Diamond Butterfly",
-        "collection": "butterfly_2022"
-      },
-      {
-        "name": "Green Butterfly",
-        "collection": "butterfly_2022"
-      },
-      {
-        "name": "Moonbeam Butterfly",
-        "collection": "butterfly_2025"
-      },
-      {
-        "name": "Orchid Butterfly",
-        "collection": "butterfly_2025"
-      },
-      {
-        "name": "Prismatic Butterfly",
-        "collection": "butterfly_2025"
-      },
-      {
-        "name": "Violet Butterfly",
-        "collection": "butterfly_2025"
-      },
-      {
-        "name": "Firefly",
-        "collection": "camping_2023"
-      },
-      {
-        "name": "Moose Calf",
-        "collection": "camping_shop_refresh_2025"
-      },
-      {
-        "name": "Papa Moose",
-        "collection": "camping_shop_refresh_2025"
-      },
-      {
-        "name": "Pirate Ghost Capuchin Monkey",
-        "collection": "capuchin_2024"
-      },
-      {
-        "name": "Princess Capuchin Monkey",
-        "collection": "capuchin_2024"
-      },
-      {
-        "name": "Royal Capuchin Monkey",
-        "collection": "capuchin_2024"
-      },
-      {
-        "name": "Glormy Hound",
-        "collection": "celestial_2024"
-      },
-      {
-        "name": "Glormy Leo",
-        "collection": "celestial_2024"
-      },
-      {
-        "name": "King Bee",
-        "collection": "coffee_2019"
-      },
-      {
-        "name": "Queen Bee",
-        "collection": "coffee_2019"
-      },
-      {
-        "name": "Lavender Dragon",
-        "collection": "dj_2022"
-      },
-      {
-        "name": "Owlbear",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Spinosaurus",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Danger Egg",
-        "collection": "danger_2023"
-      },
-      {
-        "name": "Cactus Friend",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Criosphinx",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Desert Egg",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Royal Desert Egg",
-        "collection": "desert_2024"
-      },
-      {
-        "name": "Giant Gold Scarab",
-        "collection": "desert_update_2022"
-      },
-      {
-        "name": "Wrapped Doll",
-        "collection": "dolls_2023"
-      },
-      {
-        "name": "Sugar Axolotl",
-        "collection": "dia_muertos_2024"
-      },
-      {
-        "name": "Sugar Glider",
-        "collection": "easter_2022"
-      },
-      {
-        "name": "Striped Eggy",
-        "collection": "easter_2024"
-      },
-      {
-        "name": "Blue Whale",
-        "collection": "endangered_egg_2026"
-      },
-      {
-        "name": "Sea Turtle",
-        "collection": "endangered_egg_2026"
-      },
-      {
-        "name": "Endangered Egg",
-        "collection": "endangered_egg_2026"
-      },
-      {
-        "name": "Black-Chested Pheasent",
-        "collection": "fall_2022"
-      },
-      {
-        "name": "Green-Chested Pheasent",
-        "collection": "fall_2022"
-      },
-      {
-        "name": "Crow",
-        "collection": "farm_egg_2019"
-      },
-      {
-        "name": "Owl",
-        "collection": "farm_egg_2019"
-      },
-      {
-        "name": "Farm Egg",
-        "collection": "farm_egg_2019"
-      },
-      {
-        "name": "Diamond Ladybug",
-        "collection": "farm_shop_2021"
-      },
-      {
-        "name": "Golden Ladybug",
-        "collection": "farm_shop_2021"
-      },
-      {
-        "name": "Volcanic Rhino",
-        "collection": "fire_dimension_2024"
-      },
-      {
-        "name": "Apple Owl",
-        "collection": "food_pets_2026"
-      },
-      {
-        "name": "Dragonfruit Fox",
-        "collection": "food_pets_2026"
-      },
-      {
-        "name": "Peach Owl",
-        "collection": "food_pets_2026"
-      },
-      {
-        "name": "Pineapple Owl",
-        "collection": "food_pets_2026"
-      },
-      {
-        "name": "Dodo",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "T-Rex",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "Fossil Egg",
-        "collection": "fossil_isle_2020"
-      },
-      {
-        "name": "Dimorphodon",
-        "collection": "fossil_isle_2024"
-      },
-      {
-        "name": "Golden Tortoise Beetle",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Mushroom Friend",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Rosy Maple Moth",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Garden Egg",
-        "collection": "garden_2024"
-      },
-      {
-        "name": "Villain Gibbon",
-        "collection": "gibbon_2025"
-      },
-      {
-        "name": "Hero Gibbon",
-        "collection": "gibbon_2025"
-      },
-      {
-        "name": "Influencer Gibbon",
-        "collection": "gibbon_2025"
-      },
-      {
-        "name": "Albino Gorilla",
-        "collection": "gorilla_2023"
-      },
-      {
-        "name": "Astronaut Gorilla",
-        "collection": "gorilla_2023"
-      },
-      {
-        "name": "Emperor Gorilla",
-        "collection": "gorilla_2023"
-      },
-      {
-        "name": "Evil Unicorn",
-        "collection": "halloween_2019"
-      },
-      {
-        "name": "Shadow Dragon",
-        "collection": "halloween_2019"
-      },
-      {
-        "name": "Bat Dragon",
-        "collection": "halloween_2019"
-      },
-      {
-        "name": "Cerberus",
-        "collection": "halloween_2020"
-      },
-      {
-        "name": "Skelerex",
-        "collection": "halloween_2020"
-      },
-      {
-        "name": "Ghost Dragon",
-        "collection": "halloween_2021"
-      },
-      {
-        "name": "Golden Mummy Cat",
-        "collection": "halloween_2021"
-      },
-      {
-        "name": "Chimera",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Jousting Horse",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Lava Dragon",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Undead Jousting Horse",
-        "collection": "halloween_2022"
-      },
-      {
-        "name": "Dire Stag",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Scarecrow Crow",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Werewolf",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Vampire Dragon",
-        "collection": "halloween_2023"
-      },
-      {
-        "name": "Dracula Parrot",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Evil Chick",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Grim Dragon",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Jekyll Hydra",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Scarebear",
-        "collection": "halloween_2024"
-      },
-      {
-        "name": "Black Widow",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Cryptid",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Kitty Bat",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Phantom Dragon",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Slimingo",
-        "collection": "halloween_2025"
-      },
-      {
-        "name": "Diamond Hamster",
-        "collection": "hamstertime_2024"
-      },
-      {
-        "name": "Golden Hamster",
-        "collection": "hamstertime_2024"
-      },
-      {
-        "name": "Hippogriff",
-        "collection": "hippogriff_2024"
-      },
-      {
-        "name": "Golden Penguin",
-        "collection": "ice_cream_2019"
-      },
-      {
-        "name": "Diamond King Penguin",
-        "collection": "ice_cream_2022"
-      },
-      {
-        "name": "Golden King Penguin",
-        "collection": "ice_cream_2022"
-      },
-      {
-        "name": "Frostbite Bear",
-        "collection": "ice_dimension_2025"
-      },
-      {
-        "name": "Baku",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Japan Egg",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Maneki-Neko",
-        "collection": "japan_2022"
-      },
-      {
-        "name": "Jungle Egg",
-        "collection": "jungle_egg_2019"
-      },
-      {
-        "name": "Parrot",
-        "collection": "jungle_egg_2019"
-      },
-      {
-        "name": "Golden Rat",
-        "collection": "lunar_2020"
-      },
-      {
-        "name": "Guardian Lion",
-        "collection": "lunar_2021"
-      },
-      {
-        "name": "Metal Ox",
-        "collection": "lunar_2021"
-      },
-      {
-        "name": "Dancing Dragon",
-        "collection": "lunar_2022"
-      },
-      {
-        "name": "Lunar Gold Tiger",
-        "collection": "lunar_2022"
-      },
-      {
-        "name": "Lunar Moon Bear",
-        "collection": "lunar_new_year_2023"
-      },
-      {
-        "name": "Winged Tiger",
-        "collection": "lunar_new_year_2023"
-      },
-      {
-        "name": "Midnight Dragon",
-        "collection": "lunar_2024"
-      },
-      {
-        "name": "Rainbow Dragon",
-        "collection": "lunar_2024"
-      },
-      {
-        "name": "Gilded Snake",
-        "collection": "lunar_2025"
-      },
-      {
-        "name": "Haetae",
-        "collection": "lunar_2025"
-      },
-      {
-        "name": "Fire Mare",
-        "collection": "lunar_2026"
-      },
-      {
-        "name": "Fire Stallion",
-        "collection": "lunar_2026"
-      },
-      {
-        "name": "Blazing Lion",
-        "collection": "lures_2023"
-      },
-      {
-        "name": "Zodiac Minion Egg",
-        "collection": "minions_2022"
-      },
-      {
-        "name": "Zodiac Minion Chick",
-        "collection": "minions_2022"
-      },
-      {
-        "name": "Albino Monkey",
-        "collection": "monkey_2020"
-      },
-      {
-        "name": "Monkey King",
-        "collection": "monkey_2020"
-      },
-      {
-        "name": "Ninja Monkey",
-        "collection": "monkey_2020"
-      },
-      {
-        "name": "Moon Egg",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Royal Moon Egg",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Dimension Drifter",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Glormy Dolphin",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Sunglider",
-        "collection": "moon_2025"
-      },
-      {
-        "name": "Frost Unicorn",
-        "collection": "mountain_2023"
-      },
-      {
-        "name": "Goldhorn",
-        "collection": "mythic_egg_2021"
-      },
-      {
-        "name": "Phoenix",
-        "collection": "mythic_egg_2021"
-      },
-      {
-        "name": "Mythic Egg",
-        "collection": "mythic_egg_2021"
-      },
-      {
-        "name": "Royal Egg",
-        "collection": "nursery_2019"
-      },
-      {
-        "name": "Kraken",
-        "collection": "ocean_2024"
-      },
-      {
-        "name": "Octopus",
-        "collection": "ocean_event_2021"
-      },
-      {
-        "name": "Shark",
-        "collection": "ocean_event_2021"
-      },
-      {
-        "name": "Ocean Egg",
-        "collection": "ocean_event_2021"
-      },
-      {
-        "name": "Dango Penguins",
-        "collection": "penguins_2025"
-      },
-      {
-        "name": "Strawberry Penguin",
-        "collection": "penguins_2025"
-      },
-      {
-        "name": "Vanilla Penguin",
-        "collection": "penguins_2025"
-      },
-      {
-        "name": "Crystal Egg",
-        "collection": "pet_releaser_2025"
-      },
-      {
-        "name": "Emberlight",
-        "collection": "pet_releaser_2025"
-      },
-      {
-        "name": "Giant Panda",
-        "collection": "pet_releaser_2025"
-      },
-      {
-        "name": "Glormy Crab",
-        "collection": "pet_releaser_2026"
-      },
-      {
-        "name": "Silverback Gorilla",
-        "collection": "pet_releaser_2026"
-      },
-      {
-        "name": "Griffin",
-        "collection": "pet_shop_2019"
-      },
-      {
-        "name": "Kitsune",
-        "collection": "pet_shop_2020"
-      },
-      {
-        "name": "Robo Dog",
-        "collection": "pet_shop_2020"
-      },
-      {
-        "name": "Axolotl",
-        "collection": "pet_shop_2021"
-      },
-      {
-        "name": "Peacock",
-        "collection": "pet_shop_2021"
-      },
-      {
-        "name": "Dragon",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Unicorn",
-        "collection": "pets_update_2019"
-      },
-      {
-        "name": "Caelum Cervi",
-        "collection": "pride_2023"
-      },
-      {
-        "name": "Diamond Amazon",
-        "collection": "rain_2023"
-      },
-      {
-        "name": "White Amazon",
-        "collection": "rain_2023"
-      },
-      {
-        "name": "Winged Horse",
-        "collection": "random_2022"
-      },
-      {
-        "name": "Giraffe",
-        "collection": "safari_egg_2019"
-      },
-      {
-        "name": "Safari Egg",
-        "collection": "safari_egg_2019"
-      },
-      {
-        "name": "Moonbeam Peacock",
-        "collection": "salon_2026"
-      },
-      {
-        "name": "Peahen",
-        "collection": "salon_2026"
-      },
-      {
-        "name": "Nessie",
-        "collection": "scottish_2023"
-      },
-      {
-        "name": "Cobra",
-        "collection": "sky_castle_2021"
-      },
-      {
-        "name": "Cuddly Candle",
-        "collection": "sky_castle_2023"
-      },
-      {
-        "name": "Diamond Albatross",
-        "collection": "snow_2022"
-      },
-      {
-        "name": "Golden Albatross",
-        "collection": "snow_2022"
-      },
-      {
-        "name": "Naga Dragon",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Tree Kangaroo",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Southeast Asia Egg",
-        "collection": "southeast_asia_2023"
-      },
-      {
-        "name": "Capricorn",
-        "collection": "space_house_2022"
-      },
-      {
-        "name": "Space Whale",
-        "collection": "space_house_2022"
-      },
-      {
-        "name": "Primal Kaijunior",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Sakura Spirit",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Scorching Kaijunior",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Super Saru",
-        "collection": "spring_2025"
-      },
-      {
-        "name": "Field Mouse",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Sunrise Duckling",
-        "collection": "springfest_2023"
-      },
-      {
-        "name": "Diamond Dragon",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Diamond Egg",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Diamond Griffin",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Diamond Unicorn",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Golden Dragon",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Golden Egg",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Golden Griffin",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Golden Unicorn",
-        "collection": "star_2020"
-      },
-      {
-        "name": "Strawberry Shortcake Ducky",
-        "collection": "stormy_ducky_2026"
-      },
-      {
-        "name": "Diamond Hummingbird",
-        "collection": "subscriptions_2024"
-      },
-      {
-        "name": "Golden Hummingbird",
-        "collection": "subscriptions_2024"
-      },
-      {
-        "name": "Red Dutch Guinea Pig",
-        "collection": "subscriptions_2026"
-      },
-      {
-        "name": "Tortoiseshell Guinea Pig",
-        "collection": "subscriptions_2026"
-      },
-      {
-        "name": "Candicorn",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Mochi Meow",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Latte Kitsune",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Dark Choccybunny",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Easter Bunny",
-        "collection": "sugarfest_2026"
-      },
-      {
-        "name": "Diamond Mahi Mahi",
-        "collection": "summer_beach_2024"
-      },
-      {
-        "name": "Shark Puppy",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Hot Doggo",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Leviathan",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Pirate Hermit Crab",
-        "collection": "summerfest_2023"
-      },
-      {
-        "name": "Blue Betta Fish",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Majestic Pony",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Corn Doggo",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Balloon Unicorn",
-        "collection": "summerfest_2024"
-      },
-      {
-        "name": "Manta Ray",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Mermicorn",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Coconut Friend",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Priceless Shrimp",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Kelp Captain",
-        "collection": "summerfest_2025"
-      },
-      {
-        "name": "Bush Elephant",
-        "collection": "sunshine_games_2024"
-      },
-      {
-        "name": "Cheetah",
-        "collection": "sunshine_games_2024"
-      },
-      {
-        "name": "Chameleon",
-        "collection": "task_board_2022"
-      },
-      {
-        "name": "Squid",
-        "collection": "task_board_2022"
-      },
-      {
-        "name": "Billy Goat",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Gargoyle",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Urban Egg",
-        "collection": "urban_2023"
-      },
-      {
-        "name": "Black Chow-Chow",
-        "collection": "vip_2022"
-      },
-      {
-        "name": "Chocolate Chow-Chow",
-        "collection": "vip_2022"
-      },
-      {
-        "name": "Golden Chow-Chow",
-        "collection": "vip_2022"
-      },
-      {
-        "name": "Cupid Dragon",
-        "collection": "valentines_2025"
-      },
-      {
-        "name": "Rose Dragon",
-        "collection": "valentines_2026"
-      },
-      {
-        "name": "Arctic Reindeer",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Christmas Egg",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Frost Dragon",
-        "collection": "winter_2019"
-      },
-      {
-        "name": "Frost Fury",
-        "collection": "winter_2020"
-      },
-      {
-        "name": "Snow Owl",
-        "collection": "winter_2020"
-      },
-      {
-        "name": "Golden Walrus",
-        "collection": "winter_2021"
-      },
-      {
-        "name": "Ice Golem",
-        "collection": "winter_2021"
-      },
-      {
-        "name": "Ice Moth Dragon",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Strawberry Shortcake Bat Dragon",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Shetland Pony Light Brown",
-        "collection": "winter_2022"
-      },
-      {
-        "name": "Chocolate Chip Bat Dragon",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Fleur de Ice",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Candy Hare",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Glacier Kitsune",
-        "collection": "winter_2023"
-      },
-      {
-        "name": "Aurora Fox",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Berry Cool Cube",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Fairy Bat Dragon",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Frostclaw",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Naughty Mistletroll",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Royal Mistletroll",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Winter Buck",
-        "collection": "winter_2024"
-      },
-      {
-        "name": "Arctic Dusk Dragon",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Christmas Spirit",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Angus Bull",
-        "collection": "winter_2025"
-      },
-      {
-        "name": "Frost Phoenix",
-        "collection": "winter_2025"
-      },
+      {"name": "2D Kitty", "collection": "2d_tuesday_2025"},
+      {"name": "Admin Abuse Egg", "collection": "admin_abuse_2026"},
+      {"name": "Sush Penguin", "collection": "admin_abuse_2026"},
+      {"name": "Velocirooster", "collection": "admin_abuse_2026"},
+      {"name": "Mechapup", "collection": "april_fools_2022"},
+      {"name": "Fool Egg", "collection": "april_fools_2023"},
+      {"name": "Tió De Nadal", "collection": "april_fools_2023"},
+      {"name": "Yule Log Dog", "collection": "april_fools_2023"},
+      {"name": "Aussie Egg", "collection": "aussie_egg_2020"},
+      {"name": "Kangaroo", "collection": "aussie_egg_2020"},
+      {"name": "Turtle", "collection": "aussie_egg_2020"},
+      {"name": "Aztec Egg", "collection": "aztec_2025"},
+      {"name": "Royal Aztec Egg", "collection": "aztec_2025"},
+      {"name": "Quetzalcoatl", "collection": "aztec_egg_2025"},
+      {"name": "Temple Friend", "collection": "aztec_egg_2025"},
+      {"name": "Alicorn", "collection": "basic_egg_2022"},
+      {"name": "Ancient Dragon", "collection": "basic_egg_2022"},
+      {"name": "Dragonfly", "collection": "basic_egg_2022"},
+      {"name": "Purrowl", "collection": "birthday_magic_2026"},
+      {"name": "Mecha Meow", "collection": "black_friday_2023"},
+      {"name": "Diamond Butterfly", "collection": "butterfly_2022"},
+      {"name": "Moonbeam Butterfly", "collection": "butterfly_2025"},
+      {"name": "Orchid Butterfly", "collection": "butterfly_2025"},
+      {"name": "Prismatic Butterfly", "collection": "butterfly_2025"},
+      {"name": "Violet Butterfly", "collection": "butterfly_2025"},
+      {"name": "Firefly", "collection": "camping_2023"},
+      {"name": "Moose Calf", "collection": "camping_refresh_2025"},
+      {"name": "Papa Moose", "collection": "camping_refresh_2025"},
+      {"name": "Pirate Ghost Capuchin Monkey", "collection": "capuchin_2024"},
+      {"name": "Princess Capuchin Monkey", "collection": "capuchin_2024"},
+      {"name": "Royal Capuchin Monkey", "collection": "capuchin_2024"},
+      {"name": "Glormy Hound", "collection": "celestial_2024"},
+      {"name": "Glormy Leo", "collection": "celestial_2024"},
+      {"name": "King Bee", "collection": "coffee_2019"},
+      {"name": "Queen Bee", "collection": "coffee_2019"},
+      {"name": "Lavender Dragon", "collection": "dj_2022"},
+      {"name": "Danger Egg", "collection": "danger_2023"},
+      {"name": "Owlbear", "collection": "danger_2023"},
+      {"name": "Spinosaurus", "collection": "danger_2023"},
+      {"name": "Cactus Friend", "collection": "desert_2024"},
+      {"name": "Criosphinx", "collection": "desert_2024"},
+      {"name": "Desert Egg", "collection": "desert_2024"},
+      {"name": "Royal Desert Egg", "collection": "desert_2024"},
+      {"name": "Giant Gold Scarab", "collection": "desert_update_2022"},
+      {"name": "Wrapped Doll", "collection": "dolls_2023"},
+      {"name": "Sugar Axolotl", "collection": "dia_muertos_2024"},
+      {"name": "Sugar Glider", "collection": "easter_2022"},
+      {"name": "Striped Eggy", "collection": "easter_2024"},
+      {"name": "Blue Whale", "collection": "endangered_2026"},
+      {"name": "Endangered Egg", "collection": "endangered_2026"},
+      {"name": "Sea Turtle", "collection": "endangered_2026"},
+      {"name": "Black-Chested Pheasant", "collection": "fall_2022"},
+      {"name": "Green-Chested Pheasant", "collection": "fall_2022"},
+      {"name": "Crow", "collection": "farm_egg_2019"},
+      {"name": "Farm Egg", "collection": "farm_egg_2019"},
+      {"name": "Owl", "collection": "farm_egg_2019"},
+      {"name": "Diamond Ladybug", "collection": "farm_shop_2021"},
+      {"name": "Golden Ladybug", "collection": "farm_shop_2021"},
+      {"name": "Volcanic Rhino", "collection": "fire_dimension_2024"},
+      {"name": "Apple Owl", "collection": "food_pets_2026"},
+      {"name": "Dragonfruit Fox", "collection": "food_pets_2026"},
+      {"name": "Peach Owl", "collection": "food_pets_2026"},
+      {"name": "Pineapple Owl", "collection": "food_pets_2026"},
+      {"name": "Dodo", "collection": "fossil_isle_2020"},
+      {"name": "Fossil Egg", "collection": "fossil_isle_2020"},
+      {"name": "T-Rex", "collection": "fossil_isle_2020"},
+      {"name": "Dimorphodon", "collection": "fossil_isle_2024"},
+      {"name": "Garden Egg", "collection": "garden_2024"},
+      {"name": "Golden Tortoise Beetle", "collection": "garden_2024"},
+      {"name": "Mushroom Friend", "collection": "garden_2024"},
+      {"name": "Rosy Maple Moth", "collection": "garden_2024"},
+      {"name": "Hero Gibbon", "collection": "gibbon_2025"},
+      {"name": "Influencer Gibbon", "collection": "gibbon_2025"},
+      {"name": "Villain Gibbon", "collection": "gibbon_2025"},
+      {"name": "Albino Gorilla", "collection": "gorilla_2023"},
+      {"name": "Astronaut Gorilla", "collection": "gorilla_2023"},
+      {"name": "Emperor Gorilla", "collection": "gorilla_2023"},
+      {"name": "Bat Dragon", "collection": "halloween_2019"},
+      {"name": "Evil Unicorn", "collection": "halloween_2019"},
+      {"name": "Shadow Dragon", "collection": "halloween_2019"},
+      {"name": "Cerberus", "collection": "halloween_2020"},
+      {"name": "Skele-Rex", "collection": "halloween_2020"},
+      {"name": "Halloween Golden Mummy Cat", "collection": "halloween_2021"},
+      {"name": "Halloween White Ghost Dragon", "collection": "halloween_2021"},
+      {"name": "Chimera", "collection": "halloween_2022"},
+      {"name": "Jousting Horse", "collection": "halloween_2022"},
+      {"name": "Lava Dragon", "collection": "halloween_2022"},
+      {"name": "Lava Wolf", "collection": "halloween_2022"},
+      {"name": "Unicorn Jousting Horse", "collection": "halloween_2022"},
+      {"name": "Dire Stag", "collection": "halloween_2023"},
+      {"name": "Scarecrow Crow", "collection": "halloween_2023"},
+      {"name": "Vampire Dragon", "collection": "halloween_2023"},
+      {"name": "Werewolf", "collection": "halloween_2023"},
+      {"name": "Dracula Parrot", "collection": "halloween_2024"},
+      {"name": "Evil Chick", "collection": "halloween_2024"},
+      {"name": "Grim Dragon", "collection": "halloween_2024"},
+      {"name": "Jekyll Hydra", "collection": "halloween_2024"},
+      {"name": "Scarebear", "collection": "halloween_2024"},
+      {"name": "Black Widow", "collection": "halloween_2025"},
+      {"name": "Cryptid", "collection": "halloween_2025"},
+      {"name": "Kitty Bat", "collection": "halloween_2025"},
+      {"name": "Phantom Dragon", "collection": "halloween_2025"},
+      {"name": "Slimingo", "collection": "halloween_2025"},
+      {"name": "Diamond Hamster", "collection": "hamstertime_2024"},
+      {"name": "Golden Hamster", "collection": "hamstertime_2024"},
+      {"name": "Hippogriff", "collection": "hippogriff_2024"},
+      {"name": "Golden Penguin", "collection": "ice_cream_2019"},
+      {"name": "Diamond King Penguin", "collection": "ice_cream_2022"},
+      {"name": "Golden King Penguin", "collection": "ice_cream_2022"},
+      {"name": "Frostbite Bear", "collection": "ice_dimension_2025"},
+      {"name": "Baku", "collection": "japan_2022"},
+      {"name": "Japan Egg", "collection": "japan_2022"},
+      {"name": "Maneki-Neko", "collection": "japan_2022"},
+      {"name": "Jungle Egg", "collection": "jungle_egg_2019"},
+      {"name": "Parrot", "collection": "jungle_egg_2019"},
+      {"name": "Golden Rat", "collection": "lunar_2020"},
+      {"name": "Guardian Lion", "collection": "lunar_2021"},
+      {"name": "Metal Ox", "collection": "lunar_2021"},
+      {"name": "Dancing Dragon", "collection": "lunar_2022"},
+      {"name": "Lunar Gold Tiger", "collection": "lunar_2022"},
+      {"name": "Lunar Moon Bear", "collection": "lunar_2023"},
+      {"name": "Winged Tiger", "collection": "lunar_2023"},
+      {"name": "Midnight Dragon", "collection": "lunar_2024"},
+      {"name": "Rainbow Dragon", "collection": "lunar_2024"},
+      {"name": "Gilded Snake", "collection": "lunar_2025"},
+      {"name": "Haetae", "collection": "lunar_2025"},
+      {"name": "Fire Mare", "collection": "lunar_2026"},
+      {"name": "Fire Stallion", "collection": "lunar_2026"},
+      {"name": "Blazing Lion", "collection": "lures_2023"},
+      {"name": "Zodiac Minion Chick", "collection": "minions_2022"},
+      {"name": "Zodiac Minion Egg", "collection": "minions_2022"},
+      {"name": "Albino Monkey", "collection": "monkey_2020"},
+      {"name": "Monkey King", "collection": "monkey_2020"},
+      {"name": "Ninja Monkey", "collection": "monkey_2020"},
+      {"name": "Dimension Drifter", "collection": "moon_2025"},
+      {"name": "Glormy Dolphin", "collection": "moon_2025"},
+      {"name": "Moon Egg", "collection": "moon_2025"},
+      {"name": "Royal Moon Egg", "collection": "moon_2025"},
+      {"name": "Sunglider", "collection": "moon_2025"},
+      {"name": "Frost Unicorn", "collection": "mountain_2023"},
+      {"name": "Goldhorn", "collection": "mythic_egg_2021"},
+      {"name": "Mythic Egg", "collection": "mythic_egg_2021"},
+      {"name": "Phoenix", "collection": "mythic_egg_2021"},
+      {"name": "Royal Egg", "collection": "nursery_2019"},
+      {"name": "Kraken", "collection": "ocean_2024"},
+      {"name": "Ocean Egg", "collection": "ocean_event_2021"},
+      {"name": "Octopus", "collection": "ocean_event_2021"},
+      {"name": "Shark", "collection": "ocean_event_2021"},
+      {"name": "Dango Penguins", "collection": "penguins_2025"},
+      {"name": "Strawberry Penguin", "collection": "penguins_2025"},
+      {"name": "Vanilla Penguin", "collection": "penguins_2025"},
+      {"name": "Crystal Egg", "collection": "pet_releaser_2025"},
+      {"name": "Emberlight", "collection": "pet_releaser_2025"},
+      {"name": "Giant Panda", "collection": "pet_releaser_2025"},
+      {"name": "Glormy Crab", "collection": "pet_releaser_2026"},
+      {"name": "Silverback Gorilla", "collection": "pet_releaser_2026"},
+      {"name": "Griffin", "collection": "pet_shop_2019"},
+      {"name": "Kitsune", "collection": "pet_shop_2020"},
+      {"name": "Robo Dog", "collection": "pet_shop_2020"},
+      {"name": "Axolotl", "collection": "pet_shop_2021"},
+      {"name": "Peacock", "collection": "pet_shop_2021"},
+      {"name": "Dragon", "collection": "pets_update_2019"},
+      {"name": "Unicorn", "collection": "pets_update_2019"},
+      {"name": "Caelum Cervi", "collection": "pride_2023"},
+      {"name": "Diamond Amazon", "collection": "rain_2023"},
+      {"name": "White Amazon", "collection": "rain_2023"},
+      {"name": "Winged Horse", "collection": "random_2022"},
+      {"name": "Giraffe", "collection": "safari_egg_2019"},
+      {"name": "Safari Egg", "collection": "safari_egg_2019"},
+      {"name": "Nessie", "collection": "scottish_2023"},
+      {"name": "Cobra", "collection": "sky_castle_2021"},
+      {"name": "Cuddly Candle", "collection": "sky_castle_2023"},
+      {"name": "Diamond Albatross", "collection": "snow_2022"},
+      {"name": "Golden Albatross", "collection": "snow_2022"},
+      {"name": "Naga Dragon", "collection": "sea_2023"},
+      {"name": "Southeast Asia Egg", "collection": "sea_2023"},
+      {"name": "Tree Kangaroo", "collection": "sea_2023"},
+      {"name": "Capricorn", "collection": "space_house_2022"},
+      {"name": "Primal Kaijunior", "collection": "spring_2025"},
+      {"name": "Sakura Spirit", "collection": "spring_2025"},
+      {"name": "Scorching Kaijunior", "collection": "spring_2025"},
+      {"name": "Super Saru", "collection": "spring_2025"},
+      {"name": "Field Mouse", "collection": "springfest_2023"},
+      {"name": "Sunrise Duckling", "collection": "springfest_2023"},
+      {"name": "Diamond Dragon", "collection": "star_2020"},
+      {"name": "Diamond Egg", "collection": "star_2020"},
+      {"name": "Diamond Griffin", "collection": "star_2020"},
+      {"name": "Diamond Unicorn", "collection": "star_2020"},
+      {"name": "Golden Dragon", "collection": "star_2020"},
+      {"name": "Golden Egg", "collection": "star_2020"},
+      {"name": "Golden Griffin", "collection": "star_2020"},
+      {"name": "Golden Unicorn", "collection": "star_2020"},
+      {"name": "Strawberry Shortcake Ducky", "collection": "stormy_ducky_2026"},
+      {"name": "Diamond Hummingbird", "collection": "subscriptions_2024"},
+      {"name": "Golden Hummingbird", "collection": "subscriptions_2024"},
+      {"name": "Red Dutch Guinea Pig", "collection": "subscriptions_2026"},
+      {"name": "Tortoiseshell Guinea Pig", "collection": "subscriptions_2026"},
+      {"name": "Candicorn", "collection": "sugarfest_2026"},
+      {"name": "Dark Choccybunny", "collection": "sugarfest_2026"},
+      {"name": "Easter Bunny", "collection": "sugarfest_2026"},
+      {"name": "Latte Kitsune", "collection": "sugarfest_2026"},
+      {"name": "Mochi Meow", "collection": "sugarfest_2026"},
+      {"name": "Diamond Mahi Mahi", "collection": "summer_2024"},
+      {"name": "Hot Doggo", "collection": "summerfest_2023"},
+      {"name": "Leviathan", "collection": "summerfest_2023"},
+      {"name": "Pirate Hermit Crab", "collection": "summerfest_2023"},
+      {"name": "Shark Puppy", "collection": "summerfest_2023"},
+      {"name": "Balloon Unicorn", "collection": "summerfest_2024"},
+      {"name": "Blue Betta Fish", "collection": "summerfest_2024"},
+      {"name": "Corn Doggo", "collection": "summerfest_2024"},
+      {"name": "Majestic Pony", "collection": "summerfest_2024"},
+      {"name": "Coconut Friend", "collection": "summerfest_2025"},
+      {"name": "Kelp Captain", "collection": "summerfest_2025"},
+      {"name": "Mermicorn", "collection": "summerfest_2025"},
+      {"name": "Priceless Shrimp", "collection": "summerfest_2025"},
+      {"name": "Bush Elephant", "collection": "sunshine_2024"},
+      {"name": "Cheetah", "collection": "sunshine_2024"},
+      {"name": "Chameleon", "collection": "task_board_2022"},
+      {"name": "Squid", "collection": "task_board_2022"},
+      {"name": "Billy Goat", "collection": "urban_2023"},
+      {"name": "Gargoyle", "collection": "urban_2023"},
+      {"name": "Urban Egg", "collection": "urban_2023"},
+      {"name": "Black Chow-Chow", "collection": "vip_2022"},
+      {"name": "Chocolate Chow-Chow", "collection": "vip_2022"},
+      {"name": "Golden Chow-Chow", "collection": "vip_2022"},
+      {"name": "Cupid Dragon", "collection": "valentines_2025"},
+      {"name": "Rose Dragon", "collection": "valentines_2026"},
+      {"name": "Arctic Reindeer", "collection": "winter_2019"},
+      {"name": "Christmas Egg", "collection": "winter_2019"},
+      {"name": "Frost Dragon", "collection": "winter_2019"},
+      {"name": "Frost Fury", "collection": "winter_2020"},
+      {"name": "Snow Owl", "collection": "winter_2020"},
+      {"name": "Golden Walrus", "collection": "winter_2021"},
+      {"name": "Ice Golem", "collection": "winter_2021"},
+      {"name": "Ice Moth Dragon", "collection": "winter_2022"},
+      {"name": "Shetland Pony Light Brown", "collection": "winter_2022"},
+      {"name": "Strawberry Shortcake Bat Dragon", "collection": "winter_2022"},
+      {"name": "Candy Hare", "collection": "winter_2023"},
+      {"name": "Chocolate Chip Bat Dragon", "collection": "winter_2023"},
+      {"name": "Fleur de Ice", "collection": "winter_2023"},
+      {"name": "Glacier Kitsune", "collection": "winter_2023"},
+      {"name": "Aurora Fox", "collection": "winter_2024"},
+      {"name": "Berry Cool Cube", "collection": "winter_2024"},
+      {"name": "Fairy Bat Dragon", "collection": "winter_2024"},
+      {"name": "Frostclaw", "collection": "winter_2024"},
+      {"name": "Naughty Mistletroll", "collection": "winter_2024"},
+      {"name": "Royal Mistletroll", "collection": "winter_2024"},
+      {"name": "Winter Buck", "collection": "winter_2024"},
+      {"name": "Angus Bull", "collection": "winter_2025"},
+      {"name": "Arctic Dusk Dragon", "collection": "winter_2025"},
+      {"name": "Christmas Spirit", "collection": "winter_2025"},
+      {"name": "Frost Phoenix", "collection": "winter_2025"},
       {"name": "Fallow Deer", "collection": "woodland_egg_2022"},
       {"name": "Hawk", "collection": "woodland_egg_2022"},
       {"name": "Woodland Egg", "collection": "woodland_egg_2022"}
