@@ -557,10 +557,23 @@ function renderAlphaView(){
   if(!pets.length){ container.innerHTML='<div class="no-results">Keine Pets gefunden.</div>'; updateStats(); return; }
 
   // Group by first letter
+  // Group by first letter, non-letters go into '#'
   const byLetter={};
-  pets.forEach(p=>{ const l=p.name[0].toUpperCase(); if(!byLetter[l])byLetter[l]=[]; byLetter[l].push(p); });
+  pets.forEach(p=>{
+    const first=p.name[0].toUpperCase();
+    const l=/^[A-ZÄÖÜ]$/.test(first) ? first : '#';
+    if(!byLetter[l])byLetter[l]=[];
+    byLetter[l].push(p);
+  });
 
-  container.innerHTML=Object.keys(byLetter).sort().map(letter=>{
+  // '#' always first, then A-Z
+  const sortedLetters=Object.keys(byLetter).sort((a,b)=>{
+    if(a==='#') return -1;
+    if(b==='#') return 1;
+    return a.localeCompare(b);
+  });
+
+  container.innerHTML=sortedLetters.map(letter=>{
     return`<div class="alpha-group">
       <div class="alpha-letter">${letter}</div>
       <div class="alpha-pet-grid">
