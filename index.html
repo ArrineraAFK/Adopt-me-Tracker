@@ -519,11 +519,12 @@ function renderRarityView(){
     if(fStatus==='empty')    pets=pets.filter(p=>!owned[p.colId+'|||'+p.name]);
     if(!pets.length) return;
     const dot=RARITY_DOT_COLOR[rarity]||'#ccc';
+    const ownedCount=pets.filter(p=>owned[p.colId+'|||'+p.name]).length;
     html+=`<div class="rarity-group">
       <div class="rarity-group-header">
         <span style="width:10px;height:10px;border-radius:50%;background:${dot};display:inline-block;flex-shrink:0"></span>
         <span class="rarity-group-title">${RARITY_LABEL[rarity]}</span>
-        <span class="rarity-group-count">${pets.length} Pets</span>
+        <span class="rarity-group-count">${ownedCount}/${pets.length} Pets</span>
       </div>
       <div class="rarity-pet-grid" id="rpg-${rarity}">
         ${pets.map(p=>{
