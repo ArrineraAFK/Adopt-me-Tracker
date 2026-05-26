@@ -271,9 +271,9 @@
     // Images stored by rarity: img/{rarity}/{pet_name_normalized}.png
     function imgPath(rarity, petName) { 
       const file = petName.toLowerCase()
+        .replace(/^_|_$/g,'')
         .replace(/['']/g,'')
-        .replace(/[^a-z0-9]+/g,'_')
-        .replace(/^_|_$/g,'');
+        .replace(/[^a-z0-9]+/g,'_');
       return `img/${rarity}/${file}.png`;
     }
 
