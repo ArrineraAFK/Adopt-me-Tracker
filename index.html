@@ -83,11 +83,9 @@
       .pet-item.owned{background:#EAF3DE;border-color:#639922}
       .pet-item.highlighted{outline:2px solid #185FA5;outline-offset:-1px}
       .pet-item.highlighted.owned{outline-color:#3B6D11}
-      .pet-img-wrap{width:64px;height:64px;display:flex;align-items:center;justify-content:center}
-      .pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none}
+      .pet-img-wrap{width:64px;height:64px;display:flex;align-items:center;justify-content:      .pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none}
       .pet-img.loaded{display:block}
       .pet-img-placeholder{width:64px;height:64px;border-radius:4px;background:#f5f4f0;display:flex;align-items:center;justify-content:center;font-size:22px}
-      .pet-img-placeholder.hidden{display:none}
       .pet-name{width:100%;word-break:break-word}
       .pet-footer{display:flex;align-items:center;justify-content:center;gap:4px;width:100%}
       .check{width:14px;height:14px;border:1.5px solid #ccc;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff}
@@ -283,13 +281,18 @@
       const placeholder = img.nextElementSibling;
       const show = () => {
         img.classList.add('loaded');
-        if (placeholder) placeholder.classList.add('hidden');
+        if (placeholder) placeholder.style.display = 'none';
       };
-      img.onload  = show;
+      img.onload = show;
       img.onerror = () => {};
       img.src = img.dataset.src;
       if (img.complete && img.naturalWidth > 0) show();
     }
+
+    function observeImages(container) {
+      container.querySelectorAll('img[data-src]').forEach(img => loadImg(img));
+    }
+
 
     const imgObserver = typeof IntersectionObserver !== 'undefined'
       ? new IntersectionObserver(entries => {
