@@ -277,30 +277,33 @@
       return `img/${rarity}/${file}.png`;
     }
 
-    const imgObserver = typeof IntersectionObserver !== 'undefined' ? new IntersectionObserver(entries => {
+    function loadImg(img) {
+      if (img.dataset.loaded) return;
+      img.dataset.loaded = '1';
+      const placeholder = img.nextElementSibling;
+      const show = () => {
+        img.classList.add('loaded');
+        if (placeholder) placeholder.classList.add('hidden');
+      };
+      img.onload  = show;
+      img.onerror = () => {};
+      img.src = img.dataset.src;
+      if (img.complete && img.naturalWidth > 0) show();
+    }
+
+    const imgObserver = typeof IntersectionObserver !== 'undefined'
+      ? new IntersectionObserver(entries => {
           entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const img = entry.target;
-            const placeholder = img.nextElementSibling;
-            img.onload  = () => {
-              img.classList.add('loaded');
-              if (placeholder) placeholder.classList.add('hidden');
-            };
-            img.onerror = () => {};
-            img.src = img.dataset.src;
-            // Falls Bild schon gecacht ist und onload nicht mehr feuert:
-            if (img.complete && img.naturalWidth > 0) {
-              img.classList.add('loaded');
-              if (placeholder) placeholder.classList.add('hidden');
-            }
-            imgObserver.unobserve(img);
+            if (entry.isIntersecting) loadImg(entry.target);
           });
-        }, {rootMargin:'100px'}) : null;
+        }, {rootMargin:'200px'})
+      : null;
 
     function observeImages(container) {
       container.querySelectorAll('img[data-src]').forEach(img => {
+        if (img.dataset.loaded) return;
         if (imgObserver) imgObserver.observe(img);
-        else img.src = img.dataset.src;
+        else loadImg(img);
       });
     }
 
