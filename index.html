@@ -127,7 +127,7 @@ body{font-family:system-ui,sans-serif;background:#f5f4f0;color:#1a1a1a}
 .modal{background:#fff;border-radius:12px;padding:1.25rem;width:100%;max-width:340px;box-shadow:0 8px 32px rgba(0,0,0,0.2)}
 .modal h2{font-size:16px;font-weight:600;margin-bottom:0.75rem}
 .modal p{font-size:14px;color:#444;margin-bottom:1rem}
-.modal input{width:100%;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;margin-bottom:0.75rem;-webkit-appearance:none}
+.modal input{width:100%;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;margin-bottom:0.75rem;appearance:none;-webkit-appearance:none}
 .modal input:focus{outline:none;border-color:#185FA5}
 .modal-btns{display:flex;gap:8px;justify-content:flex-end}
 .modal-btns button{padding:8px 16px;border-radius:6px;font-size:13px;cursor:pointer;border:1px solid #ddd;background:#fff}
@@ -269,7 +269,7 @@ function renderCurrentView() {
 
 // ── IMAGE HELPERS ─────────────────────────────────────────────────
 // Images stored by rarity: img/{rarity}/{pet_name_normalized}.png
-function imgPath(rarity, petName) {
+function imgPath(rarity, petName) { 
   const file = petName.toLowerCase()
     .replace(/['']/g,'')
     .replace(/[^a-z0-9]+/g,'_')
