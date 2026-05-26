@@ -41,9 +41,13 @@ body{font-family:system-ui,sans-serif;background:#f5f4f0;color:#1a1a1a}
 
 /* ── CONTROLS ── */
 .controls{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.75rem;align-items:center}
-.controls input[type=text]{flex:1;min-width:140px;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;background:#fff;-webkit-appearance:none}
+.controls input[type=text]{flex:1;min-width:140px;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;background:#fff;-appearance:none}
+.controls div{border:1px solid #ddd;border-radius:6px; display: flex; padding: 2px; border: 1px solid currentColor; border-radius: 5px;}
 .controls select{padding:8px 6px;border:1px solid #ddd;border-radius:6px;font-size:13px;background:#fff;-webkit-appearance:none;appearance:none;padding-right:20px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center}
 .controls button{padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px;background:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent;white-space:nowrap}
+.controls .search-box{display:flex;align-items:center;flex:1;min-width:140px;background:#fff;border:1px solid #ddd;border-radius:6px;overflow:hidden;}
+.controls .search-box .clear-search{width:32px;height:32px;display:flex;align-items:center;justify-content:center; border:none;background:transparent;cursor:pointer;flex-shrink:0;opacity:0.7;}
+.controls .search-box input{flex:1;border:none;outline:none;padding:8px 10px;font-size:14px;background:transparent;min-width:0;}
 .controls button:active{background:#f0ede8}
 .btn-danger{color:#a32d2d}
 
@@ -173,7 +177,10 @@ body{font-family:system-ui,sans-serif;background:#f5f4f0;color:#1a1a1a}
   </div>
 
   <div class="controls">
-    <input type="text" id="search" placeholder="Collection oder Pet suchen…" oninput="renderCurrentView()" autocomplete="off" autocorrect="off" autocapitalize="off">
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Collection oder Pet suchen…" oninput="renderCurrentView()" autocomplete="off" autocorrect="off" autocapitalize="off">
+      <button class="clear-search" onclick="document.getElementById('search').value=''; renderCurrentView()">✖</button>
+    </div>
     <select id="filter-status" onchange="renderCurrentView()">
       <option value="all">Alle Status</option>
       <option value="complete">Fertig</option>
