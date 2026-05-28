@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -154,7 +154,12 @@ body.dark .site-title h1{color:#f0ede8}
 .pet-img-wrap{width:64px;height:64px;position:relative;flex-shrink:0}
 .pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none;position:relative;z-index:1}
 .pet-img.loaded{display:block}
-.pet-img-placeholder{position:absolute;top:0;left:0;width:64px;height:64px;border-radius:4px;background:#f5f4f0;display:flex;align-items:center;justify-content:center;font-size:22px;z-index:0}
+.pet-img-placeholder{position:absolute;top:0;left:0;width:64px;height:64px;border-radius:4px;background:#f5f4f0;display:flex;align-items:center;justify-content:center;font-size:22px;z-index:0;overflow:hidden}
+.pet-img-placeholder::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.6) 50%,transparent 100%);transform:translateX(-100%);animation:shimmer 1.4s infinite}
+@keyframes shimmer{to{transform:translateX(100%)}}
+body.dark .pet-img-placeholder::after{background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.08) 50%,transparent 100%)}
+.pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none;position:relative;z-index:1;opacity:0;transition:opacity 0.3s ease}
+.pet-img.loaded{display:block;opacity:1}
 
 .pet-name{width:100%;word-break:break-word}
 .pet-footer{display:flex;align-items:center;justify-content:center;gap:4px;width:100%}
@@ -204,6 +209,8 @@ body.dark .sf-chip:hover{background:#333}
 body.dark .sf-chip.active{background:#f0ede8;color:#1a1a1a}
 .sf-divider{height:1px;background:#f0ede8;margin:2px 0}
 body.dark .sf-divider{background:#333}
+
+/* ── ALPHA VIEW ── */
 .alpha-view{padding-bottom:2rem}
 .alpha-group{margin-bottom:1rem}
 .alpha-letter{font-size:20px;font-weight:800;color:#e0ddd5;padding:0.25rem 0;margin-bottom:0.4rem;border-bottom:1px solid #e0ddd5}
@@ -218,8 +225,10 @@ body.dark .sf-divider{background:#333}
 body.dark ::-webkit-scrollbar-track{background:#1a1a1a}
 body.dark ::-webkit-scrollbar-thumb{background:#444}
 body.dark ::-webkit-scrollbar-thumb:hover{background:#666}
-* { scrollbar-width:thin; scrollbar-color:#d0cdc8 #f5f4f0 }
-body.dark *{ scrollbar-color:#444 #1a1a1a }
+*{scrollbar-width:thin;scrollbar-color:#d0cdc8 #f5f4f0}
+body.dark *{scrollbar-color:#444 #1a1a1a}
+
+/* ── MODALS ── */
 .modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:500;padding:1rem}
 .modal-overlay.open{display:flex;align-items:center;justify-content:center}
 .modal{background:#fff;border-radius:12px;padding:1.25rem;width:100%;max-width:340px;box-shadow:0 8px 32px rgba(0,0,0,0.2)}
@@ -246,7 +255,7 @@ body.dark *{ scrollbar-color:#444 #1a1a1a }
   <div class="global-progress"><div class="global-progress-bar" id="global-bar" style="width:0%"></div></div>
   <nav class="view-tabs">
     <button class="view-tab active" data-view="collections" onclick="switchView('collections')">Collections</button>
-    <button class="view-tab" data-view="rarity" onclick="switchView('rarity')">Seltenheit</button>
+    <button class="view-tab" data-view="rarity" onclick="switchView('rarity')">Rarity</button>
     <button class="view-tab" data-view="alpha" onclick="switchView('alpha')">Alphabet</button>
   </nav>
 </header>
@@ -256,33 +265,33 @@ body.dark *{ scrollbar-color:#444 #1a1a1a }
     <div class="profile-bar">
       <select class="profile-select" id="profile-select" onchange="switchProfile()"></select>
       <div class="profile-menu">
-        <button class="profile-btn" onclick="toggleProfileMenu()" title="Profil-Optionen">☰</button>
+        <button class="profile-btn" onclick="toggleProfileMenu()" title="Profile options">☰</button>
         <div class="profile-dropdown" id="profile-dropdown">
-          <button onclick="openRenameModal();closeProfileMenu()">✏️ Umbenennen</button>
-          <button onclick="openDeleteConfirm();closeProfileMenu()" class="danger">🗑 Löschen</button>
+          <button onclick="openRenameModal();closeProfileMenu()">✏️ Rename</button>
+          <button onclick="openDeleteConfirm();closeProfileMenu()" class="danger">🗑 Delete</button>
         </div>
       </div>
-      <button class="profile-btn" onclick="openNewProfileModal()" title="Neues Profil">＋</button>
+      <button class="profile-btn" onclick="openNewProfileModal()" title="New profile">＋</button>
     </div>
-    <div class="stat"><strong id="s-complete">0</strong>Fertig</div>
-    <div class="stat"><strong id="s-partial">0</strong>In Arbeit</div>
+    <div class="stat"><strong id="s-complete">0</strong>Complete</div>
+    <div class="stat"><strong id="s-partial">0</strong>In Progress</div>
     <div class="stat"><strong id="s-total">0</strong>Collections</div>
     <div class="stat"><strong id="s-pets">0/0</strong>Pets</div>
   </div>
 
   <div class="controls">
     <div class="search-box">
-      <input type="text" id="search" placeholder="Collection oder Pet suchen…" oninput="renderCurrentView()" autocomplete="off" autocorrect="off" autocapitalize="off">
+      <input type="text" id="search" placeholder="Search collection or pet…" oninput="renderCurrentView()" autocomplete="off" autocorrect="off" autocapitalize="off">
       <button class="clear-search" onclick="document.getElementById('search').value='';renderCurrentView()">✖</button>
     </div>
     <select id="filter-status" onchange="renderCurrentView()">
-      <option value="all">Alle Status</option>
-      <option value="complete">Fertig</option>
-      <option value="partial">In Bearbeitung</option>
-      <option value="empty">Nicht begonnen</option>
+      <option value="all">All Status</option>
+      <option value="complete">Complete</option>
+      <option value="partial">In Progress</option>
+      <option value="empty">Not Started</option>
     </select>
     <select id="filter-type" onchange="renderCurrentView()" class="filter-type-sel">
-      <option value="all">Alle Typen</option>
+      <option value="all">All Types</option>
       <option value="egg">Eggs</option>
       <option value="event">Events</option>
       <option value="shop">Shop</option>
@@ -290,13 +299,13 @@ body.dark *{ scrollbar-color:#444 #1a1a1a }
       <option value="lure">Lure</option>
     </select>
     <select id="col-sort" onchange="renderCollections()" class="col-sort-sel">
-      <option value="default">Reihenfolge</option>
+      <option value="default">Default Order</option>
       <option value="az">A–Z</option>
-      <option value="progress-desc">Fortschritt ↓</option>
-      <option value="progress-asc">Fortschritt ↑</option>
+      <option value="progress-desc">Progress ↓</option>
+      <option value="progress-asc">Progress ↑</option>
     </select>
-    <button onclick="expandAll()" class="expand-btn">Alle auf</button>
-    <button onclick="collapseAll()" class="collapse-btn">Alle zu</button>
+    <button onclick="expandAll()" class="expand-btn">Expand All</button>
+    <button onclick="collapseAll()" class="collapse-btn">Collapse All</button>
     <button onclick="openResetConfirm()" class="btn-danger">Reset</button>
     <button onclick="exportData()">⬇ Export</button>
     <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)">
@@ -304,7 +313,7 @@ body.dark *{ scrollbar-color:#444 #1a1a1a }
   </div>
 
   <div id="view-collections">
-    <div class="grid" id="grid"><div class="no-results">⏳ Lade Pet-Daten…</div></div>
+    <div class="grid" id="grid"><div class="no-results">⏳ Loading pet data…</div></div>
   </div>
   <div id="view-rarity" style="display:none">
     <div class="rarity-view" id="rarity-view"></div>
@@ -318,10 +327,10 @@ body.dark *{ scrollbar-color:#444 #1a1a1a }
 
 <div class="modal-overlay" id="modal-input">
   <div class="modal">
-    <h2 id="modal-input-title">Neues Profil</h2>
-    <input type="text" id="modal-input-field" placeholder="Profilname…" autocomplete="off">
+    <h2 id="modal-input-title">New Profile</h2>
+    <input type="text" id="modal-input-field" placeholder="Profile name…" autocomplete="off">
     <div class="modal-btns">
-      <button onclick="closeInputModal()">Abbrechen</button>
+      <button onclick="closeInputModal()">Cancel</button>
       <button class="btn-primary" onclick="confirmInputModal()">OK</button>
     </div>
   </div>
@@ -329,10 +338,10 @@ body.dark *{ scrollbar-color:#444 #1a1a1a }
 
 <div class="modal-overlay" id="modal-confirm">
   <div class="modal">
-    <h2 id="modal-confirm-title">Bestätigen</h2>
+    <h2 id="modal-confirm-title">Confirm</h2>
     <p id="modal-confirm-text"></p>
     <div class="modal-btns">
-      <button onclick="closeConfirmModal()">Abbrechen</button>
+      <button onclick="closeConfirmModal()">Cancel</button>
       <button class="btn-danger-solid" id="modal-confirm-ok">OK</button>
     </div>
   </div>
@@ -340,7 +349,7 @@ body.dark *{ scrollbar-color:#444 #1a1a1a }
 
 <script>
 const RARITY_ORDER    = ['common','uncommon','rare','ultrarare','legendary'];
-const RARITY_LABEL    = {common:'Common',uncommon:'Uncommon',rare:'Rare',ultrarare:'Ultra-Rare',legendary:'Legendary',unknown:'Unbekannt'};
+const RARITY_LABEL    = {common:'Common',uncommon:'Uncommon',rare:'Rare',ultrarare:'Ultra-Rare',legendary:'Legendary',unknown:'Unknown'};
 const RARITY_COLOR    = {common:'r-common',uncommon:'r-uncommon',rare:'r-rare',ultrarare:'r-ultrarare',legendary:'r-legendary',unknown:'r-unknown'};
 const RARITY_EMOJI    = {common:'⚪',uncommon:'🟢',rare:'🔵',ultrarare:'🟣',legendary:'🟠',unknown:'⚫'};
 const RARITY_DOT_COLOR= {common:'#888',uncommon:'#2d9e5f',rare:'#185FA5',ultrarare:'#7F77DD',legendary:'#D85A30'};
@@ -398,9 +407,16 @@ function loadImg(img){
   if(img.dataset.loaded)return;
   img.dataset.loaded='1';
   const placeholder=img.previousElementSibling;
-  const show=()=>{ img.classList.add('loaded'); if(placeholder)placeholder.style.display='none'; };
+  const show=()=>{
+    img.classList.add('loaded');
+    if(placeholder){
+      placeholder.style.transition='opacity 0.3s ease';
+      placeholder.style.opacity='0';
+      setTimeout(()=>{ placeholder.style.display='none'; },300);
+    }
+  };
   img.onload=show;
-  img.onerror=()=>{};
+  img.onerror=()=>{ if(placeholder){ placeholder.style.animation='none'; } };
   img.src=img.dataset.src;
   if(img.complete&&img.naturalWidth>0)show();
 }
@@ -433,7 +449,7 @@ document.getElementById('modal-confirm').addEventListener('click',e=>{ if(e.targ
 
 // ── PROFILES ─────────────────────────────────────────────────────
 const STORAGE_KEY='am_profiles';
-function loadAllProfiles(){ try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||{active:'Standard',profiles:{Standard:{}}};}catch(e){return{active:'Standard',profiles:{Standard:{}}};} }
+function loadAllProfiles(){ try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||{active:'Default',profiles:{Default:{}}};}catch(e){return{active:'Default',profiles:{Default:{}}};} }
 function saveAllProfiles(d){ try{localStorage.setItem(STORAGE_KEY,JSON.stringify(d));}catch(e){} }
 
 let profileData=loadAllProfiles();
@@ -442,10 +458,10 @@ let owned=profileData.profiles[profileData.active]||{};
 function save(){ profileData.profiles[profileData.active]=owned; saveAllProfiles(profileData); }
 function renderProfileBar(){ const sel=document.getElementById('profile-select'); sel.innerHTML=Object.keys(profileData.profiles).map(n=>`<option value="${n}" ${n===profileData.active?'selected':''}>${n}</option>`).join(''); }
 function switchProfile(){ profileData.active=document.getElementById('profile-select').value; owned=profileData.profiles[profileData.active]||{}; saveAllProfiles(profileData); expanded={}; sortMode={}; renderCurrentView(); }
-function openNewProfileModal(){ openInputModal('Neues Profil','',name=>{ if(!name)return; if(profileData.profiles[name]){openConfirmModal('Bereits vorhanden',`Profil "${name}" existiert bereits.`,()=>{});return;} profileData.profiles[name]={}; profileData.active=name; owned={}; saveAllProfiles(profileData); renderProfileBar(); expanded={}; sortMode={}; renderCurrentView(); }); }
-function openRenameModal(){ openInputModal('Umbenennen',profileData.active,n=>{ if(!n||n===profileData.active)return; if(profileData.profiles[n]){openConfirmModal('Bereits vorhanden',`Profil "${n}" existiert bereits.`,()=>{});return;} profileData.profiles[n]=profileData.profiles[profileData.active]; delete profileData.profiles[profileData.active]; profileData.active=n; saveAllProfiles(profileData); renderProfileBar(); renderCurrentView(); }); }
-function openDeleteConfirm(){ if(Object.keys(profileData.profiles).length<=1){openConfirmModal('Nicht möglich','Du kannst das letzte Profil nicht löschen.',()=>{});return;} openConfirmModal('Profil löschen',`Profil "${profileData.active}" wirklich löschen?`,()=>{ delete profileData.profiles[profileData.active]; profileData.active=Object.keys(profileData.profiles)[0]; owned=profileData.profiles[profileData.active]||{}; saveAllProfiles(profileData); renderProfileBar(); expanded={}; sortMode={}; renderCurrentView(); }); }
-function openResetConfirm(){ openConfirmModal('Zurücksetzen','Alle Häkchen im aktuellen Profil zurücksetzen?',()=>{ owned={}; save(); renderCurrentView(); }); }
+function openNewProfileModal(){ openInputModal('New Profile','',name=>{ if(!name)return; if(profileData.profiles[name]){openConfirmModal('Already exists',`Profile "${name}" already exists.`,()=>{});return;} profileData.profiles[name]={}; profileData.active=name; owned={}; saveAllProfiles(profileData); renderProfileBar(); expanded={}; sortMode={}; renderCurrentView(); }); }
+function openRenameModal(){ openInputModal('Rename',profileData.active,n=>{ if(!n||n===profileData.active)return; if(profileData.profiles[n]){openConfirmModal('Already exists',`Profile "${n}" already exists.`,()=>{});return;} profileData.profiles[n]=profileData.profiles[profileData.active]; delete profileData.profiles[profileData.active]; profileData.active=n; saveAllProfiles(profileData); renderProfileBar(); renderCurrentView(); }); }
+function openDeleteConfirm(){ if(Object.keys(profileData.profiles).length<=1){openConfirmModal('Not possible','You cannot delete the last profile.',()=>{});return;} openConfirmModal('Delete profile',`Really delete profile "${profileData.active}"?`,()=>{ delete profileData.profiles[profileData.active]; profileData.active=Object.keys(profileData.profiles)[0]; owned=profileData.profiles[profileData.active]||{}; saveAllProfiles(profileData); renderProfileBar(); expanded={}; sortMode={}; renderCurrentView(); }); }
+function openResetConfirm(){ openConfirmModal('Reset','Reset all checkmarks in the current profile?',()=>{ owned={}; save(); renderCurrentView(); }); }
 function toggleProfileMenu(){ document.getElementById('profile-dropdown').classList.toggle('open'); }
 function closeProfileMenu(){ document.getElementById('profile-dropdown').classList.remove('open'); }
 document.addEventListener('click',e=>{ if(!e.target.closest('.profile-menu'))closeProfileMenu(); });
@@ -463,7 +479,7 @@ function exportData(){
 function importData(event){
   const file=event.target.files[0]; if(!file)return;
   const reader=new FileReader();
-  reader.onload=e=>{ try{ const p=JSON.parse(e.target.result); if(!p.profiles||!p.active){openConfirmModal('Ungültige Datei','Kein gültiges Format.',()=>{});return;} openConfirmModal('Import bestätigen','Alle aktuellen Profile werden ersetzt. Fortfahren?',()=>{ profileData=p; owned=profileData.profiles[profileData.active]||{}; saveAllProfiles(profileData); renderProfileBar(); expanded={}; sortMode={}; renderCurrentView(); }); }catch(err){openConfirmModal('Fehler','Datei konnte nicht gelesen werden.',()=>{});} event.target.value=''; };
+  reader.onload=e=>{ try{ const p=JSON.parse(e.target.result); if(!p.profiles||!p.active){openConfirmModal('Invalid file','Not a valid format.',()=>{});return;} openConfirmModal('Confirm import','All current profiles will be replaced. Continue?',()=>{ profileData=p; owned=profileData.profiles[profileData.active]||{}; saveAllProfiles(profileData); renderProfileBar(); expanded={}; sortMode={}; renderCurrentView(); }); }catch(err){openConfirmModal('Error','File could not be read.',()=>{});} event.target.value=''; };
   reader.readAsText(file);
 }
 
@@ -549,7 +565,7 @@ function renderCollections(){
   else if(colSort==='progress-desc') filtered.sort((a,b)=>(getOwned(b.id)/b.pets.length||0)-(getOwned(a.id)/a.pets.length||0));
   else if(colSort==='progress-asc')  filtered.sort((a,b)=>(getOwned(a.id)/a.pets.length||0)-(getOwned(b.id)/b.pets.length||0));
   const grid=document.getElementById('grid');
-  if(!filtered.length){grid.innerHTML='<div class="no-results">Keine Collections gefunden.</div>';updateStats();return;}
+  if(!filtered.length){grid.innerHTML='<div class="no-results">No collections found.</div>';updateStats();return;}
   grid.innerHTML=filtered.map(col=>{
     const o=getOwned(col.id),t=col.pets.length,pct=t?Math.round(o/t*100):0,complete=o===t;
     const petMatch=search&&col.pets.some(p=>p.name.toLowerCase().includes(search));
@@ -559,7 +575,7 @@ function renderCollections(){
       <div class="card-header" onclick="toggleExpand('${col.id}')">
         <div class="card-title">${col.name}</div>
         <div class="card-meta">
-          ${complete?'<span class="complete-stamp">✓ Fertig</span>':''}
+          ${complete?'<span class="complete-stamp">✓ Complete</span>':''}
           <span class="count-badge">${o}/${t}</span>
           <span class="badge ${TYPE_BADGE[col.type]||''}">${TYPE_LABELS[col.type]||col.type}</span>
           <span class="chevron${isOpen?' open':''}">▾</span>
@@ -567,8 +583,8 @@ function renderCollections(){
       </div>
       <div class="progress-wrap"><div class="progress-bar" style="width:${pct}%"></div></div>
       <div class="card-toolbar${isOpen?' open':''}">
-        <span class="sort-label">Sortierung:</span>
-        <button class="sort-btn${mode==='rarity'?' active':''}" data-mode="rarity" onclick="event.stopPropagation();setSortMode('${col.id}','rarity')">Seltenheit</button>
+        <span class="sort-label">Sort by:</span>
+        <button class="sort-btn${mode==='rarity'?' active':''}" data-mode="rarity" onclick="event.stopPropagation();setSortMode('${col.id}','rarity')">Rarity</button>
         <button class="sort-btn${mode==='alpha'?' active':''}"  data-mode="alpha"  onclick="event.stopPropagation();setSortMode('${col.id}','alpha')">A–Z</button>
       </div>
       <div class="pets-grid${isOpen?' open':''}" style="${isOpen?'display:grid':''}">
@@ -601,7 +617,7 @@ function toggleExpand(id){
 
 // ── RARITY SUBFILTERS STATE ──────────────────────────────────────
 const raritySubfilters = {};
-RARITY_ORDER.forEach(r => { raritySubfilters[r] = {sort: null, open: false}; });
+RARITY_ORDER.forEach(r => { raritySubfilters[r] = {sort:null, open:false}; });
 
 function setRaritySort(rarity, value) {
   const sf = raritySubfilters[rarity];
@@ -639,46 +655,45 @@ function renderRarityView(){
     if(!pets.length) return;
 
     const sf = raritySubfilters[rarity];
-    const dot=RARITY_DOT_COLOR[rarity]||'#ccc';
-    const ownedCount=pets.filter(p=>owned[p.colId+'|||'+p.name]).length;
+    const dot = RARITY_DOT_COLOR[rarity]||'#ccc';
+    const ownedCount = pets.filter(p=>owned[p.colId+'|||'+p.name]).length;
 
-    // Apply sorting
     let filtered = [...pets];
-    if(sf.sort === 'alpha') {
-      filtered.sort((a,b) => a.name.localeCompare(b.name));
-    } else if(sf.sort === 'event') {
-      filtered.sort((a,b) => a.colName.localeCompare(b.colName) || a.name.localeCompare(b.name));
-    } else if(sf.sort === 'owned') {
-      filtered.sort((a,b) => {
-        const ao = !!owned[a.colId+'|||'+a.name];
-        const bo = !!owned[b.colId+'|||'+b.name];
-        return bo - ao || a.name.localeCompare(b.name);
+    if(sf.sort==='alpha'){
+      filtered.sort((a,b)=>a.name.localeCompare(b.name));
+    } else if(sf.sort==='event'){
+      filtered.sort((a,b)=>a.colName.localeCompare(b.colName)||a.name.localeCompare(b.name));
+    } else if(sf.sort==='owned'){
+      filtered.sort((a,b)=>{
+        const ao=!!owned[a.colId+'|||'+a.name];
+        const bo=!!owned[b.colId+'|||'+b.name];
+        return bo-ao||a.name.localeCompare(b.name);
       });
     }
 
     const hasSort = !!sf.sort;
-    const sortLabel = {alpha:'A–Z', event:'Event', owned:'Besessen'}[sf.sort] || 'Sortierung';
+    const sortLabel = {alpha:'A–Z', event:'Event', owned:'Owned first'}[sf.sort] || '↕ Sort';
 
     html+=`<div class="rarity-group">
       <div class="rarity-group-header">
         <span style="width:10px;height:10px;border-radius:50%;background:${dot};display:inline-block;flex-shrink:0"></span>
         <span class="rarity-group-title">${RARITY_LABEL[rarity]}</span>
         <span class="rarity-group-count">${ownedCount}/${pets.length} Pets</span>
-        <div class="rarity-subfilter" style="margin-right:auto">
+        <div class="rarity-subfilter" style="margin-left:auto">
           <button class="subfilter-toggle${sf.open?' open':''}${hasSort?' active-filter':''}" onclick="toggleSubfilterOpen('${rarity}',event)">
-            ${hasSort ? sortLabel : '↕ Subsort'} <span class="sf-chevron">▾</span>
+            ${sortLabel} <span class="sf-chevron">▾</span>
           </button>
           <div class="subfilter-dropdown${sf.open?' open':''}">
-            <div class="subfilter-label">Sortieren nach</div>
+            <div class="subfilter-label">Sort by</div>
             <button class="sf-chip${sf.sort==='alpha'?' active':''}" onclick="event.stopPropagation();setRaritySort('${rarity}','alpha')">🔤 Alphabet (A–Z)</button>
-            <button class="sf-chip${sf.sort==='event'?' active':''}" onclick="event.stopPropagation();setRaritySort('${rarity}','event')">📅 Event-Reihenfolge</button>
-            <button class="sf-chip${sf.sort==='owned'?' active':''}" onclick="event.stopPropagation();setRaritySort('${rarity}','owned')">✓ Besessen zuerst</button>
-            ${hasSort?`<div class="sf-divider"></div><button class="sf-chip" onclick="event.stopPropagation();setRaritySort('${rarity}',null)">✕ Zurücksetzen</button>`:''}
+            <button class="sf-chip${sf.sort==='event'?' active':''}" onclick="event.stopPropagation();setRaritySort('${rarity}','event')">📅 Event order</button>
+            <button class="sf-chip${sf.sort==='owned'?' active':''}" onclick="event.stopPropagation();setRaritySort('${rarity}','owned')">✓ Owned first</button>
+            ${hasSort?`<div class="sf-divider"></div><button class="sf-chip" onclick="event.stopPropagation();setRaritySort('${rarity}',null)">✕ Reset</button>`:''}
           </div>
         </div>
       </div>
       <div class="rarity-pet-grid">
-        ${filtered.length ? filtered.map(p=>{
+        ${filtered.map(p=>{
           const isOwned=!!owned[p.colId+'|||'+p.name];
           const hi=search&&(p.name.toLowerCase().includes(search)||p.colName.toLowerCase().includes(search));
           const safe=encodeURIComponent(p.name);
@@ -688,11 +703,11 @@ function renderRarityView(){
             <div class="rarity-pet-col">${p.colName}</div>
             <div class="pet-footer"><div class="check">${isOwned?'✓':''}</div></div>
           </div>`;
-        }).join('') : '<div class="no-results" style="grid-column:1/-1;padding:1rem">Keine Pets gefunden.</div>'}
+        }).join('')}
       </div>
     </div>`;
   });
-  container.innerHTML=html||'<div class="no-results">Keine Pets gefunden.</div>';
+  container.innerHTML=html||'<div class="no-results">No pets found.</div>';
   observeImages(container);
   updateStats();
 }
@@ -707,7 +722,7 @@ function renderAlphaView(){
   if(fStatus==='complete') pets=pets.filter(p=>owned[p.colId+'|||'+p.name]);
   if(fStatus==='empty')    pets=pets.filter(p=>!owned[p.colId+'|||'+p.name]);
   pets.sort((a,b)=>a.name.localeCompare(b.name));
-  if(!pets.length){ container.innerHTML='<div class="no-results">Keine Pets gefunden.</div>'; updateStats(); return; }
+  if(!pets.length){ container.innerHTML='<div class="no-results">No pets found.</div>'; updateStats(); return; }
   const byLetter={};
   pets.forEach(p=>{ const first=p.name[0].toUpperCase(); const l=/^[A-ZÄÖÜ]$/.test(first)?first:'#'; if(!byLetter[l])byLetter[l]=[]; byLetter[l].push(p); });
   const sortedLetters=Object.keys(byLetter).sort((a,b)=>{ if(a==='#')return -1; if(b==='#')return 1; return a.localeCompare(b); });
@@ -753,7 +768,7 @@ async function loadPetData(){
     renderProfileBar();
     renderCurrentView();
   }catch(e){
-    document.getElementById('grid').innerHTML=`<div class="no-results">⚠️ pets.json konnte nicht geladen werden.<br><small>${e.message}</small></div>`;
+    document.getElementById('grid').innerHTML=`<div class="no-results">⚠️ Could not load pets.json.<br><small>${e.message}</small></div>`;
   }
 }
 
