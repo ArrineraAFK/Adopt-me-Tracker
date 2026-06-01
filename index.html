@@ -10,6 +10,8 @@ body{font-family:system-ui,sans-serif;background:#f5f4f0;color:#1a1a1a}
 
 /* ── TRANSITIONS ── */
 body,body .card,body .stat,body .profile-bar,body .profile-btn,body .sort-btn,body .pet-item,body .rarity-pet-item,body .site-header,body .view-tab,body .modal,body .profile-dropdown,body .search-box,body .controls button,body .controls select,body .col-sort-sel,body .pet-img-placeholder,body .rarity-group-header,body .alpha-letter,body .check,body .count-badge{transition:background-color 0.3s ease,border-color 0.3s ease,color 0.3s ease}
+
+/* ── DARK MODE ── */
 body.dark{background:#1a1a1a;color:#f0ede8}
 body.dark .site-header{background:#242424;border-color:#333}
 body.dark .view-tab{color:#666}
@@ -50,7 +52,6 @@ body.dark .search-box input::placeholder{color:#666}
 body.dark .clear-search{color:#666}
 body.dark .no-results{color:#666}
 body.dark .card.complete{border-color:#2a6e4a}
-body.dark .pet-item,.dark .rarity-pet-item{background:#2a2a2a;border-color:#333}
 body.dark .sort-btn{background:#2a2a2a;border-color:#444;color:#aaa}
 body.dark .dark-toggle{border-color:#444;color:#f0ede8}
 body.dark .col-sort-sel{background:#2a2a2a;border-color:#444;color:#f0ede8;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center}
@@ -58,6 +59,15 @@ body.dark .profile-select{background:#2a2a2a;border-color:#444;color:#f0ede8}
 body.dark .pet-name{color:#e0ddd5}
 body.dark .global-progress{background:#333}
 body.dark .scroll-top{background:#f0ede8;color:#1a1a1a}
+body.dark .rarity-label{color:#888}
+body.dark .subfilter-toggle{background:#2a2a2a;border-color:#444;color:#aaa}
+body.dark .subfilter-toggle.active-filter{border-color:#7F77DD;color:#c5c2f0;background:#2a2840}
+body.dark .subfilter-dropdown{background:#2a2a2a;border-color:#444;box-shadow:0 4px 16px rgba(0,0,0,0.4)}
+body.dark .subfilter-label{color:#555}
+body.dark .sf-chip{color:#ccc}
+body.dark .sf-chip:hover{background:#333}
+body.dark .sf-chip.active{background:#f0ede8;color:#1a1a1a}
+body.dark .sf-divider{background:#333}
 
 /* ── HEADER ── */
 .site-header{background:#fff;border-bottom:1px solid #e0ddd5;padding:0.75rem 1rem 0;position:sticky;top:0;z-index:100}
@@ -70,7 +80,7 @@ body.dark .site-title h1{color:#f0ede8}
 .site-title p{font-size:11px;color:#999;letter-spacing:0.08em;text-transform:uppercase;margin-top:1px}
 
 /* ── GLOBAL PROGRESS BAR ── */
-.global-progress{height:3px;background:#e0ddd5;margin:0 -1rem 0}
+.global-progress{height:3px;background:#e0ddd5;margin:0 -1rem}
 .global-progress-bar{height:100%;background:linear-gradient(90deg,#185FA5,#7F77DD,#D85A30);transition:width 0.4s}
 
 /* ── VIEW TABS ── */
@@ -78,6 +88,7 @@ body.dark .site-title h1{color:#f0ede8}
 .view-tab{flex:1;padding:0.6rem 0.25rem;font-size:12px;font-weight:500;color:#888;background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;-webkit-tap-highlight-color:transparent;white-space:nowrap;text-align:center}
 .view-tab:hover{color:#1a1a1a}
 .view-tab.active{color:#1a1a1a;border-bottom-color:#1a1a1a}
+body.dark .view-tab:hover{color:#f0ede8}
 
 /* ── MAIN ── */
 .main{padding:0.75rem}
@@ -152,20 +163,20 @@ body.dark .site-title h1{color:#f0ede8}
 
 /* ── PET IMAGE ── */
 .pet-img-wrap{width:64px;height:64px;position:relative;flex-shrink:0}
-.pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none;position:relative;z-index:1}
-.pet-img.loaded{display:block}
+.pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none;position:relative;z-index:1;opacity:0;transition:opacity 0.3s ease}
+.pet-img.loaded{display:block;opacity:1}
 .pet-img-placeholder{position:absolute;top:0;left:0;width:64px;height:64px;border-radius:4px;background:#f5f4f0;display:flex;align-items:center;justify-content:center;font-size:22px;z-index:0;overflow:hidden}
 .pet-img-placeholder::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.6) 50%,transparent 100%);transform:translateX(-100%);animation:shimmer 1.4s infinite}
 @keyframes shimmer{to{transform:translateX(100%)}}
 body.dark .pet-img-placeholder::after{background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.08) 50%,transparent 100%)}
-.pet-img{width:64px;height:64px;object-fit:contain;border-radius:4px;display:none;position:relative;z-index:1;opacity:0;transition:opacity 0.3s ease}
-.pet-img.loaded{display:block;opacity:1}
 
 .pet-name{width:100%;word-break:break-word}
-.pet-footer{display:flex;align-items:center;justify-content:center;gap:4px;width:100%}
+.pet-footer{display:flex;flex-direction:column;align-items:center;gap:3px;width:100%}
+.pet-footer-row{display:flex;align-items:center;justify-content:center;gap:4px}
 .check{width:14px;height:14px;border:1.5px solid #ccc;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff}
-.pet-item.owned .check{background:#639922;border-color:#639922}
+.pet-item.owned .check,.rarity-pet-item.owned .check{background:#639922;border-color:#639922}
 .rarity-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.rarity-label{font-size:9px;color:#aaa;line-height:1}
 .r-common{background:#888}.r-uncommon{background:#2d9e5f}.r-rare{background:#185FA5}
 .r-ultrarare{background:#7F77DD}.r-legendary{background:#D85A30}.r-unknown{background:#ccc}
 .chevron{font-size:14px;color:#aaa;transition:transform 0.2s;display:inline-block}
@@ -191,24 +202,15 @@ body.dark .pet-img-placeholder::after{background:linear-gradient(90deg,transpare
 .rarity-subfilter{position:relative}
 .subfilter-toggle{display:flex;align-items:center;gap:4px;padding:2px 8px;font-size:11px;border:1px solid #e0ddd5;border-radius:6px;background:#fff;cursor:pointer;color:#666;-webkit-tap-highlight-color:transparent;transition:background-color 0.15s,border-color 0.15s,color 0.15s;height:24px}
 .subfilter-toggle.active-filter{border-color:#185FA5;color:#185FA5;background:#EBF3FD}
-body.dark .subfilter-toggle{background:#2a2a2a;border-color:#444;color:#aaa}
-body.dark .subfilter-toggle.active-filter{border-color:#7F77DD;color:#c5c2f0;background:#2a2840}
-.sf-chevron{font-size:15px;transition:transform 0.2s;display:inline-block}
+.sf-chevron{font-size:11px;transition:transform 0.2s;display:inline-block}
 .subfilter-toggle.open .sf-chevron{transform:rotate(180deg)}
 .subfilter-dropdown{display:none;position:absolute;top:calc(100% + 4px);left:0;min-width:200px;background:#fff;border:1px solid #e0ddd5;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,0.12);z-index:150;padding:8px;flex-direction:column;gap:4px}
 .subfilter-dropdown.open{display:flex}
-.subfilter-row{display:flex;flex-direction:column;gap:3px}
 .subfilter-label{font-size:10px;font-weight:600;color:#aaa;text-transform:uppercase;letter-spacing:0.05em;padding:2px 4px}
 .sf-chip{padding:6px 10px;border-radius:6px;border:none;font-size:12px;cursor:pointer;background:none;color:#444;-webkit-tap-highlight-color:transparent;transition:background-color 0.15s,color 0.15s;text-align:left;width:100%}
 .sf-chip:hover{background:#f5f4f0}
 .sf-chip.active{background:#1a1a1a;color:#fff}
-body.dark .subfilter-dropdown{background:#2a2a2a;border-color:#444;box-shadow:0 4px 16px rgba(0,0,0,0.4)}
-body.dark .subfilter-label{color:#555}
-body.dark .sf-chip{color:#ccc}
-body.dark .sf-chip:hover{background:#333}
-body.dark .sf-chip.active{background:#f0ede8;color:#1a1a1a}
 .sf-divider{height:1px;background:#f0ede8;margin:2px 0}
-body.dark .sf-divider{background:#333}
 
 /* ── ALPHA VIEW ── */
 .alpha-view{padding-bottom:2rem}
@@ -219,7 +221,7 @@ body.dark .sf-divider{background:#333}
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:6px;height:6px}
-::-webkit-scrollbar-track{background:#f5f4f0;border-radius:0}
+::-webkit-scrollbar-track{background:#f5f4f0}
 ::-webkit-scrollbar-thumb{background:#d0cdc8;border-radius:3px}
 ::-webkit-scrollbar-thumb:hover{background:#b0ada8}
 body.dark ::-webkit-scrollbar-track{background:#1a1a1a}
@@ -257,6 +259,7 @@ body.dark *{scrollbar-color:#444 #1a1a1a}
     <button class="view-tab active" data-view="collections" onclick="switchView('collections')">Collections</button>
     <button class="view-tab" data-view="rarity" onclick="switchView('rarity')">Rarity</button>
     <button class="view-tab" data-view="alpha" onclick="switchView('alpha')">Alphabet</button>
+    <button class="view-tab" data-view="owned" onclick="switchView('owned')">Collected</button>
   </nav>
 </header>
 
@@ -284,7 +287,7 @@ body.dark *{scrollbar-color:#444 #1a1a1a}
       <input type="text" id="search" placeholder="Search collection or pet…" oninput="renderCurrentView()" autocomplete="off" autocorrect="off" autocapitalize="off">
       <button class="clear-search" onclick="document.getElementById('search').value='';renderCurrentView()">✖</button>
     </div>
-    <select id="filter-status" onchange="renderCurrentView()">
+    <select id="filter-status" onchange="renderCurrentView()" class="filter-status-sel">
       <option value="all">All Status</option>
       <option value="complete">Complete</option>
       <option value="partial">In Progress</option>
@@ -320,6 +323,9 @@ body.dark *{scrollbar-color:#444 #1a1a1a}
   </div>
   <div id="view-alpha" style="display:none">
     <div class="alpha-view" id="alpha-view"></div>
+  </div>
+  <div id="view-owned" style="display:none">
+    <div class="rarity-view" id="owned-view"></div>
   </div>
 </main>
 
@@ -384,10 +390,14 @@ function switchView(view){
   document.getElementById('view-collections').style.display=view==='collections'?'':'none';
   document.getElementById('view-rarity').style.display=view==='rarity'?'':'none';
   document.getElementById('view-alpha').style.display=view==='alpha'?'':'none';
-  document.querySelector('.expand-btn').style.display=view==='collections'?'':'none';
-  document.querySelector('.collapse-btn').style.display=view==='collections'?'':'none';
-  document.querySelector('.filter-type-sel').style.display=view==='collections'?'':'none';
-  document.querySelector('.col-sort-sel').style.display=view==='collections'?'':'none';
+  document.getElementById('view-owned').style.display=view==='owned'?'':'none';
+  // show/hide controls relevant to each view
+  const isCollections=view==='collections';
+  document.querySelector('.expand-btn').style.display=isCollections?'':'none';
+  document.querySelector('.collapse-btn').style.display=isCollections?'':'none';
+  document.querySelector('.filter-type-sel').style.display=isCollections?'':'none';
+  document.querySelector('.col-sort-sel').style.display=isCollections?'':'none';
+  document.querySelector('.filter-status-sel').style.display=(view==='owned'||view==='alpha'||view==='rarity')?'none':'';
   renderCurrentView();
 }
 
@@ -395,6 +405,7 @@ function renderCurrentView(){
   if(currentView==='collections') renderCollections();
   else if(currentView==='rarity') renderRarityView();
   else if(currentView==='alpha')  renderAlphaView();
+  else if(currentView==='owned')  renderOwnedView();
 }
 
 // ── IMAGES ───────────────────────────────────────────────────────
@@ -416,7 +427,7 @@ function loadImg(img){
     }
   };
   img.onload=show;
-  img.onerror=()=>{ if(placeholder){ placeholder.style.animation='none'; } };
+  img.onerror=()=>{ if(placeholder)placeholder.style.animation='none'; };
   img.src=img.dataset.src;
   if(img.complete&&img.naturalWidth>0)show();
 }
@@ -430,6 +441,17 @@ function petImgHtml(rarity,petName){
   return`<div class="pet-img-wrap">
     <div class="pet-img-placeholder">${RARITY_EMOJI[rarity]||'❓'}</div>
     <img class="pet-img" data-src="${path}" alt="${petName}">
+  </div>`;
+}
+
+// ── RARITY FOOTER ─────────────────────────────────────────────────
+function rarityFooterHtml(rarity,isOwned){
+  return`<div class="pet-footer">
+    <div class="pet-footer-row"><div class="check">${isOwned?'✓':''}</div></div>
+    <div class="pet-footer-row">
+      <span class="rarity-dot ${RARITY_COLOR[rarity]||'r-unknown'}"></span>
+      <span class="rarity-label">${RARITY_LABEL[rarity]||rarity}</span>
+    </div>
   </div>`;
 }
 
@@ -519,7 +541,7 @@ function petItemHtml(colId,p,highlight){
   return`<div class="pet-item${isOwned?' owned':''}${highlight?' highlighted':''}" onclick="togglePet('${colId}','${safe}')">
     ${petImgHtml(p.rarity,p.name)}
     <div class="pet-name">${p.name}</div>
-    <div class="pet-footer"><div class="check">${isOwned?'✓':''}</div><span class="rarity-dot ${RARITY_COLOR[p.rarity]||'r-unknown'}"></span></div>
+    ${rarityFooterHtml(p.rarity,isOwned)}
   </div>`;
 }
 
@@ -616,30 +638,43 @@ function toggleExpand(id){
 }
 
 // ── RARITY SUBFILTERS STATE ──────────────────────────────────────
-const raritySubfilters = {};
-RARITY_ORDER.forEach(r => { raritySubfilters[r] = {sort:null, open:false}; });
+const raritySubfilters={};
+RARITY_ORDER.forEach(r=>{ raritySubfilters[r]={sort:null,open:false}; });
 
-function setRaritySort(rarity, value) {
-  const sf = raritySubfilters[rarity];
-  sf.sort = sf.sort === value ? null : value;
-  RARITY_ORDER.forEach(r => { raritySubfilters[r].open = false; });
+function setRaritySort(rarity,value){
+  const sf=raritySubfilters[rarity];
+  sf.sort=sf.sort===value?null:value;
+  RARITY_ORDER.forEach(r=>{ raritySubfilters[r].open=false; });
   renderRarityView();
 }
 
-function toggleSubfilterOpen(rarity, e) {
+function toggleSubfilterOpen(rarity,e){
   e.stopPropagation();
-  const sf = raritySubfilters[rarity];
-  const wasOpen = sf.open;
-  RARITY_ORDER.forEach(r => { raritySubfilters[r].open = false; });
-  sf.open = !wasOpen;
+  const sf=raritySubfilters[rarity];
+  const wasOpen=sf.open;
+  RARITY_ORDER.forEach(r=>{ raritySubfilters[r].open=false; });
+  sf.open=!wasOpen;
   renderRarityView();
 }
 
-document.addEventListener('click', () => {
-  let any = false;
-  RARITY_ORDER.forEach(r => { if(raritySubfilters[r].open){ raritySubfilters[r].open=false; any=true; } });
+document.addEventListener('click',()=>{
+  let any=false;
+  RARITY_ORDER.forEach(r=>{ if(raritySubfilters[r].open){ raritySubfilters[r].open=false; any=true; } });
   if(any) renderRarityView();
 });
+
+// ── RARITY PET CARD HTML ─────────────────────────────────────────
+function rarityPetCardHtml(p,search){
+  const isOwned=!!owned[p.colId+'|||'+p.name];
+  const hi=search&&(p.name.toLowerCase().includes(search)||p.colName.toLowerCase().includes(search));
+  const safe=encodeURIComponent(p.name);
+  return`<div class="rarity-pet-item${isOwned?' owned':''}${hi?' highlighted':''}" onclick="togglePetFromFlat('${p.colId}','${safe}')">
+    ${petImgHtml(p.rarity,p.name)}
+    <div class="pet-name">${p.name}</div>
+    <div class="rarity-pet-col">${p.colName}</div>
+    <div class="pet-footer"><div class="pet-footer-row"><div class="check">${isOwned?'✓':''}</div></div></div>
+  </div>`;
+}
 
 // ── RARITY VIEW ───────────────────────────────────────────────────
 function renderRarityView(){
@@ -654,32 +689,27 @@ function renderRarityView(){
     if(fStatus==='empty')    pets=pets.filter(p=>!owned[p.colId+'|||'+p.name]);
     if(!pets.length) return;
 
-    const sf = raritySubfilters[rarity];
-    const dot = RARITY_DOT_COLOR[rarity]||'#ccc';
-    const ownedCount = pets.filter(p=>owned[p.colId+'|||'+p.name]).length;
+    const sf=raritySubfilters[rarity];
+    const dot=RARITY_DOT_COLOR[rarity]||'#ccc';
+    const ownedCount=pets.filter(p=>owned[p.colId+'|||'+p.name]).length;
 
-    let filtered = [...pets];
-    if(sf.sort==='alpha'){
-      filtered.sort((a,b)=>a.name.localeCompare(b.name));
-    } else if(sf.sort==='event'){
-      filtered.sort((a,b)=>a.colName.localeCompare(b.colName)||a.name.localeCompare(b.name));
-    } else if(sf.sort==='owned'){
-      filtered.sort((a,b)=>{
-        const ao=!!owned[a.colId+'|||'+a.name];
-        const bo=!!owned[b.colId+'|||'+b.name];
-        return bo-ao||a.name.localeCompare(b.name);
-      });
-    }
+    let filtered=[...pets];
+    if(sf.sort==='alpha') filtered.sort((a,b)=>a.name.localeCompare(b.name));
+    else if(sf.sort==='event') filtered.sort((a,b)=>a.colName.localeCompare(b.colName)||a.name.localeCompare(b.name));
+    else if(sf.sort==='owned') filtered.sort((a,b)=>{
+      const ao=!!owned[a.colId+'|||'+a.name],bo=!!owned[b.colId+'|||'+b.name];
+      return bo-ao||a.name.localeCompare(b.name);
+    });
 
-    const hasSort = !!sf.sort;
-    const sortLabel = {alpha:'A–Z', event:'Event', owned:'Owned first'}[sf.sort] || '↕ Sort';
+    const hasSort=!!sf.sort;
+    const sortLabel={alpha:'A–Z',event:'Event',owned:'Owned first'}[sf.sort]||'↕ Sort';
 
     html+=`<div class="rarity-group">
       <div class="rarity-group-header">
         <span style="width:10px;height:10px;border-radius:50%;background:${dot};display:inline-block;flex-shrink:0"></span>
         <span class="rarity-group-title">${RARITY_LABEL[rarity]}</span>
         <span class="rarity-group-count">${ownedCount}/${pets.length} Pets</span>
-        <div class="rarity-subfilter" style="margin-left:auto">
+        <div class="rarity-subfilter">
           <button class="subfilter-toggle${sf.open?' open':''}${hasSort?' active-filter':''}" onclick="toggleSubfilterOpen('${rarity}',event)">
             ${sortLabel} <span class="sf-chevron">▾</span>
           </button>
@@ -693,17 +723,7 @@ function renderRarityView(){
         </div>
       </div>
       <div class="rarity-pet-grid">
-        ${filtered.map(p=>{
-          const isOwned=!!owned[p.colId+'|||'+p.name];
-          const hi=search&&(p.name.toLowerCase().includes(search)||p.colName.toLowerCase().includes(search));
-          const safe=encodeURIComponent(p.name);
-          return`<div class="rarity-pet-item${isOwned?' owned':''}${hi?' highlighted':''}" onclick="togglePetFromFlat('${p.colId}','${safe}')">
-            ${petImgHtml(p.rarity,p.name)}
-            <div class="pet-name">${p.name}</div>
-            <div class="rarity-pet-col">${p.colName}</div>
-            <div class="pet-footer"><div class="check">${isOwned?'✓':''}</div></div>
-          </div>`;
-        }).join('')}
+        ${filtered.map(p=>rarityPetCardHtml(p,search)).join('')}
       </div>
     </div>`;
   });
@@ -737,14 +757,44 @@ function renderAlphaView(){
           ${petImgHtml(p.rarity,p.name)}
           <div class="pet-name">${p.name}</div>
           <div class="rarity-pet-col">${p.colName}</div>
-          <div class="pet-footer">
-            <div class="check">${isOwned?'✓':''}</div>
-            <span class="rarity-dot ${RARITY_COLOR[p.rarity]||'r-unknown'}"></span>
-          </div>
+          ${rarityFooterHtml(p.rarity,isOwned)}
         </div>`;
       }).join('')}
     </div>
   </div>`).join('');
+  observeImages(container);
+  updateStats();
+}
+
+// ── OWNED / NOT OWNED VIEW ────────────────────────────────────────
+function renderOwnedView(){
+  const search=document.getElementById('search').value.toLowerCase();
+  const container=document.getElementById('owned-view');
+
+  const matchSearch=p=>!search||(p.name.toLowerCase().includes(search)||p.colName.toLowerCase().includes(search));
+
+  const ownedPets=ALL_PETS.filter(p=>owned[p.colId+'|||'+p.name]&&matchSearch(p))
+    .sort((a,b)=>a.name.localeCompare(b.name));
+  const notOwnedPets=ALL_PETS.filter(p=>!owned[p.colId+'|||'+p.name]&&matchSearch(p))
+    .sort((a,b)=>a.name.localeCompare(b.name));
+
+  const renderGroup=(pets,title,dot)=>{
+    if(!pets.length) return '';
+    return`<div class="rarity-group">
+      <div class="rarity-group-header">
+        <span style="width:10px;height:10px;border-radius:50%;background:${dot};display:inline-block;flex-shrink:0"></span>
+        <span class="rarity-group-title">${title}</span>
+        <span style="flex:1"></span>
+        <span class="rarity-group-count">${pets.length} Pets</span>
+      </div>
+      <div class="rarity-pet-grid">
+        ${pets.map(p=>rarityPetCardHtml(p,search)).join('')}
+      </div>
+    </div>`;
+  };
+
+  const html=renderGroup(ownedPets,'Collected','#1D9E75')+renderGroup(notOwnedPets,'Not Collected','#ccc');
+  container.innerHTML=html||'<div class="no-results">No pets found.</div>';
   observeImages(container);
   updateStats();
 }
